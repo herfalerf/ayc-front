@@ -73,7 +73,7 @@ class AycApi {
   }
 
   static async removeVideo(id) {
-    let res = await this.request(`videos/${id}`, data, "delete");
+    let res = await this.request(`videos/${id}`, {}, "delete");
     return res.video;
   }
 
@@ -110,7 +110,7 @@ class AycApi {
   }
 
   static async deleteTag(id) {
-    let res = await this.request(`tags/${id}`, data, "patch");
+    let res = await this.request(`tags/${id}`, {}, "patch");
     return res.tag;
   }
 
@@ -127,20 +127,20 @@ class AycApi {
   }
 
   static async getMember(name) {
-    kName = convertToKebabCase(name);
+    const kName = convertToKebabCase(name);
     let res = await this.request(`team/${kName}`);
     return res.member;
   }
 
   static async editMember(name, data) {
-    kName = convertToKebabCase(name);
+    const kName = convertToKebabCase(name);
     let res = await this.request(`team/${kName}`, data, "patch");
     return res.member;
   }
 
   static async deleteMember(name) {
-    kName = convertToKebabCase(name);
-    let res = await this.request(`team/${kName}`, data, "delete");
+    const kName = convertToKebabCase(name);
+    let res = await this.request(`team/${kName}`, {}, "delete");
     return res.member;
   }
 
@@ -162,12 +162,12 @@ class AycApi {
   }
 
   static async editCustomer(id) {
-    let res = await this.request(`customers/${id}`, data, "patch");
+    let res = await this.request(`customers/${id}`, {}, "patch");
     return res.customer;
   }
 
   static async deleteCustomer(id) {
-    let res = await this.request(`customers/${id}`, data, "delete");
+    let res = await this.request(`customers/${id}`, {}, "delete");
     return res.customer;
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Alert from "../common/Alert";
 
 // Admin Login form.
 //
@@ -12,7 +13,7 @@ import { useHistory } from "react-router-dom";
 // Routed as /login
 //
 
-function adminForm({ login }) {
+function AdminForm({ login }) {
   const history = useHistory();
   const [formData, setFormData] = useState({
     username: "",
@@ -83,3 +84,5 @@ function adminForm({ login }) {
     </form>
   );
 }
+
+export default AdminForm;

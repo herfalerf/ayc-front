@@ -1,5 +1,7 @@
 import React from "react";
-import { SwitchCase, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Homepage from "../homepage/Homepage";
+import AdminForm from "../auth/AdminForm";
 
 // Site-wide routes.
 //
