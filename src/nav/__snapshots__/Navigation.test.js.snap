@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <nav>
+    <a
+      href="/"
+    >
+      Align Your Culture
+    </a>
+    <ul>
+      <li>
+        <a
+          href="/methods"
+        >
+          Methodology
+        </a>
+      </li>
+      <li>
+        <a
+          href="/services"
+        >
+          Services
+        </a>
+      </li>
+      <li>
+        <a
+          href="/resources"
+        >
+          Resources
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+        >
+          About Us
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when logged out 1`] = `
+<DocumentFragment>
+  <nav>
+    <a
+      href="/"
+    >
+      Align Your Culture
+    </a>
+    <ul>
+      <li>
+        <a
+          href="/methods"
+        >
+          Methodology
+        </a>
+      </li>
+      <li>
+        <a
+          href="/services"
+        >
+          Services
+        </a>
+      </li>
+      <li>
+        <a
+          href="/resources"
+        >
+          Resources
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+        >
+          About Us
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

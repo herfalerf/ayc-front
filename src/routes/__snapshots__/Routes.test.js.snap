@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <h1>
+        Our Mission is to Inspire Organizations to Create Extraordinary Working Cultures
+      </h1>
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        href="/methods"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Get Started Here
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
+      <div>
+        <div>
+          <h2>
+             Send a Message
+          </h2>
+          <div>
+            <div>
+              <form>
+                <div>
+                  <label>
+                    Name
+                  </label>
+                  <input
+                    name="username"
+                    value=""
+                  />
+                </div>
+                <div>
+                  <label>
+                    Email
+                  </label>
+                  <input
+                    name="email"
+                    type="email"
+                    value=""
+                  />
+                </div>
+                <div>
+                  <label>
+                    Company
+                  </label>
+                  <input
+                    name="company"
+                    value=""
+                  />
+                </div>
+                <div>
+                  <label>
+                    Phone Number
+                  </label>
+                  <input
+                    name="phone"
+                    value=""
+                  />
+                </div>
+                <div>
+                  <label>
+                    Message
+                  </label>
+                  <input
+                    name="message"
+                    value=""
+                  />
+                </div>
+                <button
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

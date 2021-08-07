@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <form>
+    <div>
+      <label>
+        Username
+      </label>
+      <input
+        autocomplete="username"
+        class="form-control"
+        name="username"
+        required=""
+        value=""
+      />
+    </div>
+    <div>
+      <label>
+        Password
+      </label>
+      <input
+        autocomplete="current-password"
+        class="form-control"
+        name="password"
+        required=""
+        type="password"
+        value=""
+      />
+    </div>
+    <button>
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./LoadingSpinner.css";
+// import "./LoadingSpinner.css";
 
 /** Loading message used by components that fetch API data. */
 
