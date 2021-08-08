@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Homepage from "../homepage/Homepage";
 import AdminForm from "../auth/AdminForm";
 import VideoList from "../videos/VideoList";
-import TeamCard from "../team/TeamCard";
+import TeamList from "../team/TeamList";
 
 // Site-wide routes.
 //
@@ -12,14 +12,18 @@ import TeamCard from "../team/TeamCard";
 // Visiting a non-existant route redirects to the homepage
 //
 
-function Routes({ login }) {
-  console.debug("Routes", `login=${typeof login}`);
+function Routes({ login, addCustomer }) {
+  console.debug(
+    "Routes",
+    `login=${typeof login}`,
+    `addCustomer=${typeof addCustomer}`
+  );
 
   return (
     <div>
       <Switch>
         <Route exact path="/">
-          <Homepage />
+          <Homepage addCustomer={addCustomer} />
         </Route>
 
         <Route exact path="/methods"></Route>
@@ -31,12 +35,7 @@ function Routes({ login }) {
         </Route>
 
         <Route exact path="/about">
-          <TeamCard
-            name="Timmy Jimmy"
-            bio="Big man with a plan."
-            img="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          />
-          <TeamCard name="Ramen" bio="Best Cat Girl" />
+          <TeamList />
         </Route>
 
         <Route exact path="/login">

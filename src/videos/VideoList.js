@@ -22,10 +22,13 @@ function VideoList({ tag }) {
   //     setVideos(videos);
   //   }, []);
 
-  useEffect(function getVideosOnMount() {
-    console.debug("VideoList useEffect getVideosOnMount");
-    getVideos(tag);
-  }, []);
+  useEffect(
+    function getVideosOnMount() {
+      console.debug("VideoList useEffect getVideosOnMount");
+      getVideos(tag);
+    },
+    [tag]
+  );
 
   async function getVideos(tag) {
     let videos = await AycApi.getVideos(tag);

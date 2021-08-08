@@ -36,8 +36,7 @@ describe("Api", () => {
     mock.onGet("https://ayc-back.herokuapp.com/videos").reply(200, data);
 
     api.getVideos().then((response) => {
-      expect(response).toEqual(data);
-      done();
+      expect(response).toEqual(data.videos);
     });
   });
 });

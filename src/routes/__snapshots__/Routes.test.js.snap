@@ -4,25 +4,90 @@ exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div>
-      <h1>
-        Our Mission is to Inspire Organizations to Create Extraordinary Working Cultures
-      </h1>
-      <a
-        aria-disabled="false"
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-        href="/methods"
-        role="button"
-        tabindex="0"
-      >
-        <span
-          class="MuiButton-label"
+      <div>
+        <h1>
+          Our Mission is to Inspire Organizations to Create Extraordinary Working Cultures
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, harum? Fuga eos atque ea recusandae deserunt aperiam veniam sint doloremque.
+        </p>
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/resources"
+          role="button"
+          tabindex="0"
         >
-          Get Started Here
-        </span>
-        <span
-          class="MuiTouchRipple-root"
-        />
-      </a>
+          <span
+            class="MuiButton-label"
+          >
+            Get Started Here
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div>
+        <p>
+          WHAT WE DO
+        </p>
+        <h3>
+          How Culture Aligment Model Skyrockets Your Efficiency
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam adipisci harum blanditiis dolorum earum dicta incidunt maiores illum debitis eveniet consequatur itaque nostrum at aliquam deserunt placeat inventore, a rerum. Nostrum eum et iste sit.
+        </p>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          </li>
+        </ul>
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/methods"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Our Methodology
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+        <div
+          class="LoadingSpinner"
+        >
+          Loading ...
+        </div>
+      </div>
+      <div>
+        <p>
+          OUR SERVICES
+        </p>
+        <h3>
+          Move from Talking About Your Culture to Tranforming It
+        </h3>
+        <li>
+          Workshops
+        </li>
+        <li>
+          Culture Assessments
+        </li>
+        <li>
+          Consulting
+        </li>
+      </div>
       <div>
         <div>
           <h2>

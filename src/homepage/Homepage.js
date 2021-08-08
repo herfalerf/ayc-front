@@ -12,7 +12,7 @@ import VideoList from "../videos/VideoList";
 // Routes -> Homepage
 //
 
-function Homepage() {
+function Homepage({ addCustomer }) {
   // const { currentUser } = useContext(UserContext);
   // console.debug("Homepage", "currentUser=", currentUser)
 
@@ -68,7 +68,7 @@ function Homepage() {
         <li>Culture Assessments</li>
         <li>Consulting</li>
       </div>
-      <ContactForm />
+      <ContactForm addCustomer={addCustomer} />
     </div>
   );
 }

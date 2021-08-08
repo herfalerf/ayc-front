@@ -6,7 +6,7 @@ import Alert from "../common/Alert";
 //
 // Shows contact form and manages state
 // On submission
-// Calls contact function prop
+// Calls addCustomer function prop
 // calls email function prop
 // redirects to /
 //
@@ -14,41 +14,55 @@ import Alert from "../common/Alert";
 // Routed as /
 //
 
-function ContactForm({ contact, email }) {
-  const history = useHistory();
-  const [formData, setFormData] = useState({
+function ContactForm({ addCustomer, email }) {
+  const INITIAL_STATE = {
     name: "",
     email: "",
     company: "",
     phone: "",
     message: "",
-  });
+  };
+  const history = useHistory();
+  const [formData, setFormData] = useState(INITIAL_STATE);
   const [formErrors, setFormErrors] = useState([]);
 
   console.debug(
     "ContactForm",
-    "contact",
-    typeof contact,
-    "email",
+    "addCustomer=",
+    typeof addCustomer,
+    "email=",
     typeof email,
-    "formData",
+    "formData=",
     formData,
-    "formErrors",
+    "formErrors=",
     formErrors
   );
 
   // Handle form submit:
   //
-  // Calls contact func prop and email prop and if successful, redirect to /.
+  // Calls addCustomer func prop and email prop and if successful, redirect to /.
   //
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let result = await contact(formData);
+    let customerData = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+    };
+    let result = await addCustomer(customerData);
+    console.debug("handleSubmit result=", result);
     if (result.success) {
+      setFormData(INITIAL_STATE);
       history.push("/");
     } else {
-      setFormErrors(result.errors);
+      if (result.errors[0] === `Email already exists: ${formData.email}`) {
+        setFormData(INITIAL_STATE);
+      } else {
+        setFormErrors(result.errors);
+        console.debug("formErrors=", formErrors);
+      }
     }
   }
 
@@ -68,7 +82,7 @@ function ContactForm({ contact, email }) {
               <div>
                 <label>Name</label>
                 <input
-                  name="username"
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
                 />
