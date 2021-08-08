@@ -2,6 +2,8 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Homepage from "../homepage/Homepage";
 import AdminForm from "../auth/AdminForm";
+import VideoList from "../videos/VideoList";
+import TeamCard from "../team/TeamCard";
 
 // Site-wide routes.
 //
@@ -24,9 +26,18 @@ function Routes({ login }) {
 
         <Route exact path="/services"></Route>
 
-        <Route exact path="/resources"></Route>
+        <Route exact path="/resources">
+          <VideoList />
+        </Route>
 
-        <Route exact path="/about"></Route>
+        <Route exact path="/about">
+          <TeamCard
+            name="Timmy Jimmy"
+            bio="Big man with a plan."
+            img="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          />
+          <TeamCard name="Ramen" bio="Best Cat Girl" />
+        </Route>
 
         <Route exact path="/login">
           <AdminForm login={login} />
