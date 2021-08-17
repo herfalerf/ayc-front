@@ -36,9 +36,22 @@ function TeamList() {
 
   return (
     <div>
-      {team.map((m) => (
-        <TeamCard key={m.name} name={m.name} bio={m.bio} img={m.img} />
-      ))}
+      <div>
+        <h3>Forging Our Own Path</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Libero at voluptate
+          officiis sed atque, ipsam quod est dicta veritatis eaque aut, sequi
+          sapiente veniam eveniet aliquid totam? Labore, hic! Laboriosam!
+        </p>
+      </div>
+      <div>
+        <h5>Who We Are</h5>
+        <h3>The Team Behind AlignYourCulture</h3>
+        {team.map((m) => (
+          <TeamCard key={m.name} name={m.name} bio={m.bio} img={m.img} />
+        ))}
+      </div>
     </div>
   );
 }

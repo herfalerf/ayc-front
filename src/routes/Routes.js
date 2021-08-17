@@ -4,6 +4,7 @@ import Homepage from "../homepage/Homepage";
 import AdminForm from "../auth/AdminForm";
 import VideoList from "../videos/VideoList";
 import TeamList from "../team/TeamList";
+import Contactpage from "../contact/Contactpage";
 
 // Site-wide routes.
 //
@@ -31,11 +32,14 @@ function Routes({ login, addCustomer }) {
         <Route exact path="/services"></Route>
 
         <Route exact path="/resources">
-          <VideoList />
+          <VideoList usename="true" />
         </Route>
 
         <Route exact path="/about">
           <TeamList />
+        </Route>
+        <Route exact path="/contact">
+          <Contactpage />
         </Route>
 
         <Route exact path="/login">
