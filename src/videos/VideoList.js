@@ -39,8 +39,6 @@ function VideoList({ tag, usename }) {
   console.debug(videos);
   return (
     <div>
-      <h3>Get Started with Our Resource Library</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       {videos.map((v) => (
         <VideoCard key={v.name} link={v.link} name={v.name} usename={usename} />
       ))}

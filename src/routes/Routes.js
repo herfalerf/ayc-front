@@ -2,9 +2,10 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Homepage from "../homepage/Homepage";
 import AdminForm from "../auth/AdminForm";
-import VideoList from "../videos/VideoList";
+import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import Contactpage from "../contact/Contactpage";
+import Services from "../services/Services";
 
 // Site-wide routes.
 //
@@ -29,10 +30,12 @@ function Routes({ login, addCustomer }) {
 
         <Route exact path="/methods"></Route>
 
-        <Route exact path="/services"></Route>
+        <Route exact path="/services">
+          <Services />
+        </Route>
 
         <Route exact path="/resources">
-          <VideoList usename="true" />
+          <VideoLibrary />
         </Route>
 
         <Route exact path="/about">

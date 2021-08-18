@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import ContactForm from "../contact/ContactForm";
-import VideoCard from "../videos/VideoCard";
 import VideoList from "../videos/VideoList";
 
 // Homepage of site.
