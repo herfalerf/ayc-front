@@ -51,7 +51,13 @@ function TeamList() {
         <h5>Who We Are</h5>
         <h3>The Team Behind AlignYourCulture</h3>
         {team.map((m) => (
-          <TeamCard key={m.name} name={m.name} bio={m.bio} img={m.img} />
+          <TeamCard
+            key={m.name}
+            name={m.name}
+            title={m.title}
+            bio={m.bio}
+            img={m.img}
+          />
         ))}
       </div>
       <div>

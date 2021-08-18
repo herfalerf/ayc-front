@@ -6,7 +6,7 @@ import React from "react";
 //
 // VideoList -> VideoCard
 
-function VideoCard({ link, name, usename }) {
+function VideoCard({ link, name, username }) {
   console.debug("VideoCard", link);
 
   return (
@@ -20,7 +20,7 @@ function VideoCard({ link, name, usename }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      {usename && <h3> {name}</h3>}
+      {name && <h3> {name}</h3>}
     </div>
   );
 }

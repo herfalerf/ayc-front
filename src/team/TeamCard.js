@@ -8,13 +8,14 @@ import "./TeamCard.css";
 // TeamList -> TeamCard
 //
 
-function TeamCard({ name, bio, img }) {
+function TeamCard({ name, title, bio, img }) {
   console.debug("TeamCard", img);
 
   return (
     <div>
       {img && <img src={img} alt={name} />}
-      <h6>{name}</h6>
+      <h3>{name}</h3>
+      <h4>{title}</h4>
       <p>{bio}</p>
     </div>
   );

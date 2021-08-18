@@ -6,6 +6,7 @@ import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
+import Methods from "../methods/Methods";
 
 // Site-wide routes.
 //
@@ -28,7 +29,9 @@ function Routes({ login, addCustomer }) {
           <Homepage addCustomer={addCustomer} />
         </Route>
 
-        <Route exact path="/methods"></Route>
+        <Route exact path="/methods">
+          <Methods />
+        </Route>
 
         <Route exact path="/services">
           <Services />
