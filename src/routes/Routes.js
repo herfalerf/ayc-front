@@ -5,6 +5,8 @@ import AdminHome from "../homepage/AdminHome";
 import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
+import TeamManager from "../team/TeamManager";
+import TeamForm from "../team/TeamForm";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
 import Methods from "../methods/Methods";
@@ -17,11 +19,12 @@ import PrivateRoute from "./PrivateRoute";
 // Visiting a non-existant route redirects to the homepage
 //
 
-function Routes({ login, addCustomer }) {
+function Routes({ login, addCustomer, addMember }) {
   console.debug(
     "Routes",
     `login=${typeof login}`,
-    `addCustomer=${typeof addCustomer}`
+    `addCustomer=${typeof addCustomer}`,
+    `addMember=${typeof addMember}`
   );
 
   return (
@@ -55,6 +58,12 @@ function Routes({ login, addCustomer }) {
         </Route>
         <PrivateRoute exact path="/admin/home">
           <AdminHome />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/team">
+          <TeamManager />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/team/add">
+          <TeamForm addMember={addMember} />
         </PrivateRoute>
 
         <Redirect to="/" />

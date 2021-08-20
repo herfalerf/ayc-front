@@ -77,12 +77,26 @@ function App() {
       return { success: false, errors };
     }
   }
+
+  async function addMember(data) {
+    try {
+      await AycApi.addMember(data);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to add team member", errors);
+      return { success: false, errors };
+    }
+  }
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <div className="App">
           <Navigation logout={logout} />
-          <Routes login={login} addCustomer={addCustomer} />
+          <Routes
+            login={login}
+            addCustomer={addCustomer}
+            addMember={addMember}
+          />
           <BottomNav />
         </div>
       </UserContext.Provider>

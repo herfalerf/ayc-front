@@ -57,6 +57,9 @@ function Navigation({ logout }) {
           <li>
             <NavLink to="/admin/home">Admin Home</NavLink>
           </li>
+          <li>
+            <NavLink to="/admin/team">Team Manager</NavLink>
+          </li>
           <li className="nav-item">
             <Link className="nav-link" to="/" onClick={logout}>
               Log out {currentUser.first_name || currentUser.username}
