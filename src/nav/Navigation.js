@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import UserContext from "../auth/UserContext";
 
 // Navigation bar for site.  Shows up on every page
 //
@@ -8,8 +9,9 @@ import { Link, NavLink } from "react-router-dom";
 // Rendered by App
 //
 
-function Navigation() {
-  function Nav() {
+function Navigation({ logout }) {
+  const { currentUser } = useContext(UserContext);
+  const Nav = () => {
     return (
       <ul>
         <li>
@@ -29,12 +31,46 @@ function Navigation() {
         </li>
       </ul>
     );
-  }
+  };
+
+  const AdminNav = () => {
+    return (
+      <div>
+        <ul>
+          <li>
+            <NavLink to="/methods">Methodology</NavLink>
+          </li>
+          <li>
+            <NavLink to="/services">Services</NavLink>
+          </li>
+          <li>
+            <NavLink to="/resources">Resources</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact Us</NavLink>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <NavLink to="/admin/home">Admin Home</NavLink>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/" onClick={logout}>
+              Log out {currentUser.first_name || currentUser.username}
+            </Link>
+          </li>
+        </ul>
+      </div>
+    );
+  };
 
   return (
     <nav>
       <Link to="/">Align Your Culture</Link>
-      <Nav></Nav>
+      {currentUser ? AdminNav() : Nav()}
     </nav>
   );
 }

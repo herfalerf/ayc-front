@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
 import Navigation from "./nav/Navigation";
+import BottomNav from "./nav/BottomNav";
 import Routes from "./routes/Routes";
 import LoadingSpinner from "./common/LoadingSpinner";
 import AycApi from "./api/api";
@@ -82,6 +83,7 @@ function App() {
         <div className="App">
           <Navigation logout={logout} />
           <Routes login={login} addCustomer={addCustomer} />
+          <BottomNav />
         </div>
       </UserContext.Provider>
     </BrowserRouter>

@@ -1,12 +1,14 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Homepage from "../homepage/Homepage";
+import AdminHome from "../homepage/AdminHome";
 import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
 import Methods from "../methods/Methods";
+import PrivateRoute from "./PrivateRoute";
 
 // Site-wide routes.
 //
@@ -48,9 +50,12 @@ function Routes({ login, addCustomer }) {
           <Contactpage />
         </Route>
 
-        <Route exact path="/login">
+        <Route exact path="/admin">
           <AdminForm login={login} />
         </Route>
+        <PrivateRoute exact path="/admin/home">
+          <AdminHome />
+        </PrivateRoute>
 
         <Redirect to="/" />
       </Switch>

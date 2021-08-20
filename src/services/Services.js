@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import ContactElement from "../contact/ContactElement";
 import Workshops from "./Workshops";
 import Assessments from "./Assessments";
 import Consulting from "./Consulting";
@@ -48,14 +47,7 @@ const Services = () => {
           alias explicabo dignissimos doloribus consequuntur et eum sit?
           Corrupti, excepturi!
         </p>
-        <Button
-          variant="contained"
-          component={Link}
-          color="primary"
-          to="/contact"
-        >
-          Send a Message
-        </Button>
+        <ContactElement />
       </div>
     </div>
   );

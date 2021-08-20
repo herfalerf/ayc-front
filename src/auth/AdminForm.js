@@ -40,7 +40,7 @@ function AdminForm({ login }) {
     evt.preventDefault();
     let result = await login(formData);
     if (result.success) {
-      history.push("/admin");
+      history.push("/admin/home");
     } else {
       setFormErrors(result.errors);
     }
