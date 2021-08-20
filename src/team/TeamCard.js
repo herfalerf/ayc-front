@@ -1,5 +1,7 @@
 import React from "react";
 import "./TeamCard.css";
+import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 // Show information about a team member
 //
@@ -8,7 +10,7 @@ import "./TeamCard.css";
 // TeamList -> TeamCard
 //
 
-function TeamCard({ name, title, bio, img }) {
+function TeamCard({ name, title, bio, img, admin }) {
   console.debug("TeamCard", img);
 
   return (
@@ -17,6 +19,16 @@ function TeamCard({ name, title, bio, img }) {
       <h3>{name}</h3>
       <h4>{title}</h4>
       <p>{bio}</p>
+      {admin && (
+        <Button
+          variant="contained"
+          component={Link}
+          color="primary"
+          to="/admin/team"
+        >
+          Edit
+        </Button>
+      )}
     </div>
   );
 }

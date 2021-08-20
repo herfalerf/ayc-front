@@ -57,6 +57,7 @@ const TeamManager = ({ addMember }) => {
             title={m.title}
             bio={m.bio}
             img={m.img}
+            admin="true"
           />
         ))}
       </div>
