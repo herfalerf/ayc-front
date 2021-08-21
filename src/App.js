@@ -87,6 +87,7 @@ function App() {
       return { success: false, errors };
     }
   }
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>

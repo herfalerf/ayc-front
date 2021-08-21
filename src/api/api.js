@@ -126,21 +126,18 @@ class AycApi {
     return res.member;
   }
 
-  static async getMember(name) {
-    const kName = convertToKebabCase(name);
-    let res = await this.request(`team/${kName}`);
+  static async getMember(id) {
+    let res = await this.request(`team/${id}`);
     return res.member;
   }
 
-  static async editMember(name, data) {
-    const kName = convertToKebabCase(name);
-    let res = await this.request(`team/${kName}`, data, "patch");
+  static async editMember(id, data) {
+    let res = await this.request(`team/${id}`, data, "patch");
     return res.member;
   }
 
-  static async deleteMember(name) {
-    const kName = convertToKebabCase(name);
-    let res = await this.request(`team/${kName}`, {}, "delete");
+  static async deleteMember(id) {
+    let res = await this.request(`team/${id}`, {}, "delete");
     return res.member;
   }
 

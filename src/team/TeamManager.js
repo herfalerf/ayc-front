@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import AycApi from "../api/api";
 import TeamCard from "./TeamCard";
-import TeamForm from "./TeamForm";
 import LoadingSpinner from "../common/LoadingSpinner";
 
 // Show page with list of team members which buttons to add/edit/delete team members
@@ -15,7 +14,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 // Routes -> { TeamManager }
 //
 
-const TeamManager = ({ addMember }) => {
+const TeamManager = () => {
   console.debug("TeamList");
 
   const [team, setTeam] = useState(null);
@@ -52,6 +51,7 @@ const TeamManager = ({ addMember }) => {
       <div>
         {team.map((m) => (
           <TeamCard
+            id={m.id}
             key={m.name}
             name={m.name}
             title={m.title}

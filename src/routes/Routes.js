@@ -7,6 +7,7 @@ import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import TeamManager from "../team/TeamManager";
 import TeamForm from "../team/TeamForm";
+import TeamEditForm from "../team/TeamEditForm";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
 import Methods from "../methods/Methods";
@@ -64,6 +65,9 @@ function Routes({ login, addCustomer, addMember }) {
         </PrivateRoute>
         <PrivateRoute exact path="/admin/team/add">
           <TeamForm addMember={addMember} />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/team/:id">
+          <TeamEditForm />
         </PrivateRoute>
 
         <Redirect to="/" />

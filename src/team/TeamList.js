@@ -51,6 +51,7 @@ function TeamList() {
         <h3>The Team Behind AlignYourCulture</h3>
         {team.map((m) => (
           <TeamCard
+            id={m.id}
             key={m.name}
             name={m.name}
             title={m.title}

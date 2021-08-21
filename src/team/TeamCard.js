@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 // TeamList -> TeamCard
 //
 
-function TeamCard({ name, title, bio, img, admin }) {
-  console.debug("TeamCard", img);
+function TeamCard({ id, name, title, bio, img, admin }) {
+  console.debug("TeamCard", `MemberId=${id}`, `MemberName=${name}`);
 
   return (
     <div>
@@ -24,7 +24,7 @@ function TeamCard({ name, title, bio, img, admin }) {
           variant="contained"
           component={Link}
           color="primary"
-          to="/admin/team"
+          to={`/admin/team/${id}`}
         >
           Edit
         </Button>
