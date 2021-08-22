@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "axios-mock-adapter": "^1.19.0",
     "formik": "^2.2.9",
+    "formik-material-ui": "*",
     "jest": "^26.6.0",
     "jsonwebtoken": "^8.5.1",
     "react": "^17.0.2",

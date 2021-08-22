@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
+import { TextField } from "formik-material-ui";
+import { Button } from "@material-ui/core";
 import * as yup from "yup";
 
 const TeamForm = ({ addMember }) => {
@@ -14,13 +16,6 @@ const TeamForm = ({ addMember }) => {
       <Formik
         validationSchema={schema}
         initialValues={{ name: "", title: "", bio: "", img: "" }}
-        // validate={(values) => {
-        //   const errors = {};
-        //   if (!values.name) {
-        //     errors.name = "Required";
-        //   }
-        //   return errors;
-        // }}
         onSubmit={async (values, { setStatus, setSubmitting }) => {
           setStatus(undefined);
           let result = await addMember(values);
@@ -36,23 +31,40 @@ const TeamForm = ({ addMember }) => {
       >
         {({ isSubmitting, status, errors }) => (
           <Form>
-            <Field label="name" type="name" name="name" />
-            <ErrorMessage name="name" component="div" />
-            <Field label="title" type="title" name="title" />
-            <ErrorMessage name="title" component="div" />
-            <Field label="bio" type="bio" name="bio" component="textarea" />
-            <ErrorMessage name="bio" component="div" />
-            <Field label="img" type="img" name="img" />
-            <ErrorMessage name="img" component="div" />
+            <Field label="name" type="name" name="name" component={TextField} />
 
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
+            <br />
+            <Field
+              label="title"
+              type="title"
+              name="title"
+              component={TextField}
+            />
+
+            <br />
+            <Field
+              label="bio"
+              type="bio"
+              name="bio"
+              component={TextField}
+              InputProps={{ multiline: true }}
+            />
+
+            <br />
+            <Field label="img" type="img" name="img" component={TextField} />
+
             {status && status.error ? (
               <div>API Error: {status.error}</div>
-            ) : (
-              errors.name && <div>Validation Error: {errors.name}</div>
-            )}
+            ) : null}
+            <br />
+            <Button
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              type="submit"
+            >
+              Submit
+            </Button>
           </Form>
         )}
       </Formik>
