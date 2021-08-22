@@ -6,7 +6,7 @@ import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import TeamManager from "../team/TeamManager";
-import TeamForm from "../team/TeamForm";
+import TeamForm from "../team/TeamForm2";
 import TeamEditForm from "../team/TeamEditForm";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
