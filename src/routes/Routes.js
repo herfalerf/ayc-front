@@ -6,7 +6,7 @@ import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
 import TeamList from "../team/TeamList";
 import TeamManager from "../team/TeamManager";
-import TeamForm from "../team/TeamForm2";
+import TeamForm from "../team/TeamForm";
 import TeamEditForm from "../team/TeamEditForm";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
@@ -51,7 +51,7 @@ function Routes({ login, addCustomer, addMember }) {
           <TeamList />
         </Route>
         <Route exact path="/contact">
-          <Contactpage />
+          <Contactpage addCustomer={addCustomer} />
         </Route>
 
         <Route exact path="/admin">

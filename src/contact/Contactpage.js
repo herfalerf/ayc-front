@@ -10,8 +10,8 @@ import ContactForm from "./ContactForm";
 // Routes -> Contact
 //
 
-function Contactpage(addCustomer) {
-  console.debug("Contactpage");
+function Contactpage({ addCustomer }) {
+  console.debug("Contactpage", "addCustomer=", typeof addCustomer);
 
   return (
     <div>

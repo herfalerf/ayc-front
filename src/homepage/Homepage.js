@@ -14,6 +14,7 @@ import VideoList from "../videos/VideoList";
 function Homepage({ addCustomer }) {
   // const { currentUser } = useContext(UserContext);
   // console.debug("Homepage", "currentUser=", currentUser)
+  console.debug("HomePage", "addCustomer=", typeof addCustomer);
 
   return (
     <div>

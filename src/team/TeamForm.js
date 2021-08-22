@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import Alert from "../common/Alert";
+import { Formik, Form, Field } from "formik";
+import { TextField } from "formik-material-ui";
+import { Button } from "@material-ui/core";
+import * as yup from "yup";
 
 // Team member add form
 //
@@ -14,99 +17,75 @@ import Alert from "../common/Alert";
 //
 
 const TeamForm = ({ addMember }) => {
-  const history = useHistory();
-  const [formData, setFormData] = useState({
-    name: "",
-    title: "",
-    bio: "",
-    img: "",
+  const schema = yup.object().shape({
+    name: yup.string().required("Name required"),
   });
-  const [formErrors, setFormErrors] = useState([]);
+  const history = useHistory();
 
-  console.debug(
-    "TeamForm",
-    "addMember=",
-    typeof addMember,
-    "formData=",
-    formData,
-    "formErrors=",
-    formErrors
-  );
-
-  //   Handle form submit:
-  //
-  // Calls addMember func prop and, if successful, redirect to /admin/team
-  //
-
-  async function handleSubmit(evt) {
-    evt.preventDefault();
-    let result = await addMember(formData);
-    if (result.success) {
-      history.push("/admin/team");
-    } else {
-      setFormErrors(result.errors);
-    }
-  }
-
-  //   Update form data field
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setFormData((data) => ({ ...data, [name]: value }));
-  }
+  console.debug("TeamForm", "addMember=", typeof addMember);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            name="name"
-            className="form-control"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Title</label>
-          <input
-            name="title"
-            className="form-control"
-            value={formData.title}
-            onChange={handleChange}
-          />
-        </div>
+      <Formik
+        validationSchema={schema}
+        initialValues={{ name: "", title: "", bio: "", img: "" }}
+        onSubmit={async (values, { setStatus, setSubmitting }) => {
+          setStatus(undefined);
+          let result = await addMember(values);
+          console.log(result);
 
-        <div className="form-group">
-          <label>Bio</label>
-          <input
-            name="bio"
-            className="form-control"
-            value={formData.bio}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Image</label>
-          <input
-            name="img"
-            className="form-control"
-            value={formData.img}
-            onChange={handleChange}
-          />
-        </div>
+          if (result.success) {
+            setSubmitting(false);
+            history.push("/admin/team");
+          } else {
+            setStatus({ error: result.errors });
+          }
+        }}
+      >
+        {({ isSubmitting, status }) => (
+          <Form>
+            <Field
+              label="name*"
+              type="name"
+              name="name"
+              component={TextField}
+            />
 
-        {formErrors.length ? (
-          <Alert type="danger" messages={formErrors} />
-        ) : null}
+            <br />
+            <Field
+              label="title"
+              type="title"
+              name="title"
+              component={TextField}
+            />
 
-        <button
-          type="submit"
-          className="btn btn-primary float-right"
-          onSubmit={handleSubmit}
-        >
-          Submit
-        </button>
-      </form>
+            <br />
+            <Field
+              label="bio"
+              type="bio"
+              name="bio"
+              component={TextField}
+              InputProps={{ multiline: true }}
+            />
+
+            <br />
+            <Field label="img" type="img" name="img" component={TextField} />
+
+            {status && status.error ? (
+              <div>API Error: {status.error}</div>
+            ) : null}
+            <br />
+            <Button
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 };
