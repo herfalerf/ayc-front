@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import Alert from "../common/Alert";
+import { Formik, Form, Field } from "formik";
+import { TextField } from "formik-material-ui";
+import { Button } from "@material-ui/core";
+import * as yup from "yup";
 import AycApi from "../api/api";
-import LoadingSpinner from "../common/LoadingSpinner";
-import useTimedMessage from "../hooks/useTimedMessage";
 
 // Team member edit form
 //
@@ -14,13 +15,19 @@ import useTimedMessage from "../hooks/useTimedMessage";
 //
 // Routed as /admin/team/:name
 
-const TeamEditForm = () => {
+const TeamEditForm = ({ editMember, deleteMember }) => {
   const { id } = useParams();
   console.debug("TeamEditForm", "id=", id);
-
+  const [member, setMember] = useState({
+    name: "",
+    title: "",
+    bio: "bio",
+    img: "img",
+  });
   const history = useHistory();
-  const [member, setMember] = useState(null);
-  const [formData, setFormData] = useState(null);
+  const schema = yup.object().shape({
+    name: yup.string().required("Name required"),
+  });
 
   useEffect(
     function getTeamMember() {
@@ -33,143 +40,89 @@ const TeamEditForm = () => {
     [id]
   );
 
-  useEffect(
-    function getFormData() {
-      if (member) {
-        setFormData({
+  return (
+    <div>
+      <Formik
+        validationSchema={schema}
+        initialValues={{
           name: member.name,
           title: member.title,
           bio: member.bio,
           img: member.img,
-        });
-      }
-    },
-    [member]
-  );
+        }}
+        enableReinitialize={true}
+        onSubmit={async (values, { setStatus, setSubmitting }) => {
+          setStatus(undefined);
+          console.debug("id=", id, "values=", values);
+          let result = await editMember(id, values);
+          console.debug(result);
 
-  const [formErrors, setFormErrors] = useState([]);
-  //   const [saveConfirmed, setSaveConfirmed] = useState(false);
-  const [saveConfirmed, setSaveConfirmed] = useTimedMessage();
+          if (result.success) {
+            setSubmitting(false);
+            history.push("/admin/team");
+          } else {
+            setStatus({ error: result.errors });
+          }
+        }}
+      >
+        {({ isSubmitting, status }) => (
+          <Form>
+            <Field
+              label="name*"
+              type="name"
+              name="name"
+              component={TextField}
+            />
 
-  console.debug(
-    "TeamEditForm",
-    "member=",
-    member,
-    "formData=",
-    formData,
-    "formErrors=",
-    formErrors,
-    "saveConfirmed=",
-    saveConfirmed
-  );
+            <br />
+            <Field
+              label="title"
+              type="title"
+              name="title"
+              component={TextField}
+            />
 
-  /** on form submit:
-   * - attempt save to backend & report any errors
-   * - if successful
-   *   - clear previous error messages
-   *   - show save-confirmed message
-   */
+            <br />
+            <Field
+              label="bio"
+              type="bio"
+              name="bio"
+              component={TextField}
+              InputProps={{ multiline: true }}
+            />
 
-  async function handleSubmit(evt) {
-    evt.preventDefault();
+            <br />
+            <Field label="img" type="img" name="img" component={TextField} />
 
-    let memberData = {
-      name: formData.name,
-      title: formData.title,
-      bio: formData.bio,
-      img: formData.img,
-    };
-
-    if (memberData.name === "") {
-      memberData.name = null;
-    }
-    if (memberData.title === "") {
-      memberData.title = null;
-    }
-
-    let id = member.id;
-
-    try {
-      await AycApi.editMember(id, memberData);
-    } catch (errors) {
-      setFormErrors(errors);
-      return;
-    }
-
-    setFormData((f) => ({ ...f }));
-    setFormErrors([]);
-    setSaveConfirmed(true);
-  }
-
-  /** Handle form data changing */
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setFormData((f) => ({
-      ...f,
-      [name]: value,
-    }));
-    setFormErrors([]);
-  }
-  if (!member || !formData) return <LoadingSpinner />;
-  return (
-    <div>
-      <form>
-        <div className="form-group">
-          <label>Team Member Id</label>
-          <p className="form-control-plaintext">{member.id}</p>
-        </div>
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            name="name"
-            className="form-control"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Title</label>
-          <input
-            name="title"
-            className="form-control"
-            value={formData.title}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Bio</label>
-          <textarea
-            name="bio"
-            className="form-control"
-            value={formData.bio}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Image</label>
-          <input
-            name="img"
-            className="form-control"
-            value={formData.img}
-            onChange={handleChange}
-          />
-        </div>
-
-        {formErrors.length ? (
-          <Alert type="danger" messages={formErrors} />
-        ) : null}
-
-        {saveConfirmed ? (
-          <Alert type="success" messages={["Updated successfully."]} />
-        ) : null}
-
-        <button
-          className="btn btn-primary btn-block mt-4"
-          onClick={handleSubmit}
-        >
-          Save Changes
-        </button>
-      </form>
+            {status && status.error ? (
+              <div>API Error: {status.error}</div>
+            ) : null}
+            <br />
+            <Button
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              type="submit"
+            >
+              Submit
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={async ({ setStatus }) => {
+                let result = await deleteMember(id);
+                if (result.success) {
+                  history.push("/admin/team");
+                } else {
+                  setStatus({ error: result.errors });
+                }
+              }}
+            >
+              Delete
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 };

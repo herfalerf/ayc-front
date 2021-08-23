@@ -20,12 +20,14 @@ import PrivateRoute from "./PrivateRoute";
 // Visiting a non-existant route redirects to the homepage
 //
 
-function Routes({ login, addCustomer, addMember }) {
+function Routes({ login, addCustomer, addMember, editMember, deleteMember }) {
   console.debug(
     "Routes",
     `login=${typeof login}`,
     `addCustomer=${typeof addCustomer}`,
-    `addMember=${typeof addMember}`
+    `addMember=${typeof addMember}`,
+    `editMember=${typeof editMember}`,
+    `deleteMember=${typeof deleteMember}`
   );
 
   return (
@@ -67,7 +69,7 @@ function Routes({ login, addCustomer, addMember }) {
           <TeamForm addMember={addMember} />
         </PrivateRoute>
         <PrivateRoute exact path="/admin/team/:id">
-          <TeamEditForm />
+          <TeamEditForm editMember={editMember} deleteMember={deleteMember} />
         </PrivateRoute>
 
         <Redirect to="/" />

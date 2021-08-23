@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useHistory } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
 import Navigation from "./nav/Navigation";
 import BottomNav from "./nav/BottomNav";
@@ -88,6 +88,26 @@ function App() {
     }
   }
 
+  async function editMember(id, data) {
+    try {
+      await AycApi.editMember(id, data);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to edit team member", errors);
+      return { success: false, errors };
+    }
+  }
+
+  async function deleteMember(id) {
+    try {
+      await AycApi.deleteMember(id);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to delete team member", errors);
+      return { success: false, errors };
+    }
+  }
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
@@ -97,6 +117,8 @@ function App() {
             login={login}
             addCustomer={addCustomer}
             addMember={addMember}
+            editMember={editMember}
+            deleteMember={deleteMember}
           />
           <BottomNav />
         </div>
