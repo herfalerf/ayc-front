@@ -16,8 +16,7 @@ import * as yup from "yup";
 //
 
 const CustomerForm = ({ addCustomer }) => {
-  const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  const phoneRegExp = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
 
   const schema = yup.object().shape({
     name: yup.string().required("Name required"),
@@ -27,10 +26,7 @@ const CustomerForm = ({ addCustomer }) => {
       .required("Email Required"),
     phone: yup
       .string()
-      .matches(
-        phoneRegExp,
-        "Please enter phone number in format ###-###-#### or ##########"
-      ),
+      .matches(phoneRegExp, "Please enter a valid phone number"),
   });
   const history = useHistory();
   console.debug("ContactForm", "addCustomer=", typeof addCustomer);

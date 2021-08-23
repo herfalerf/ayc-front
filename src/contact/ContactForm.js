@@ -13,7 +13,7 @@ import * as yup from "yup";
 // calls email function prop
 // redirects to /
 //
-// Routes -> ContactForm -> Alert
+// Routes -> ContactForm
 // Routed as /
 //
 

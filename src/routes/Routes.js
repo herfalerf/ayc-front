@@ -13,6 +13,7 @@ import Services from "../services/Services";
 import Methods from "../methods/Methods";
 import CustomerManager from "../customers/CustomerManager";
 import CustomerForm from "../customers/CustomerForm";
+import CustomerEditForm from "../customers/CustomerEditForm";
 import PrivateRoute from "./PrivateRoute";
 
 // Site-wide routes.
@@ -22,7 +23,15 @@ import PrivateRoute from "./PrivateRoute";
 // Visiting a non-existant route redirects to the homepage
 //
 
-function Routes({ login, addCustomer, addMember, editMember, deleteMember }) {
+function Routes({
+  login,
+  addCustomer,
+  addMember,
+  editMember,
+  deleteMember,
+  editCustomer,
+  deleteCustomer,
+}) {
   console.debug(
     "Routes",
     `login=${typeof login}`,
@@ -78,6 +87,12 @@ function Routes({ login, addCustomer, addMember, editMember, deleteMember }) {
         </PrivateRoute>
         <PrivateRoute exact path="/admin/customers/add">
           <CustomerForm addCustomer={addCustomer} />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/customers/:id">
+          <CustomerEditForm
+            editCustomer={editCustomer}
+            deleteCustomer={deleteCustomer}
+          />
         </PrivateRoute>
 
         <Redirect to="/" />

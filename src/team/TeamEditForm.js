@@ -9,11 +9,9 @@ import AycApi from "../api/api";
 // Team member edit form
 //
 // Displays team member edit form and handles changes to local form state.
-// Submitting the form calls the API to save, and triggers team relading throughout the site.
+// Submitting the form calls the API to save
 //
-// Confirmation of a successful save is an <Alert>
-//
-// Routed as /admin/team/:name
+// Routed as /admin/team/:id
 
 const TeamEditForm = ({ editMember, deleteMember }) => {
   const { id } = useParams();
@@ -21,8 +19,8 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
   const [member, setMember] = useState({
     name: "",
     title: "",
-    bio: "bio",
-    img: "img",
+    bio: "",
+    img: "",
   });
   const history = useHistory();
   const schema = yup.object().shape({

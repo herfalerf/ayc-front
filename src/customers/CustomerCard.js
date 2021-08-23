@@ -21,7 +21,7 @@ const CustomerCard = ({ id, name, email, phone, company }) => {
       <p>company: {company}</p>
       <Button
         variant="contained"
-        componet={Link}
+        component={Link}
         color="primary"
         to={`/admin/customers/${id}`}
       >

@@ -78,6 +78,27 @@ function App() {
     }
   }
 
+  async function editCustomer(id, data) {
+    try {
+      console.debug("editCustomer", "id=", id, "data=", data);
+      await AycApi.editCustomer(id, data);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to edit customer", errors);
+      return { success: false, errors };
+    }
+  }
+
+  async function deleteCustomer(id) {
+    try {
+      await AycApi.deleteCustomer(id);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to delete customer", errors);
+      return { success: false, errors };
+    }
+  }
+
   async function addMember(data) {
     try {
       await AycApi.addMember(data);
@@ -116,6 +137,8 @@ function App() {
           <Routes
             login={login}
             addCustomer={addCustomer}
+            editCustomer={editCustomer}
+            deleteCustomer={deleteCustomer}
             addMember={addMember}
             editMember={editMember}
             deleteMember={deleteMember}

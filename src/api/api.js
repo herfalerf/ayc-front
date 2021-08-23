@@ -158,8 +158,8 @@ class AycApi {
     return res.customer;
   }
 
-  static async editCustomer(id) {
-    let res = await this.request(`customers/${id}`, {}, "patch");
+  static async editCustomer(id, data) {
+    let res = await this.request(`customers/${id}`, data, "patch");
     return res.customer;
   }
 
