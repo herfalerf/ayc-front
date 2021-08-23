@@ -4,6 +4,7 @@ import { Button } from "@material-ui/core";
 import AycApi from "../api/api";
 import CustomerCard from "./CustomerCard";
 import LoadingSpinner from "../common/LoadingSpinner";
+import { isCompositeComponent } from "react-dom/test-utils";
 
 // Shows page with a list of customers with buttons to add/edit/delete custoemrs
 //
@@ -23,12 +24,12 @@ const CustomerManager = () => {
     async function getCustomersOnMount() {
       console.debug("CustomerManager useEffect getCustomersOnMount");
       let customers = await AycApi.getCustomers();
+
       setCustomers(customers);
     }
     getCustomersOnMount();
   }, []);
   if (!customers) return <LoadingSpinner />;
-  console.debug(customers);
 
   return (
     <div>
@@ -46,7 +47,7 @@ const CustomerManager = () => {
         {customers.map((c) => (
           <CustomerCard
             id={c.id}
-            key={c.key}
+            key={c.id}
             name={c.name}
             email={c.email}
             phone={c.phone}

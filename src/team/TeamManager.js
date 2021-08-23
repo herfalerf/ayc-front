@@ -19,12 +19,6 @@ const TeamManager = () => {
 
   const [team, setTeam] = useState(null);
 
-  //   useEffect(async function getTeamOnMount() {
-  //     console.debug("TeamList useEffect getTeamOnMount");
-  //     let team = await AycApi.getTeam();
-  //     setTeam(team);
-  //   }, []);
-
   useEffect(() => {
     async function getTeamOnMount() {
       console.debug("TeamManager useEffect getTeamOnMount");
@@ -34,7 +28,7 @@ const TeamManager = () => {
     getTeamOnMount();
   }, []);
   if (!team) return <LoadingSpinner />;
-  console.debug(team);
+  console.debug(team, "team=typeof", typeof team);
 
   return (
     <div>
@@ -50,7 +44,7 @@ const TeamManager = () => {
       </Button>
       <div>
         {team.map((m) => (
-          <CustomerCard
+          <TeamCard
             id={m.id}
             key={m.name}
             name={m.name}
