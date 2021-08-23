@@ -12,6 +12,7 @@ import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
 import Methods from "../methods/Methods";
 import CustomerManager from "../customers/CustomerManager";
+import CustomerForm from "../customers/CustomerForm";
 import PrivateRoute from "./PrivateRoute";
 
 // Site-wide routes.
@@ -74,6 +75,9 @@ function Routes({ login, addCustomer, addMember, editMember, deleteMember }) {
         </PrivateRoute>
         <PrivateRoute exact path="/admin/customers">
           <CustomerManager />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/customers/add">
+          <CustomerForm addCustomer={addCustomer} />
         </PrivateRoute>
 
         <Redirect to="/" />

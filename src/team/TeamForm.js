@@ -12,7 +12,7 @@ import * as yup from "yup";
 // call addMember function prop
 // redirect to /admin/team route
 //
-// Routes -> TeamManager -> TeamForm -> Alert
+// Routes -> TeamManager -> TeamForm
 // Routed as /admin/team/add
 //
 
