@@ -5,7 +5,7 @@ import AycApi from "../api/api";
 import TeamCard from "./TeamCard";
 import LoadingSpinner from "../common/LoadingSpinner";
 
-// Show page with list of team members which buttons to add/edit/delete team members
+// Show page with list of team members with buttons to add/edit/delete team members
 //
 // On Mount, loads team members from API.
 //
@@ -15,7 +15,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 //
 
 const TeamManager = () => {
-  console.debug("TeamList");
+  console.debug("TeamManager");
 
   const [team, setTeam] = useState(null);
 
@@ -27,7 +27,7 @@ const TeamManager = () => {
 
   useEffect(() => {
     async function getTeamOnMount() {
-      console.debug("TeamList useEffect getTeamOnMount");
+      console.debug("TeamManager useEffect getTeamOnMount");
       let team = await AycApi.getTeam();
       setTeam(team);
     }
@@ -50,7 +50,7 @@ const TeamManager = () => {
       </Button>
       <div>
         {team.map((m) => (
-          <TeamCard
+          <CustomerCard
             id={m.id}
             key={m.name}
             name={m.name}

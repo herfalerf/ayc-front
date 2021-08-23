@@ -11,6 +11,7 @@ import TeamEditForm from "../team/TeamEditForm";
 import Contactpage from "../contact/Contactpage";
 import Services from "../services/Services";
 import Methods from "../methods/Methods";
+import CustomerManager from "../customers/CustomerManager";
 import PrivateRoute from "./PrivateRoute";
 
 // Site-wide routes.
@@ -70,6 +71,9 @@ function Routes({ login, addCustomer, addMember, editMember, deleteMember }) {
         </PrivateRoute>
         <PrivateRoute exact path="/admin/team/:id">
           <TeamEditForm editMember={editMember} deleteMember={deleteMember} />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/customers">
+          <CustomerManager />
         </PrivateRoute>
 
         <Redirect to="/" />
