@@ -3,11 +3,9 @@ import { useParams, useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button } from "@material-ui/core";
-import AlertDialog from "../common/AlertDialog";
 import ConfirmDialog from "../common/ConfirmDialog";
 import * as yup from "yup";
 import AycApi from "../api/api";
-import Alert from "../common/Alert";
 
 // Customer edit form
 //
@@ -150,14 +148,12 @@ const CustomerEditForm = ({ editCustomer, deleteCustomer }) => {
               title="Are you sure you want to delete?"
               color="secondary"
               onConfirm={async () => {
-                console.debug("setStatus=", typeof setStatus);
                 let result = await deleteCustomer(id);
 
                 if (result.success) {
                   history.push("/admin/customers");
                 } else {
-                  setDelErrors(result.error);
-                  console.log("delErrors=", delErrors);
+                  console.debug("API error", result.errors);
                 }
               }}
             ></ConfirmDialog>

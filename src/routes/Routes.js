@@ -4,6 +4,7 @@ import Homepage from "../homepage/Homepage";
 import AdminHome from "../homepage/AdminHome";
 import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
+import VideoManager from "../videos/VideoManager";
 import TeamList from "../team/TeamList";
 import TeamManager from "../team/TeamManager";
 import TeamForm from "../team/TeamForm";
@@ -93,6 +94,9 @@ function Routes({
             editCustomer={editCustomer}
             deleteCustomer={deleteCustomer}
           />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/videos">
+          <VideoManager />
         </PrivateRoute>
 
         <Redirect to="/" />

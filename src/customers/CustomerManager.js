@@ -4,7 +4,6 @@ import { Button } from "@material-ui/core";
 import AycApi from "../api/api";
 import CustomerCard from "./CustomerCard";
 import LoadingSpinner from "../common/LoadingSpinner";
-import { isCompositeComponent } from "react-dom/test-utils";
 
 // Shows page with a list of customers with buttons to add/edit/delete custoemrs
 //
@@ -12,7 +11,7 @@ import { isCompositeComponent } from "react-dom/test-utils";
 //
 // This is routed at /admin/customers
 //
-// Routes -> { Customers }
+// Routes -> CustomerManager
 //
 
 const CustomerManager = () => {

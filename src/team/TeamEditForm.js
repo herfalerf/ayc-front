@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button } from "@material-ui/core";
+import ConfirmDialog from "../common/ConfirmDialog";
 import * as yup from "yup";
 import AycApi from "../api/api";
 
@@ -104,7 +105,7 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
             >
               Submit
             </Button>
-            <Button
+            {/* <Button
               variant="contained"
               color="secondary"
               onClick={async ({ setStatus }) => {
@@ -117,7 +118,20 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
               }}
             >
               Delete
-            </Button>
+            </Button> */}
+            <ConfirmDialog
+              title="Are you sure you want to delete?"
+              color="secondary"
+              onConfirm={async () => {
+                let result = await deleteMember(id);
+
+                if (result.success) {
+                  history.push("/admin/customers");
+                } else {
+                  console.debug("API error", result.errors);
+                }
+              }}
+            ></ConfirmDialog>
           </Form>
         )}
       </Formik>
