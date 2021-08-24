@@ -72,7 +72,7 @@ class AycApi {
     return res.video;
   }
 
-  static async removeVideo(id) {
+  static async deleteVideo(id) {
     let res = await this.request(`videos/${id}`, {}, "delete");
     return res.video;
   }

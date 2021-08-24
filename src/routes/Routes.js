@@ -5,6 +5,8 @@ import AdminHome from "../homepage/AdminHome";
 import AdminForm from "../auth/AdminForm";
 import VideoLibrary from "../videos/VideoLibrary";
 import VideoManager from "../videos/VideoManager";
+import VideoForm from "../videos/VideoForm";
+import VideoEditForm from "../videos/VideoEditForm";
 import TeamList from "../team/TeamList";
 import TeamManager from "../team/TeamManager";
 import TeamForm from "../team/TeamForm";
@@ -32,6 +34,9 @@ function Routes({
   deleteMember,
   editCustomer,
   deleteCustomer,
+  addVideo,
+  editVideo,
+  deleteVideo,
 }) {
   console.debug(
     "Routes",
@@ -39,7 +44,8 @@ function Routes({
     `addCustomer=${typeof addCustomer}`,
     `addMember=${typeof addMember}`,
     `editMember=${typeof editMember}`,
-    `deleteMember=${typeof deleteMember}`
+    `deleteMember=${typeof deleteMember}`,
+    `addVideo=${typeof addVideo}`
   );
 
   return (
@@ -48,29 +54,25 @@ function Routes({
         <Route exact path="/">
           <Homepage addCustomer={addCustomer} />
         </Route>
-
         <Route exact path="/methods">
           <Methods />
         </Route>
-
         <Route exact path="/services">
           <Services />
         </Route>
-
         <Route exact path="/resources">
           <VideoLibrary />
         </Route>
-
         <Route exact path="/about">
           <TeamList />
         </Route>
         <Route exact path="/contact">
           <Contactpage addCustomer={addCustomer} />
         </Route>
-
         <Route exact path="/admin">
           <AdminForm login={login} />
         </Route>
+
         <PrivateRoute exact path="/admin/home">
           <AdminHome />
         </PrivateRoute>
@@ -96,7 +98,13 @@ function Routes({
           />
         </PrivateRoute>
         <PrivateRoute exact path="/admin/videos">
-          <VideoManager />
+          <VideoManager usename="true" />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/videos/add">
+          <VideoForm addVideo={addVideo} />
+        </PrivateRoute>
+        <PrivateRoute exact path="/admin/videos/:id">
+          <VideoEditForm editVideo={editVideo} deleteVideo={deleteVideo} />
         </PrivateRoute>
 
         <Redirect to="/" />

@@ -14,7 +14,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 // Routes -> VideoManager
 //
 
-const VideoManager = () => {
+const VideoManager = ({ usename }) => {
   console.debug("VideoManager");
 
   const [videos, setVideos] = useState(null);
@@ -49,6 +49,8 @@ const VideoManager = () => {
           name={v.name}
           link={v.link}
           description={v.description}
+          admin="true"
+          usename={usename}
         />
       ))}
     </div>

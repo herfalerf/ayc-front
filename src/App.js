@@ -129,6 +129,36 @@ function App() {
     }
   }
 
+  async function addVideo(data) {
+    try {
+      await AycApi.addVideo(data);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to add video", errors);
+      return { success: false, errors };
+    }
+  }
+
+  async function editVideo(id, data) {
+    try {
+      await AycApi.editVideo(id, data);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to edit video", errors);
+      return { success: false, errors };
+    }
+  }
+
+  async function deleteVideo(id) {
+    try {
+      await AycApi.deleteVideo(id);
+      return { success: true };
+    } catch (errors) {
+      console.error("Failed to delete video", errors);
+      return { success: false, errors };
+    }
+  }
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
@@ -142,6 +172,9 @@ function App() {
             addMember={addMember}
             editMember={editMember}
             deleteMember={deleteMember}
+            addVideo={addVideo}
+            editVideo={editVideo}
+            deleteVideo={deleteVideo}
           />
           <BottomNav />
         </div>

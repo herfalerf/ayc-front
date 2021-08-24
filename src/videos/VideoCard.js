@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 // Display embedded youtube video
 //
@@ -6,7 +8,7 @@ import React from "react";
 //
 // VideoList -> VideoCard
 
-function VideoCard({ id, link, name, description, usename }) {
+function VideoCard({ id, link, name, description, usename, admin }) {
   console.debug("VideoCard", link);
 
   return (
@@ -23,6 +25,16 @@ function VideoCard({ id, link, name, description, usename }) {
       {id && <h3>id: {id}</h3>}
       {usename && <h3> {name}</h3>}
       {description && <h3> {description}</h3>}
+      {admin && (
+        <Button
+          variant="contained"
+          component={Link}
+          color="primary"
+          to={`/admin/videos/${id}`}
+        >
+          Edit
+        </Button>
+      )}
     </div>
   );
 }
