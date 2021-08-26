@@ -149,20 +149,6 @@ const VideoEditForm = ({ editVideo, deleteVideo, tagVideo, untagVideo }) => {
             >
               Submit
             </Button>
-            {/* <Button
-              variant="contained"
-              color="secondary"
-              onClick={async ({ setStatus }) => {
-                let result = await deleteMember(id);
-                if (result.success) {
-                  history.push("/admin/team");
-                } else {
-                  setStatus({ error: result.errors });
-                }
-              }}
-            >
-              Delete
-            </Button> */}
             <ConfirmDialog
               name="Delete"
               title="Are you sure you want to delete?"
@@ -181,13 +167,6 @@ const VideoEditForm = ({ editVideo, deleteVideo, tagVideo, untagVideo }) => {
         )}
       </Formik>
       <h2>Tags:</h2>
-      {/* <div>
-        {availableTags.map((t) => (
-          <p>
-            {t.name} {t.id}
-          </p>
-        ))}
-      </div> */}
       {video.tags &&
         video.tags.map((t) => (
           <div key={t.tag_name}>
