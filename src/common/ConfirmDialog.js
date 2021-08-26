@@ -5,7 +5,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 const ConfirmDialog = (props) => {
-  const { title, children, onConfirm, color } = props;
+  const { name, title, children, onConfirm, color } = props;
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -16,7 +16,7 @@ const ConfirmDialog = (props) => {
   return (
     <div>
       <Button variant="contained" color={color} onClick={handleClickOpen}>
-        Delete
+        {name}
       </Button>
       <Dialog
         open={open}

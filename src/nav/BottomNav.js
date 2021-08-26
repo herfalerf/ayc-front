@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // Bottom sitemap navigation.  Shows up on every page, contains links to social media as well as site links and link for admin access
 //

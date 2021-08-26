@@ -37,6 +37,8 @@ function Routes({
   addVideo,
   editVideo,
   deleteVideo,
+  tagVideo,
+  untagVideo,
 }) {
   console.debug(
     "Routes",
@@ -45,7 +47,10 @@ function Routes({
     `addMember=${typeof addMember}`,
     `editMember=${typeof editMember}`,
     `deleteMember=${typeof deleteMember}`,
-    `addVideo=${typeof addVideo}`
+    `addVideo=${typeof addVideo}`,
+    `deleteVideo=${typeof deleteVideo}`,
+    `tagVideo=${typeof tagVideo}`,
+    `unTagVideo=${typeof untagVideo}`
   );
 
   return (
@@ -104,7 +109,12 @@ function Routes({
           <VideoForm addVideo={addVideo} />
         </PrivateRoute>
         <PrivateRoute exact path="/admin/videos/:id">
-          <VideoEditForm editVideo={editVideo} deleteVideo={deleteVideo} />
+          <VideoEditForm
+            editVideo={editVideo}
+            deleteVideo={deleteVideo}
+            tagVideo={tagVideo}
+            untagVideo={untagVideo}
+          />
         </PrivateRoute>
 
         <Redirect to="/" />

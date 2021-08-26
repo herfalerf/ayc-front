@@ -39,16 +39,7 @@ const Services = () => {
         <button onClick={viewConsulting}>Consulting</button>
       </div>
       <div>{service}</div>
-      <div>
-        <h3>Our results speak for themselves</h3>
-        <h1>Get in Touch To see How We Can Help</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio saepe
-          alias explicabo dignissimos doloribus consequuntur et eum sit?
-          Corrupti, excepturi!
-        </p>
-        <ContactElement />
-      </div>
+      <ContactElement />
     </div>
   );
 };

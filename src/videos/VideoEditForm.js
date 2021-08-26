@@ -7,6 +7,7 @@ import { Button } from "@material-ui/core";
 import ConfirmDialog from "../common/ConfirmDialog";
 import * as yup from "yup";
 import AycApi from "../api/api";
+import SelectTagForm from "./SelectTagForm";
 
 // Video edit form
 //
@@ -16,14 +17,17 @@ import AycApi from "../api/api";
 // Routed as /admin/videos/:id
 //
 
-const VideoEditForm = ({ editVideo, deleteVideo }) => {
+const VideoEditForm = ({ editVideo, deleteVideo, tagVideo, untagVideo }) => {
   const { id } = useParams();
   console.debug("VideoEditForm", "id=", id);
   const [video, setVideo] = useState({
     name: "",
     description: "",
     link: "",
+    tags: [],
   });
+  const [tags, setTags] = useState([]);
+  const [availableTags, setAvailableTags] = useState([]);
 
   const history = useHistory();
   const schema = yup.object().shape({
@@ -31,8 +35,15 @@ const VideoEditForm = ({ editVideo, deleteVideo }) => {
     link: yup.string().required("Link required"),
   });
 
+  useEffect(function getTagsOnMount() {
+    async function getTags() {
+      setTags(await AycApi.getTags());
+    }
+    getTags();
+  }, []);
+
   useDeepCompareEffect(
-    function getVid() {
+    function getVids() {
       async function getVideo() {
         setVideo(await AycApi.getVideo(id));
       }
@@ -41,7 +52,36 @@ const VideoEditForm = ({ editVideo, deleteVideo }) => {
     },
     [id, video]
   );
-  console.debug(video);
+
+  useDeepCompareEffect(
+    function setTagsList() {
+      function setList() {
+        let usedTags = {};
+
+        for (let tag of video.tags) {
+          usedTags[tag.tag_name] = tag.tag_id;
+        }
+
+        let difference = [];
+
+        for (let tag of tags) {
+          if (!usedTags[tag.name]) {
+            console.log(usedTags[tag.name]);
+            difference.push(tag);
+          }
+        }
+        setAvailableTags(difference);
+
+        console.debug("these are the usedTags=", usedTags);
+        console.debug("these are all the tags", tags);
+
+        console.debug("these are the available tags=", availableTags);
+      }
+
+      setList();
+    },
+    [tags, video]
+  );
 
   return (
     <div>
@@ -124,13 +164,14 @@ const VideoEditForm = ({ editVideo, deleteVideo }) => {
               Delete
             </Button> */}
             <ConfirmDialog
+              name="Delete"
               title="Are you sure you want to delete?"
               color="secondary"
               onConfirm={async () => {
                 let result = await deleteVideo(id);
 
                 if (result.success) {
-                  history.push("/admin/videos");
+                  history.push(`/admin/videos`);
                 } else {
                   console.debug("API error", result.errors);
                 }
@@ -140,7 +181,45 @@ const VideoEditForm = ({ editVideo, deleteVideo }) => {
         )}
       </Formik>
       <h2>Tags:</h2>
-      {video.tags && video.tags.map((t) => <h3>{t}</h3>)}
+      {/* <div>
+        {availableTags.map((t) => (
+          <p>
+            {t.name} {t.id}
+          </p>
+        ))}
+      </div> */}
+      {video.tags &&
+        video.tags.map((t) => (
+          <div key={t.tag_name}>
+            <p>{t.tag_name}</p>
+            <ConfirmDialog
+              key={t.tag_id}
+              name="Remove"
+              title="Are you sure you want to remove this tag?"
+              color="secondary"
+              onConfirm={async () => {
+                let data = { tag_id: t.tag_id };
+                let result = await untagVideo(id, data);
+                console.debug(
+                  "this is the result of the remove tag=",
+                  result.success
+                );
+                if (result.success) {
+                  setVideo(result.video);
+                } else {
+                  console.debug("API error", result.errors);
+                }
+              }}
+            />
+          </div>
+        ))}
+
+      <SelectTagForm
+        setVideo={setVideo}
+        videoId={id}
+        availableTags={availableTags}
+        tagVideo={tagVideo}
+      />
     </div>
   );
 };

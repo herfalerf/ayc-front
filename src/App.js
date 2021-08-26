@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, useHistory } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
 import Navigation from "./nav/Navigation";
 import BottomNav from "./nav/BottomNav";
@@ -159,6 +159,26 @@ function App() {
     }
   }
 
+  async function tagVideo(id, data) {
+    try {
+      let video = await AycApi.tagVideo(id, data);
+      return { success: true, video };
+    } catch (errors) {
+      console.error("Failed to add tag to video", errors);
+      return { success: false, errors };
+    }
+  }
+
+  async function untagVideo(id, data) {
+    try {
+      let video = await AycApi.untagVideo(id, data);
+      return { success: true, video };
+    } catch (errors) {
+      console.error("Failed to remove tag from video", errors);
+      return { success: false, errors };
+    }
+  }
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
@@ -175,6 +195,8 @@ function App() {
             addVideo={addVideo}
             editVideo={editVideo}
             deleteVideo={deleteVideo}
+            tagVideo={tagVideo}
+            untagVideo={untagVideo}
           />
           <BottomNav />
         </div>

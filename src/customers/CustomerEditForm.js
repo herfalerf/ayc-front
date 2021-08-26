@@ -16,7 +16,6 @@ import AycApi from "../api/api";
 
 const CustomerEditForm = ({ editCustomer, deleteCustomer }) => {
   const { id } = useParams();
-  const [delErrors, setDelErrors] = useState([]);
   console.debug("CustomerEditForm", "id=", id);
   const [customer, setCustomer] = useState({
     name: "",
@@ -120,31 +119,8 @@ const CustomerEditForm = ({ editCustomer, deleteCustomer }) => {
             >
               Submit
             </Button>
-            {/* <Button
-              variant="contained"
-              color="secondary"
-              onClick={async ({ setStatus }) => {
-                let result = await deleteCustomer(id);
-                if (result.success) {
-                  history.push("/admin/customers");
-                } else {
-                  setStatus({ error: result.errors });
-                }
-              }}
-            >
-              Delete
-            </Button>
-            <AlertDialog
-              alertSubmit={async (setStatus) => {
-                let result = await deleteCustomer(id);
-                if (result.success) {
-                  history.push("/admin/customers");
-                } else {
-                  setStatus({ error: result.errors });
-                }
-              }}
-            ></AlertDialog> */}
             <ConfirmDialog
+              name="Delete"
               title="Are you sure you want to delete?"
               color="secondary"
               onConfirm={async () => {

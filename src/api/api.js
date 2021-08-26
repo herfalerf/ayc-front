@@ -1,5 +1,4 @@
 import axios from "axios";
-import convertToKebabCase from "../helpers/ToKebab";
 
 const BASE_URL =
   process.env.REACT_APP_BASE_URL || "https://ayc-back.herokuapp.com";
@@ -90,7 +89,7 @@ class AycApi {
   //Tags Routes
 
   static async getTags() {
-    let res = await this.request("videos");
+    let res = await this.request("tags");
     return res.tags;
   }
 

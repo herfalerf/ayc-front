@@ -105,21 +105,8 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
             >
               Submit
             </Button>
-            {/* <Button
-              variant="contained"
-              color="secondary"
-              onClick={async ({ setStatus }) => {
-                let result = await deleteMember(id);
-                if (result.success) {
-                  history.push("/admin/team");
-                } else {
-                  setStatus({ error: result.errors });
-                }
-              }}
-            >
-              Delete
-            </Button> */}
             <ConfirmDialog
+              name="Delete"
               title="Are you sure you want to delete?"
               color="secondary"
               onConfirm={async () => {
