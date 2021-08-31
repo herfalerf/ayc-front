@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
-import { Button } from "@material-ui/core";
+import { Button, ButtonGroup } from "@material-ui/core";
+import { Save, DeleteForever } from "@material-ui/icons/";
+// import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import ConfirmDialog from "../common/ConfirmDialog";
 import * as yup from "yup";
 import AycApi from "../api/api";
@@ -97,28 +99,32 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
               <div>API Error: {status.error}</div>
             ) : null}
             <br />
-            <Button
-              variant="contained"
-              color="primary"
-              disabled={isSubmitting}
-              type="submit"
-            >
-              Submit
-            </Button>
-            <ConfirmDialog
-              name="Delete"
-              title="Are you sure you want to delete?"
-              color="secondary"
-              onConfirm={async () => {
-                let result = await deleteMember(id);
+            <ButtonGroup>
+              <Button
+                startIcon={<Save />}
+                variant="contained"
+                color="primary"
+                disabled={isSubmitting}
+                type="submit"
+              >
+                Submit
+              </Button>
+              <ConfirmDialog
+                startIcon={<DeleteForever />}
+                name="Delete"
+                title="Are you sure you want to delete?"
+                color="secondary"
+                onConfirm={async () => {
+                  let result = await deleteMember(id);
 
-                if (result.success) {
-                  history.push("/admin/customers");
-                } else {
-                  console.debug("API error", result.errors);
-                }
-              }}
-            ></ConfirmDialog>
+                  if (result.success) {
+                    history.push("/admin/customers");
+                  } else {
+                    console.debug("API error", result.errors);
+                  }
+                }}
+              ></ConfirmDialog>
+            </ButtonGroup>
           </Form>
         )}
       </Formik>

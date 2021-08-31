@@ -8,12 +8,42 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import AycApi from "./api/api";
 import UserContext from "./auth/UserContext";
 import jwt from "jsonwebtoken";
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
+import { CssBaseline } from "@material-ui/core";
+import "@fontsource/metropolis";
 
 export const TOKEN_STORAGE_ID = "ayc-token";
 
 // AYC application
 
 function App() {
+  let theme = createTheme({
+    typography: {
+      fontFamily: "Metropolis",
+      button: {
+        textTransform: "none",
+      },
+    },
+    palette: {
+      primary: {
+        main: "#00c7d7",
+      },
+      secondary: {
+        main: "#607494",
+      },
+      textPrimary: {
+        main: "#000000",
+      },
+      textSecondary: {
+        main: "#FFFFFF",
+      },
+    },
+  });
+  theme = responsiveFontSizes(theme);
   const [infoLoaded, setInfoLoaded] = useState(false);
   const [token, setToken] = useLocalStorage(TOKEN_STORAGE_ID);
   const [currentUser, setCurrentUser] = useState(null);
@@ -180,28 +210,31 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <UserContext.Provider value={{ currentUser, setCurrentUser }}>
-        <div className="App">
-          <Navigation logout={logout} />
-          <Routes
-            login={login}
-            addCustomer={addCustomer}
-            editCustomer={editCustomer}
-            deleteCustomer={deleteCustomer}
-            addMember={addMember}
-            editMember={editMember}
-            deleteMember={deleteMember}
-            addVideo={addVideo}
-            editVideo={editVideo}
-            deleteVideo={deleteVideo}
-            tagVideo={tagVideo}
-            untagVideo={untagVideo}
-          />
-          <BottomNav />
-        </div>
-      </UserContext.Provider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <UserContext.Provider value={{ currentUser, setCurrentUser }}>
+          <div className="App">
+            <Navigation logout={logout} />
+            <Routes
+              login={login}
+              addCustomer={addCustomer}
+              editCustomer={editCustomer}
+              deleteCustomer={deleteCustomer}
+              addMember={addMember}
+              editMember={editMember}
+              deleteMember={deleteMember}
+              addVideo={addVideo}
+              editVideo={editVideo}
+              deleteVideo={deleteVideo}
+              tagVideo={tagVideo}
+              untagVideo={untagVideo}
+            />
+            <BottomNav />
+          </div>
+        </UserContext.Provider>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

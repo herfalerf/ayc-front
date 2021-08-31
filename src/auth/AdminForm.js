@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import Alert from "../common/Alert";
+import { Formik, Form, Field } from "formik";
+import { TextField } from "formik-material-ui";
+import { Button } from "@material-ui/core";
+import * as yup from "yup";
 
 // Admin Login form.
 //
@@ -15,73 +18,68 @@ import Alert from "../common/Alert";
 
 function AdminForm({ login }) {
   const history = useHistory();
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+  const schema = yup.object().shape({
+    username: yup.string().required("username required"),
+    password: yup.string().required("password required"),
   });
-  const [formErrors, setFormErrors] = useState([]);
 
-  console.debug(
-    "AdminForm",
-    "login=",
-    typeof login,
-    "formData=",
-    formData,
-    "formErrors",
-    formErrors
-  );
-
-  // Handle form submit
-  //
-  // Calls login func prop and, if successful, redirect to /admin.
-  //
-
-  async function handleSubmit(evt) {
-    evt.preventDefault();
-    let result = await login(formData);
-    if (result.success) {
-      history.push("/admin/home");
-    } else {
-      setFormErrors(result.errors);
-    }
-  }
+  console.debug("AdminForm", "login=", typeof login);
 
   // Update form data field
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setFormData((l) => ({ ...l, [name]: value }));
-  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Username</label>
-        <input
-          name="username"
-          className="form-control"
-          value={formData.username}
-          onChange={handleChange}
-          autoComplete="username"
-          required
-        />
-      </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          className="form-control"
-          value={formData.password}
-          onChange={handleChange}
-          autoComplete="current-password"
-          required
-        />
-      </div>
+    <div>
+      <Formik
+        validationSchema={schema}
+        initialValues={{ username: "", password: "" }}
+        onSubmit={async (values, { setStatus, setSubmitting }) => {
+          setStatus(undefined);
+          let result = await login(values);
+          console.log(result);
 
-      {formErrors.length ? <Alert type="danger" messages={formErrors} /> : null}
+          if (result.success) {
+            setSubmitting(false);
+            history.push("/admin/videos");
+          } else {
+            setStatus({ error: result.errors });
+          }
+        }}
+      >
+        {({ isSubmitting, status }) => (
+          <Form>
+            <Field
+              label="username*"
+              type="username"
+              name="username"
+              component={TextField}
+            />
 
-      <button onSubmit={handleSubmit}>Submit</button>
-    </form>
+            <br />
+            <Field
+              label="password"
+              type="password"
+              name="password"
+              component={TextField}
+            />
+
+            <br />
+
+            {status && status.error ? (
+              <div>API Error: {status.error}</div>
+            ) : null}
+            <br />
+            <Button
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 }
 

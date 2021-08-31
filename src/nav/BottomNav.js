@@ -1,15 +1,31 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 
 // Bottom sitemap navigation.  Shows up on every page, contains links to social media as well as site links and link for admin access
 //
 // Rendered by App
 
+const useStyles = makeStyles((theme) => ({
+  botNav: {
+    marginTop: 0,
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/nav/nav.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "left top",
+    // height: "120vh",
+    height: "25vh",
+  },
+  h1: {
+    marginTop: 0,
+  },
+}));
+
 const BottomNav = () => {
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.botNav}>
       <div>
-        <h1>AYC</h1>
+        <h1 className={classes.h1}>AYC</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum
           dolor sit amet, consectetur adipisicing elit. Libero at voluptate
