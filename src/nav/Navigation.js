@@ -1,18 +1,20 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import UserContext from "../auth/UserContext";
 import {
   AppBar,
   Toolbar,
   Typography,
-  Menu,
+  Drawer,
   MenuItem,
   Button,
   IconButton,
-  Grid,
+  Link,
 } from "@material-ui/core";
+
 import MenuIcon from "@material-ui/icons/Menu";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles } from "@material-ui/core/styles";
 import navLogo from "./images/navLogo.png";
 
 const useStyles = makeStyles((theme) =>
@@ -23,9 +25,17 @@ const useStyles = makeStyles((theme) =>
       boxShadow: "none",
       flexGrow: 1,
     },
+    rootMobile: {
+      background: "#607494",
+      // boxShadow: "none",
+      // flexgrow: 1,
+    },
     navLogo: {
       maxHeight: 20,
       // flexGrow: 1,
+    },
+    mobileLogo: {
+      maxHeight: 15,
     },
     navLinks: {
       display: "flex",
@@ -50,6 +60,13 @@ const useStyles = makeStyles((theme) =>
     button: {
       margin: "10px 10px 10px 10px",
     },
+    drawerContainer: {},
+    drawer: {
+      backgroundColor: "#607494",
+    },
+    drawerItem: {
+      color: "#FFFFFF",
+    },
   })
 );
 
@@ -63,66 +80,178 @@ const useStyles = makeStyles((theme) =>
 function Navigation({ logout }) {
   const classes = useStyles();
   const { currentUser } = useContext(UserContext);
-  const Nav = () => {
+  const [state, setState] = useState({
+    mobileView: false,
+    drawerOpen: false,
+  });
+
+  const { mobileView, drawerOpen } = state;
+
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 900
+        ? setState((prevState) => ({ ...prevState, mobileView: true }))
+        : setState((prevState) => ({ ...prevState, mobileView: false }));
+    };
+
+    setResponsiveness();
+    window.addEventListener("resize", () => setResponsiveness());
+
+    return () => {
+      window.removeEventListener("resize", () => setResponsiveness());
+    };
+  }, []);
+
+  const displayDesktop = () => {
     return (
-      <div>
-        <AppBar position="absolute" className={classes.root}>
-          <Toolbar>
-            <Button component={Link} to="/" className={classes.navLogo}>
-              {" "}
-              <img
-                src={navLogo}
-                alt="Align Your Culture"
-                className={classes.navLogo}
-              />
+      <AppBar position="absolute" className={classes.root}>
+        <Toolbar>
+          <Button component={RouterLink} to="/" className={classes.navLogo}>
+            {" "}
+            <img
+              src={navLogo}
+              alt="Align Your Culture"
+              className={classes.navLogo}
+            />
+          </Button>
+          <div className={classes.navLinks}>
+            <Typography
+              className={classes.navLink}
+              component={NavLink}
+              to="/methods"
+              activeClassName={classes.active}
+            >
+              Our Methodology
+            </Typography>
+            <Typography
+              className={classes.navLink}
+              component={NavLink}
+              to="/services"
+              activeClassName={classes.active}
+            >
+              Services
+            </Typography>
+            <Typography
+              className={classes.navLink}
+              component={NavLink}
+              to="/resources"
+              activeClassName={classes.active}
+            >
+              Resources
+            </Typography>
+            <Typography
+              className={classes.navLink}
+              component={NavLink}
+              to="/about"
+              activeClassName={classes.active}
+            >
+              About Us
+            </Typography>
+            <Button
+              className={classes.button}
+              component={NavLink}
+              to="/contact"
+              variant="contained"
+              color="secondary"
+            >
+              Contact Us
             </Button>
-            <div className={classes.navLinks}>
-              <Typography
-                className={classes.navLink}
-                component={NavLink}
-                to="/methods"
-                activeClassName={classes.active}
-              >
-                Our Methodology
-              </Typography>
-              <Typography
-                className={classes.navLink}
-                component={NavLink}
-                to="/services"
-                activeClassName={classes.active}
-              >
-                Services
-              </Typography>
-              <Typography
-                className={classes.navLink}
-                component={NavLink}
-                to="/resources"
-                activeClassName={classes.active}
-              >
-                Resources
-              </Typography>
-              <Typography
-                className={classes.navLink}
-                component={NavLink}
-                to="/about"
-                activeClassName={classes.active}
-              >
-                About Us
-              </Typography>
-              <Button
-                className={classes.button}
-                component={NavLink}
-                to="/contact"
-                variant="contained"
-                color="secondary"
-              >
-                Contact Us
-              </Button>
-            </div>
-          </Toolbar>
-        </AppBar>
-      </div>
+          </div>
+        </Toolbar>
+      </AppBar>
     );
+  };
+
+  const displayMobile = () => {
+    const handleDrawerOpen = () =>
+      setState((prevState) => ({ ...prevState, drawerOpen: true }));
+    const handleDrawerClose = () =>
+      setState((prevState) => ({ ...prevState, drawerOpen: false }));
+    return (
+      <AppBar position="absolute" className={classes.rootMobile}>
+        <Toolbar>
+          <IconButton
+            {...{
+              edge: "start",
+              color: "inherit",
+              "aria-label": "menu",
+              "aria-haspopup": "true",
+              onClick: handleDrawerOpen,
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Drawer
+            // {...{
+            //   anchor: "top",
+            //   open: drawerOpen,
+            //   onClose: handleDrawerClose,
+            //   color: "secondary",
+            // }}
+            anchor="top"
+            open={drawerOpen}
+            onClose={handleDrawerClose}
+            className={classes.drawerContainer}
+          >
+            <div className={classes.drawer}>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/"
+              >
+                <MenuItem>Home</MenuItem>
+              </Link>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/methods"
+              >
+                <MenuItem>Our Methodology</MenuItem>
+              </Link>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/services"
+              >
+                <MenuItem>Services</MenuItem>
+              </Link>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/resources"
+              >
+                <MenuItem>Resources</MenuItem>
+              </Link>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/about"
+              >
+                <MenuItem>About us</MenuItem>
+              </Link>
+              <Link
+                className={classes.drawerItem}
+                component={RouterLink}
+                to="/contact"
+              >
+                <MenuItem>About us</MenuItem>
+              </Link>
+            </div>
+          </Drawer>
+          <div>
+            <img
+              src={navLogo}
+              alt="Align Your Culture"
+              className={classes.mobileLogo}
+            />
+          </div>
+        </Toolbar>
+      </AppBar>
+    );
+  };
+
+  const Nav = () => {
+    return <div>{mobileView ? displayMobile() : displayDesktop()}</div>;
   };
 
   const AdminNav = () => {
@@ -171,7 +300,8 @@ function Navigation({ logout }) {
   return (
     <nav>
       {/* <Link to="/">Align Your Culture</Link> */}
-      {currentUser ? AdminNav() : Nav()}
+      {/* {currentUser ? AdminNav() : Nav()} */}
+      {Nav()}
     </nav>
   );
 }

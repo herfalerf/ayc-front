@@ -35,6 +35,9 @@ function App() {
       secondary: {
         main: "#607494",
       },
+      info: {
+        main: "#FFFFFF",
+      },
       textPrimary: {
         main: "#000000",
       },

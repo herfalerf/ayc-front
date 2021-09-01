@@ -29,8 +29,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home01.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
+    // backgroundAttachment: "fixed",
     // backgroundRepeat: "no-repeat",
     height: "100vh",
+    // maxHeight: "100vh",
 
     // width: "100vw",
   },
@@ -39,27 +41,28 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
     // height: "120vh",
-    height: "100vh",
+    // height: "100vh",
   },
   services: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home03.png')`,
     backgroundSize: "cover",
-    backgroundPosition: "left top",
+    backgroundPosition: "right bottom",
     // height: "120vh",
     height: "100vh",
+    // maxHeight: "100vh",
   },
   contact: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home04.png')`,
     backgroundSize: "cover",
-    backgroundPosition: "left bottom",
+    backgroundPosition: "right bottom",
     // height: "120vh",
-    height: "100%",
+    // height: "100vh",
   },
-  missionItem: { padding: theme.spacing(20) },
-  whatWeDoItem: { padding: theme.spacing(20) },
-  servicesItem: { padding: theme.spacing(12) },
-  contactItem: { padding: theme.spacing(12) },
-  mainItem: { padding: theme.spacing(20) },
+  missionItem: { padding: theme.spacing(2) },
+  whatWeDoItem: { padding: theme.spacing(2) },
+  servicesItem: { padding: theme.spacing(2) },
+  contactItem: { padding: theme.spacing(2) },
+  mainItem: { padding: theme.spacing(2) },
   subItem: { color: "white", padding: theme.spacing(2) },
   missionText: {
     color: "white",
@@ -109,7 +112,12 @@ function Homepage({ addCustomer }) {
   return (
     <div className={classes.root}>
       <div>
-        <Grid container className={classes.mission}>
+        <Grid
+          container
+          className={classes.mission}
+          justifyContent="flex-start"
+          alignItems="center"
+        >
           <Grid item xs={12} sm={6} className={classes.missionItem}>
             <Typography
               className={classes.subItem}
@@ -145,20 +153,29 @@ function Homepage({ addCustomer }) {
         </Grid>
       </div>
       <div>
-        <Grid container className={classes.whatWeDo}>
+        <Grid
+          container
+          className={classes.whatWeDo}
+          justifyContent="flex-start"
+          alignItems="center"
+        >
           <Grid item xs={12} sm={6} className={classes.whatWeDoItem}>
-            <Grid>
-              <Icon className={classes.logoMark}>
-                <img src={ic_logomark} className={classes.logoMark} />
-              </Icon>
-              <Typography
-                className={classes.logoText}
-                variant="subtitle1"
-                component="span"
-              >
-                WHAT WE DO
-              </Typography>
-            </Grid>
+            {/* <Grid> */}
+            <Icon className={classes.logoMark}>
+              <img
+                src={ic_logomark}
+                alt="logo mark"
+                className={classes.logoMark}
+              />
+            </Icon>
+            <Typography
+              className={classes.logoText}
+              variant="subtitle1"
+              component="span"
+            >
+              WHAT WE DO
+            </Typography>
+            {/* </Grid> */}
             <Typography variant="h4" className={classes.subTitleText}>
               How Culture Aligment Model Skyrockets Your Efficiency
             </Typography>
@@ -195,20 +212,29 @@ function Homepage({ addCustomer }) {
         </Grid>
       </div>
       <div>
-        <Grid container justifyContent="flex-end" className={classes.services}>
+        <Grid
+          container
+          justifyContent="flex-end"
+          alignContent="center"
+          className={classes.services}
+        >
           <Grid item xs={12} sm={6} className={classes.servicesItem}>
-            <Grid>
-              <Icon className={classes.logoMark}>
-                <img src={ic_logomark} className={classes.logoMark} />
-              </Icon>
-              <Typography
-                className={classes.logoText}
-                variant="subtitle1"
-                component="span"
-              >
-                OUR SERVICES
-              </Typography>
-            </Grid>
+            {/* <Grid> */}
+            <Icon className={classes.logoMark}>
+              <img
+                src={ic_logomark}
+                alt="logo mark"
+                className={classes.logoMark}
+              />
+            </Icon>
+            <Typography
+              className={classes.logoText}
+              variant="subtitle1"
+              component="span"
+            >
+              OUR SERVICES
+            </Typography>
+            {/* </Grid> */}
             <Typography variant="h4" className={classes.subTitleText}>
               Move from Talking About Your Culture to Tranforming It
             </Typography>
