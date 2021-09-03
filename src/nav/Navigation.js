@@ -182,12 +182,6 @@ function Navigation({ logout }) {
             <MenuIcon />
           </IconButton>
           <Drawer
-            // {...{
-            //   anchor: "top",
-            //   open: drawerOpen,
-            //   onClose: handleDrawerClose,
-            //   color: "secondary",
-            // }}
             anchor="top"
             open={drawerOpen}
             onClose={handleDrawerClose}

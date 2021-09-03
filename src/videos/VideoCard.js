@@ -14,8 +14,8 @@ function VideoCard({ id, link, name, description, usename, admin }) {
   return (
     <div>
       <iframe
-        width="560"
-        height="315"
+        width="300"
+        height="230"
         src={link}
         title="YouTube video player"
         frameBorder="0"

@@ -119,11 +119,7 @@ function Homepage({ addCustomer }) {
           alignItems="center"
         >
           <Grid item xs={12} sm={6} className={classes.missionItem}>
-            <Typography
-              className={classes.subItem}
-              color="textSecondary"
-              variant="h2"
-            >
+            <Typography className={classes.subItem} variant="h2">
               <span className={classes.missionTextUnderline}>Our Mission</span>{" "}
               is to Inspire Organizations to{" "}
               <span className={classes.missionTextUnderline}>
