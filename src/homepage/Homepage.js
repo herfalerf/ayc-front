@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
     // height: "120vh",
-    // height: "100vh",
+    minHeight: "50vh",
   },
   services: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home03.png')`,
