@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
+import CardButton from "../common/CardButton";
 import ContactForm from "../contact/ContactForm";
 import VideoList from "../videos/VideoList";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,6 +14,9 @@ import {
   Icon,
 } from "@material-ui/core";
 import ic_logomark from "../common/images/ic_logomark.svg";
+import ic_service_workshops from "../common/images/ic_services_workshops.svg";
+import ic_service_assessment from "../common/images/ic_services_assessment.svg";
+import ic_service_consulting from "../common/images/ic_services_consulting.svg";
 
 // Homepage of site.
 //
@@ -64,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
   contactItem: { padding: theme.spacing(2) },
   mainItem: { padding: theme.spacing(2) },
   subItem: { color: "white", padding: theme.spacing(2) },
+  cardButton: { marginTop: theme.spacing(2), marginRight: theme.spacing(2) },
   missionText: {
     color: "white",
     borderBottom: "2px solid rgba(0, 0, 0, 0.0)",
@@ -214,8 +219,7 @@ function Homepage({ addCustomer }) {
           alignContent="center"
           className={classes.services}
         >
-          <Grid item xs={12} sm={6} className={classes.servicesItem}>
-            {/* <Grid> */}
+          <Grid item xs={12} sm={6}>
             <Icon className={classes.logoMark}>
               <img
                 src={ic_logomark}
@@ -230,21 +234,43 @@ function Homepage({ addCustomer }) {
             >
               OUR SERVICES
             </Typography>
-            {/* </Grid> */}
+
             <Typography variant="h4" className={classes.subTitleText}>
               Move from Talking About Your Culture to Tranforming It
             </Typography>
-            <List>
-              <ListItem>
-                <ListItemText primary="Workshops" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Culture Assessments" />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Consulting" />
-              </ListItem>
-            </List>
+            <Grid item className={classes.cardButton}>
+              <CardButton
+                icon={ic_service_workshops}
+                alt="workshops button"
+                headerText="Workshops"
+                bodyText=" Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quidem, perspiciatis.
+              "
+                route="/services"
+              />
+            </Grid>
+            <Grid item className={classes.cardButton}>
+              <CardButton
+                icon={ic_service_assessment}
+                alt="assessments button"
+                headerText="Culture Assessments"
+                bodyText=" Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quidem, perspiciatis.
+              "
+                route="/services"
+              />
+            </Grid>
+            <Grid item className={classes.cardButton}>
+              <CardButton
+                icon={ic_service_consulting}
+                alt="consulting button"
+                headerText="Consulting"
+                bodyText=" Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quidem, perspiciatis.
+              "
+                route="/services"
+              />
+            </Grid>
           </Grid>
         </Grid>
       </div>

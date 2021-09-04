@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
   },
   botLogoItem: {
-    padding: theme.spacing(20),
+    padding: theme.spacing(2),
   },
   botItem: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
   },
 
   botLogo: {
@@ -65,19 +65,18 @@ const BottomNav = () => {
             xs={6}
             className={classes.botItem}
           >
-            <Grid item xs={12}>
+            <Grid item xs={8} classname={classes.botItem}>
               {" "}
               <img
                 src={process.env.PUBLIC_URL + "/images/logos/Logo03b.png"}
                 className={classes.botLogo}
               ></img>
-            </Grid>
-            <Grid item xs={12}>
               <Typography className={classes.textWhite}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem
                 ipsum dolor sit amet, consectetur adipisicing elit.
               </Typography>
             </Grid>
+            {/* <Grid item xs={6}></Grid> */}
           </Grid>
           <Grid item xs={2} className={classes.botItem}>
             <List>
@@ -119,23 +118,6 @@ const BottomNav = () => {
                 </Link>
               </ListItem>
             </List>
-            {/* <ul>
-              <li>
-                <NavLink to="/methods">Methodology</NavLink>
-              </li>
-              <li>
-                <NavLink to="/services">Services</NavLink>
-              </li>
-              <li>
-                <NavLink to="/resources">Resources</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About Us</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul> */}
           </Grid>
           <Grid item xs={2} className={classes.botItem}>
             <List>
