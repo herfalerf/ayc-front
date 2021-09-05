@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
   services: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home03.png')`,
     backgroundSize: "cover",
-    backgroundPosition: "right bottom",
+    backgroundPosition: "right top",
     // height: "120vh",
-    height: "100vh",
+    height: "75vh",
     // maxHeight: "100vh",
   },
   contact: {
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "2px solid #00c7d7",
   },
   testColor: { color: "blue" },
-  linkButton: { margin: theme.spacing(2) },
+  linkButton: { margin: theme.spacing(2), color: "#FFFFFF" },
   logoMark: { height: "15px", margin: "auto" },
   logoText: {
     fontWeight: "bold",
@@ -222,7 +222,7 @@ function Homepage({ addCustomer, setService }) {
           alignContent="center"
           className={classes.services}
         >
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className={classes.servicesItem}>
             <Icon className={classes.logoMark}>
               <img
                 src={ic_logomark}

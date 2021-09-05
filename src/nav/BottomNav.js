@@ -27,6 +27,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center center",
     // height: "120vh",
     minHeight: "25vh",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+
+  botNavMobile: {
+    marginTop: 0,
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/nav/nav.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    // height: "120vh",
+    minHeight: "25vh",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   h1: {
     marginTop: 0,
@@ -51,132 +66,184 @@ const useStyles = makeStyles((theme) => ({
 
 const BottomNav = () => {
   const classes = useStyles();
-  return (
-    <div className={classes.botNav}>
-      <div>
-        <Grid container>
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="flex-start"
-            item
-            xs={6}
-            className={classes.botItem}
-          >
-            <Grid item xs={8} classname={classes.botItem}>
-              {" "}
-              <img
-                src={process.env.PUBLIC_URL + "/images/logos/Logo03b.png"}
-                alt="AYC Logo"
-                className={classes.botLogo}
-              ></img>
-              <Typography className={classes.textWhite}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit.
-              </Typography>
-            </Grid>
-            {/* <Grid item xs={6}></Grid> */}
-          </Grid>
-          <Grid item xs={2} className={classes.botItem}>
-            <List>
-              <ListItem>
-                <ListItemText
-                  className={classes.textPrimary}
-                  primary="QUICK LINKS"
-                ></ListItemText>
-              </ListItem>
-              <ListItem>
-                <Link component={RouterLink} to="/">
-                  <ListItemText className={classes.textWhite} primary="Home" />
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link component={RouterLink} to="/methods">
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Methodology"
-                  />
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link component={RouterLink} to="/about">
-                  {" "}
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="About Us"
-                  />
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link component={RouterLink} to="/contact">
-                  {" "}
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Contact"
-                  />
-                </Link>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={2} className={classes.botItem}>
-            <List>
-              <ListItem className={classes.textPrimary}>
-                <ListItemText primary="OUR SERVICES" />
-              </ListItem>
-              <ListItem>
-                <Link component={RouterLink}>
-                  {" "}
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Workshops"
-                  />
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link>
-                  {" "}
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Culture Assessments"
-                  />
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link>
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Consulting"
-                  />
-                </Link>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={2} className={classes.botItem}>
-            <List>
-              <ListItem className={classes.textPrimary}>
-                <ListItemText primary="RESOURCES" />
-              </ListItem>
-              <ListItem>
-                <Link>
-                  {" "}
-                  <ListItemText
-                    className={classes.textWhite}
-                    primary="Video Library"
-                  />
-                </Link>
-              </ListItem>
-            </List>
-          </Grid>
 
+  const displayDesktop = () => {
+    return (
+      <div className={classes.botNav}>
+        <div>
           <Grid container>
-            <Grid item xs={3} className={classes.botItem}>
-              <Typography className={classes.textWhite}>
-                <PhoneIcon />
-                1-800-123-1234
-              </Typography>
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="flex-start"
+              item
+              xs={6}
+              className={classes.botItem}
+            >
+              <Grid item xs={8} classname={classes.botItem}>
+                {" "}
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logos/Logo03b.png"}
+                  alt="AYC Logo"
+                  className={classes.botLogo}
+                ></img>
+                <Typography className={classes.textWhite}>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </Typography>
+              </Grid>
+              {/* <Grid item xs={6}></Grid> */}
+            </Grid>
+            <Grid item xs={2} className={classes.botItem}>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    className={classes.textPrimary}
+                    primary="QUICK LINKS"
+                  ></ListItemText>
+                </ListItem>
+                <ListItem>
+                  <Link component={RouterLink} to="/">
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Home"
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link component={RouterLink} to="/methods">
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Methodology"
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link component={RouterLink} to="/about">
+                    {" "}
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="About Us"
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link component={RouterLink} to="/contact">
+                    {" "}
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Contact"
+                    />
+                  </Link>
+                </ListItem>
+              </List>
+            </Grid>
+            <Grid item xs={2} className={classes.botItem}>
+              <List>
+                <ListItem className={classes.textPrimary}>
+                  <ListItemText primary="OUR SERVICES" />
+                </ListItem>
+                <ListItem>
+                  <Link component={RouterLink}>
+                    {" "}
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Workshops"
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    {" "}
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Culture Assessments"
+                    />
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Consulting"
+                    />
+                  </Link>
+                </ListItem>
+              </List>
+            </Grid>
+            <Grid item xs={2} className={classes.botItem}>
+              <List>
+                <ListItem className={classes.textPrimary}>
+                  <ListItemText primary="RESOURCES" />
+                </ListItem>
+                <ListItem>
+                  <Link>
+                    {" "}
+                    <ListItemText
+                      className={classes.textWhite}
+                      primary="Video Library"
+                    />
+                  </Link>
+                </ListItem>
+              </List>
             </Grid>
 
-            <Grid item xs={3} className={classes.botItem}>
+            <Grid container>
+              <Grid item xs={3} className={classes.botItem}>
+                <Typography className={classes.textWhite}>
+                  <PhoneIcon />
+                  1-800-123-1234
+                </Typography>
+              </Grid>
+
+              <Grid item xs={3} className={classes.botItem}>
+                <Link component="a" href="mailto:test@email.com">
+                  <Typography className={classes.textWhite}>
+                    <MailOutlineIcon />
+                    test@email.com
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item xs={1} className={classes.botItem}>
+                <Link component="a" href="https://www.facebook.com">
+                  <FacebookIcon className={classes.textWhite} />
+                </Link>
+              </Grid>
+              <Grid item xs={1} className={classes.botItem}>
+                <Link componet="a" href="https://www.linkedin.com">
+                  <LinkedInIcon className={classes.textWhite} />
+                </Link>
+              </Grid>
+              <Grid item xs={3} className={classes.botItem}>
+                <Typography className={classes.textWhite}>
+                  <CopyrightIcon />
+                  2021 AYC. All Rights Reserved
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </div>
+
+        {/* <NavLink to="/admin">Admin</NavLink> */}
+      </div>
+    );
+  };
+
+  const displayMobile = () => {
+    return (
+      <div className={classes.botNavMobile}>
+        <div>
+          <Grid container>
+            <Grid item xs={6} className={classes.botItem}>
+              <Link component="a" href="tel:1231231234">
+                <Typography className={classes.textWhite}>
+                  <PhoneIcon />
+                  123-123-1234
+                </Typography>
+              </Link>
+            </Grid>
+
+            <Grid item xs={6} className={classes.botItem}>
               <Link component="a" href="mailto:test@email.com">
                 <Typography className={classes.textWhite}>
                   <MailOutlineIcon />
@@ -184,29 +251,37 @@ const BottomNav = () => {
                 </Typography>
               </Link>
             </Grid>
-            <Grid item xs={1} className={classes.botItem}>
+            <Grid item xs={6} className={classes.botItem}>
               <Link component="a" href="https://www.facebook.com">
                 <FacebookIcon className={classes.textWhite} />
               </Link>
             </Grid>
-            <Grid item xs={1} className={classes.botItem}>
+            <Grid item xs={6} className={classes.botItem}>
               <Link componet="a" href="https://www.linkedin.com">
                 <LinkedInIcon className={classes.textWhite} />
               </Link>
             </Grid>
-            <Grid item xs={3} className={classes.botItem}>
+            <Grid item xs={12} className={classes.botItem}>
               <Typography className={classes.textWhite}>
                 <CopyrightIcon />
                 2021 AYC. All Rights Reserved
               </Typography>
             </Grid>
           </Grid>
-        </Grid>
+        </div>
       </div>
+    );
+  };
 
-      {/* <NavLink to="/admin">Admin</NavLink> */}
-    </div>
-  );
+  const botNav = () => {
+    return (
+      <div>
+        {displayDesktop()} {displayMobile()}
+      </div>
+    );
+  };
+
+  return botNav();
 };
 
 export default BottomNav;
