@@ -4,6 +4,9 @@ import { Button } from "@material-ui/core";
 import CardButton from "../common/CardButton";
 import ContactForm from "../contact/ContactForm";
 import VideoList from "../videos/VideoList";
+import Workshops from "../services/Workshops";
+import Assessments from "../services/Assessments";
+import Consulting from "../services/Consulting";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Typography,
@@ -107,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Homepage({ addCustomer }) {
+function Homepage({ addCustomer, setService }) {
   // const { currentUser } = useContext(UserContext);
   // console.debug("Homepage", "currentUser=", currentUser)
   console.debug("HomePage", "addCustomer=", typeof addCustomer);
@@ -247,6 +250,9 @@ function Homepage({ addCustomer }) {
               consectetur adipisicing elit. Quidem, perspiciatis.
               "
                 route="/services"
+                onClick={() => {
+                  setService(Workshops);
+                }}
               />
             </Grid>
             <Grid item className={classes.cardButton}>
@@ -258,6 +264,9 @@ function Homepage({ addCustomer }) {
               consectetur adipisicing elit. Quidem, perspiciatis.
               "
                 route="/services"
+                onClick={() => {
+                  setService(Assessments);
+                }}
               />
             </Grid>
             <Grid item className={classes.cardButton}>
@@ -269,6 +278,9 @@ function Homepage({ addCustomer }) {
               consectetur adipisicing elit. Quidem, perspiciatis.
               "
                 route="/services"
+                onClick={() => {
+                  setService(Consulting);
+                }}
               />
             </Grid>
           </Grid>

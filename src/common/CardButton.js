@@ -4,16 +4,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
-  Button,
   Typography,
   Icon,
   Grid,
 } from "@material-ui/core";
-import ic_service_workshops from "./images/ic_services_workshops.svg";
+
 import ic_arrow_small_blue from "./images/ic_arrow_small_blue.svg";
-import { HeadsetMicRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CardButton = ({ icon, alt, headerText, bodyText, route }) => {
+const CardButton = ({ icon, alt, headerText, bodyText, route, onClick }) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -39,6 +36,7 @@ const CardButton = ({ icon, alt, headerText, bodyText, route }) => {
         className={classes.cardAction}
         component={Link}
         to={route}
+        onClick={onClick}
       >
         <CardContent>
           <Grid container justifyContent="space-between" alignItems="center">

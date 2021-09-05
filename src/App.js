@@ -6,6 +6,7 @@ import BottomNav from "./nav/BottomNav";
 import Routes from "./routes/Routes";
 import LoadingSpinner from "./common/LoadingSpinner";
 import AycApi from "./api/api";
+import Workshops from "./services/Workshops";
 import UserContext from "./auth/UserContext";
 import jwt from "jsonwebtoken";
 import {
@@ -50,6 +51,7 @@ function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
   const [token, setToken] = useLocalStorage(TOKEN_STORAGE_ID);
   const [currentUser, setCurrentUser] = useState(null);
+  const [service, setService] = useState(Workshops);
 
   useEffect(
     function loadAdminInfo() {
@@ -232,6 +234,8 @@ function App() {
               deleteVideo={deleteVideo}
               tagVideo={tagVideo}
               untagVideo={untagVideo}
+              service={service}
+              setService={setService}
             />
             <BottomNav />
           </div>

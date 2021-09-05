@@ -1,9 +1,7 @@
 import React from "react";
 import { Button, Card } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import IframeResizer from "iframe-resizer-react";
 import ReactPlayer from "react-player";
-import { classes } from "istanbul-lib-coverage";
 import { makeStyles } from "@material-ui/core/styles";
 import "./videocard.css";
 

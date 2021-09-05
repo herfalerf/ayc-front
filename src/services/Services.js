@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ContactElement from "../contact/ContactElement";
 import Workshops from "./Workshops";
 import Assessments from "./Assessments";
@@ -12,10 +12,8 @@ import Consulting from "./Consulting";
 //
 // Routes -> services
 
-const Services = () => {
+const Services = ({ service, setService }) => {
   console.debug("Services");
-
-  const [service, setService] = useState(Workshops);
 
   function viewWorkshops(evt) {
     setService(Workshops);

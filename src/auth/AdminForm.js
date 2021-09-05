@@ -4,6 +4,8 @@ import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button } from "@material-ui/core";
 import * as yup from "yup";
+import { makeStyles } from "@material-ui/core/styles";
+import { CallMissedSharp } from "@material-ui/icons";
 
 // Admin Login form.
 //
@@ -16,6 +18,18 @@ import * as yup from "yup";
 // Routed as /login
 //
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  upper: {
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/admin-home/admin-home01.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center bottom",
+    minHeight: "25vh",
+  },
+}));
+
 function AdminForm({ login }) {
   const history = useHistory();
   const schema = yup.object().shape({
@@ -25,10 +39,13 @@ function AdminForm({ login }) {
 
   console.debug("AdminForm", "login=", typeof login);
 
+  const classes = useStyles();
+
   // Update form data field
 
   return (
     <div>
+      <div className={classes.upper}></div>
       <Formik
         validationSchema={schema}
         initialValues={{ username: "", password: "" }}

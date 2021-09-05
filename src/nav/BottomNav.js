@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -8,7 +7,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  Icon,
   Link,
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -69,6 +67,7 @@ const BottomNav = () => {
               {" "}
               <img
                 src={process.env.PUBLIC_URL + "/images/logos/Logo03b.png"}
+                alt="AYC Logo"
                 className={classes.botLogo}
               ></img>
               <Typography className={classes.textWhite}>

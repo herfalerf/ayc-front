@@ -24,11 +24,17 @@ const useStyles = makeStyles((theme) =>
       // backgroundColor: "#212931",
       boxShadow: "none",
       flexGrow: 1,
+      [theme.breakpoints.down("xs")]: {
+        display: "none",
+      },
     },
     rootMobile: {
       background: "#607494",
-      // boxShadow: "none",
-      // flexgrow: 1,
+      [theme.breakpoints.up("sm")]: {
+        display: "none",
+      },
+      boxShadow: "none",
+      flexgrow: 1,
     },
     navLogo: {
       maxHeight: 20,
@@ -52,10 +58,6 @@ const useStyles = makeStyles((theme) =>
     active: {
       margin: "10px 10px 10px 10px",
       borderBottom: "2px solid #00c7d7",
-      // paddingBottom: "2px",
-      // textDecoration: "underline",
-      // textDecorationColor: "#00c7d7",
-      // textDecorationThickness: "2px",
     },
     button: {
       margin: "10px 10px 10px 10px",
@@ -80,29 +82,19 @@ const useStyles = makeStyles((theme) =>
 function Navigation({ logout }) {
   const classes = useStyles();
   const { currentUser } = useContext(UserContext);
+
   const [state, setState] = useState({
-    mobileView: false,
     drawerOpen: false,
+    adminOpen: false,
   });
 
-  const { mobileView, drawerOpen } = state;
-
-  useEffect(() => {
-    const setResponsiveness = () => {
-      return window.innerWidth < 900
-        ? setState((prevState) => ({ ...prevState, mobileView: true }))
-        : setState((prevState) => ({ ...prevState, mobileView: false }));
-    };
-
-    setResponsiveness();
-    window.addEventListener("resize", () => setResponsiveness());
-
-    return () => {
-      window.removeEventListener("resize", () => setResponsiveness());
-    };
-  }, []);
+  const { drawerOpen, adminOpen } = state;
 
   const displayDesktop = () => {
+    const handleDrawerOpen = () =>
+      setState((prevState) => ({ ...prevState, adminOpen: true }));
+    const handleDrawerClose = () =>
+      setState((prevState) => ({ ...prevState, adminOpen: false }));
     return (
       <AppBar position="absolute" className={classes.root}>
         <Toolbar>
@@ -115,6 +107,63 @@ function Navigation({ logout }) {
             />
           </Button>
           <div className={classes.navLinks}>
+            {currentUser && (
+              <div>
+                <Button
+                  className={classes.button}
+                  onClick={handleDrawerOpen}
+                  variant="contained"
+                  color="secondary"
+                >
+                  Admin
+                </Button>
+                <Drawer
+                  anchor="top"
+                  open={adminOpen}
+                  onClose={handleDrawerClose}
+                  className={classes.drawerContainer}
+                >
+                  <div className={classes.drawer} onClick={handleDrawerClose}>
+                    <Link
+                      className={classes.drawerItem}
+                      component={RouterLink}
+                      to="/admin/home"
+                    >
+                      <MenuItem>Admin Home</MenuItem>
+                    </Link>
+                    <Link
+                      className={classes.drawerItem}
+                      component={RouterLink}
+                      to="/admin/team"
+                    >
+                      <MenuItem>Team Manager</MenuItem>
+                    </Link>
+                    <Link
+                      className={classes.drawerItem}
+                      component={RouterLink}
+                      to="/admin/customers"
+                    >
+                      <MenuItem>Customers</MenuItem>
+                    </Link>
+                    <Link
+                      className={classes.drawerItem}
+                      component={RouterLink}
+                      to="/admin/videos"
+                    >
+                      <MenuItem>Video Manager</MenuItem>
+                    </Link>
+                    <Link
+                      className={classes.drawerItem}
+                      component={RouterLink}
+                      to="/"
+                      onClick={logout}
+                    >
+                      <MenuItem>Log Out</MenuItem>
+                    </Link>
+                  </div>
+                </Drawer>{" "}
+              </div>
+            )}
             <Typography
               className={classes.navLink}
               component={NavLink}
@@ -167,27 +216,31 @@ function Navigation({ logout }) {
       setState((prevState) => ({ ...prevState, drawerOpen: true }));
     const handleDrawerClose = () =>
       setState((prevState) => ({ ...prevState, drawerOpen: false }));
+    const handleAdminOpen = () =>
+      setState((prevState) => ({ ...prevState, adminOpen: true }));
+    const handleAdminClose = () =>
+      setState((prevState) => ({ ...prevState, adminOpen: false }));
+
     return (
       <AppBar position="absolute" className={classes.rootMobile}>
         <Toolbar>
           <IconButton
-            {...{
-              edge: "start",
-              color: "inherit",
-              "aria-label": "menu",
-              "aria-haspopup": "true",
-              onClick: handleDrawerOpen,
-            }}
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            aria-haspopup="true"
+            onClick={handleDrawerOpen}
           >
             <MenuIcon />
           </IconButton>
+
           <Drawer
             anchor="top"
             open={drawerOpen}
             onClose={handleDrawerClose}
             className={classes.drawerContainer}
           >
-            <div className={classes.drawer}>
+            <div className={classes.drawer} onClick={handleDrawerClose}>
               <Link
                 className={classes.drawerItem}
                 component={RouterLink}
@@ -228,7 +281,7 @@ function Navigation({ logout }) {
                 component={RouterLink}
                 to="/contact"
               >
-                <MenuItem>About us</MenuItem>
+                <MenuItem>Contact</MenuItem>
               </Link>
             </div>
           </Drawer>
@@ -239,65 +292,78 @@ function Navigation({ logout }) {
               className={classes.mobileLogo}
             />
           </div>
+          {currentUser && (
+            <div>
+              <Button
+                className={classes.button}
+                onClick={handleAdminOpen}
+                variant="contained"
+                color="secondary"
+              >
+                Admin
+              </Button>
+              <Drawer
+                anchor="top"
+                open={adminOpen}
+                onClose={handleAdminClose}
+                className={classes.drawerContainer}
+              >
+                <div className={classes.drawer} onClick={handleAdminClose}>
+                  <Link
+                    className={classes.drawerItem}
+                    component={RouterLink}
+                    to="/admin/home"
+                  >
+                    <MenuItem>Admin Home</MenuItem>
+                  </Link>
+                  <Link
+                    className={classes.drawerItem}
+                    component={RouterLink}
+                    to="/admin/team"
+                  >
+                    <MenuItem>Team Manager</MenuItem>
+                  </Link>
+                  <Link
+                    className={classes.drawerItem}
+                    component={RouterLink}
+                    to="/admin/customers"
+                  >
+                    <MenuItem>Customers</MenuItem>
+                  </Link>
+                  <Link
+                    className={classes.drawerItem}
+                    component={RouterLink}
+                    to="/admin/videos"
+                  >
+                    <MenuItem>Video Manager</MenuItem>
+                  </Link>
+                  <Link
+                    className={classes.drawerItem}
+                    component={RouterLink}
+                    to="/"
+                    onClick={logout}
+                  >
+                    <MenuItem>Log Out</MenuItem>
+                  </Link>
+                </div>
+              </Drawer>{" "}
+            </div>
+          )}
         </Toolbar>
       </AppBar>
     );
   };
 
   const Nav = () => {
-    return <div>{mobileView ? displayMobile() : displayDesktop()}</div>;
-  };
-
-  const AdminNav = () => {
     return (
       <div>
-        <ul>
-          <li>
-            <NavLink to="/methods">Methodology</NavLink>
-          </li>
-          <li>
-            <NavLink to="/services">Services</NavLink>
-          </li>
-          <li>
-            <NavLink to="/resources">Resources</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About Us</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact Us</NavLink>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <NavLink to="/admin/home">Admin Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/admin/team">Team Manager</NavLink>
-          </li>
-          <li>
-            <NavLink to="/admin/customers">Customers</NavLink>
-          </li>
-          <li>
-            <NavLink to="/admin/videos">Video Manager</NavLink>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/" onClick={logout}>
-              Log out
-            </Link>
-          </li>
-        </ul>
+        {displayDesktop()}
+        {displayMobile()}
       </div>
     );
   };
 
-  return (
-    <nav>
-      {/* <Link to="/">Align Your Culture</Link> */}
-      {/* {currentUser ? AdminNav() : Nav()} */}
-      {Nav()}
-    </nav>
-  );
+  return <nav>{Nav()}</nav>;
 }
 
 export default Navigation;

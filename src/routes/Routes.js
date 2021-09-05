@@ -39,6 +39,8 @@ function Routes({
   deleteVideo,
   tagVideo,
   untagVideo,
+  service,
+  setService,
 }) {
   console.debug(
     "Routes",
@@ -57,13 +59,13 @@ function Routes({
     <div>
       <Switch>
         <Route exact path="/">
-          <Homepage addCustomer={addCustomer} />
+          <Homepage addCustomer={addCustomer} setService={setService} />
         </Route>
         <Route exact path="/methods">
           <Methods />
         </Route>
         <Route exact path="/services">
-          <Services />
+          <Services service={service} setService={setService} />
         </Route>
         <Route exact path="/resources">
           <VideoLibrary />
