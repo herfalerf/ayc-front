@@ -24,13 +24,13 @@ const useStyles = makeStyles((theme) =>
       // backgroundColor: "#212931",
       boxShadow: "none",
       flexGrow: 1,
-      [theme.breakpoints.down("xs")]: {
+      [theme.breakpoints.down("sm")]: {
         display: "none",
       },
     },
     rootMobile: {
       background: "#607494",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         display: "none",
       },
       boxShadow: "none",
@@ -203,7 +203,7 @@ function Navigation({ logout }) {
               variant="contained"
               color="secondary"
             >
-              Contact Us
+              Contact
             </Button>
           </div>
         </Toolbar>

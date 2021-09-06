@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     // maxHeight: "100vh",
   },
   contact: {
-    backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home04.png')`,
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/contact/contactlink.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
     // height: "120vh",

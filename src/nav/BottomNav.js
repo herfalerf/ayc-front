@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   botItem: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
   },
 
   botLogo: {
@@ -233,7 +233,7 @@ const BottomNav = () => {
     return (
       <div className={classes.botNavMobile}>
         <div>
-          <Grid container>
+          <Grid container direction="column">
             <Grid item xs={6} className={classes.botItem}>
               <Link component="a" href="tel:1231231234">
                 <Typography className={classes.textWhite}>
