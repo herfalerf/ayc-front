@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import * as yup from "yup";
 
 // Contact Form.
@@ -17,7 +18,15 @@ import * as yup from "yup";
 // Routed as /
 //
 
+const useStyles = makeStyles((theme) => ({
+  root: { flexGrow: 1 },
+  linkButton: { color: "#FFFFFF" },
+  formColor: { color: "#FFFFFF !important" },
+}));
+
 const ContactForm = ({ addCustomer, sendEmail }) => {
+  const classes = useStyles();
+
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -122,8 +131,9 @@ const ContactForm = ({ addCustomer, sendEmail }) => {
               color="primary"
               disabled={isSubmitting}
               type="submit"
+              className={classes.linkButton}
             >
-              Submit
+              Send A Message
             </Button>
           </Form>
         )}

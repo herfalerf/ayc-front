@@ -7,7 +7,7 @@ import VideoLibrary from "../videos/VideoLibrary";
 import VideoManager from "../videos/VideoManager";
 import VideoForm from "../videos/VideoForm";
 import VideoEditForm from "../videos/VideoEditForm";
-import TeamList from "../team/TeamList";
+import About from "../team/About";
 import TeamManager from "../team/TeamManager";
 import TeamForm from "../team/TeamForm";
 import TeamEditForm from "../team/TeamEditForm";
@@ -71,7 +71,7 @@ function Routes({
           <VideoLibrary />
         </Route>
         <Route exact path="/about">
-          <TeamList />
+          <About />
         </Route>
         <Route exact path="/contact">
           <Contactpage addCustomer={addCustomer} />

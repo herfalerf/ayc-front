@@ -1,0 +1,21 @@
+<svg id="ic_contact_mail" xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #699e2e;
+        fill-opacity: 0;
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-opacity: 0.1;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        fill: #2dc0d2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_11_copy" data-name="Ellipse 11 copy" class="cls-1" cx="50.5" cy="50.5" r="50"/>
+  <path id="mail_copy_2" data-name="mail copy 2" class="cls-2" d="M723,766H711a2,2,0,0,0-2,2v9a2,2,0,0,0,2,2h12a2,2,0,0,0,2-2v-9A2,2,0,0,0,723,766Zm-1.509,2-3.785,3.783a1,1,0,0,1-1.414,0L712.508,768h8.983ZM722,777H712a1,1,0,0,1-1-1v-6.68l4.585,4.585a2,2,0,0,0,2.829,0L723,769.318V776A1,1,0,0,1,722,777Z" transform="translate(-665.5 -721.5)"/>
+</svg>

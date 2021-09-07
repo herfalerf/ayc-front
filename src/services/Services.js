@@ -96,7 +96,7 @@ const Services = ({ service, setService }) => {
         <Grid
           container
           justifyContent="space-around"
-          alignItems="space-around"
+          alignItems="center"
           item
           xs={12}
           sm={8}

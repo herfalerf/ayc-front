@@ -1,7 +1,15 @@
 import React from "react";
-import "./TeamCard.css";
-import { Button } from "@material-ui/core";
+import {
+  Button,
+  Card,
+  CardMedia,
+  CardContent,
+  CardHeader,
+  CardActions,
+  Typography,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 
 // Show information about a team member
 //
@@ -10,25 +18,44 @@ import { Link } from "react-router-dom";
 // TeamList -> TeamCard
 //
 
+const useStyles = makeStyles((theme) => ({
+  image: {
+    height: 0,
+    paddingTop: "100%",
+  },
+}));
+
 function TeamCard({ id, name, title, bio, img, admin }) {
   console.debug("TeamCard", `MemberId=${id}`, `MemberName=${name}`);
 
+  const classes = useStyles();
+
   return (
     <div>
-      {img && <img src={img} alt={name} />}
-      <h3>{name}</h3>
-      <h4>{title}</h4>
-      <p>{bio}</p>
-      {admin && (
-        <Button
-          variant="contained"
-          component={Link}
-          color="primary"
-          to={`/admin/team/${id}`}
-        >
-          Edit
-        </Button>
-      )}
+      <Card>
+        {img && (
+          <CardMedia className={classes.image} image={img} title={name} />
+        )}
+
+        <CardHeader title={name} subheader={title}></CardHeader>
+        <CardContent>
+          <Typography variant="body2" component="p">
+            {bio}
+          </Typography>
+        </CardContent>
+        {admin && (
+          <CardActions>
+            <Button
+              variant="contained"
+              component={Link}
+              color="primary"
+              to={`/admin/team/${id}`}
+            >
+              Edit
+            </Button>
+          </CardActions>
+        )}
+      </Card>
     </div>
   );
 }

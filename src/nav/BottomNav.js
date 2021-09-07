@@ -80,7 +80,7 @@ const BottomNav = () => {
               xs={6}
               className={classes.botItem}
             >
-              <Grid item xs={8} classname={classes.botItem}>
+              <Grid item xs={8} className={classes.botItem}>
                 {" "}
                 <img
                   src={process.env.PUBLIC_URL + "/images/logos/Logo03b.png"}
@@ -144,7 +144,7 @@ const BottomNav = () => {
                   <ListItemText primary="OUR SERVICES" />
                 </ListItem>
                 <ListItem>
-                  <Link component={RouterLink}>
+                  <Link>
                     {" "}
                     <ListItemText
                       className={classes.textWhite}

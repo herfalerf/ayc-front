@@ -36,34 +36,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home01.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
-    // backgroundAttachment: "fixed",
-    // backgroundRepeat: "no-repeat",
     height: "100vh",
-    // maxHeight: "100vh",
-
-    // width: "100vw",
   },
   whatWeDo: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home02.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
-    // height: "120vh",
     minHeight: "50vh",
   },
   services: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/home/home03.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right top",
-    // height: "120vh",
     height: "75vh",
-    // maxHeight: "100vh",
   },
   contact: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/contact/contactlink.png')`,
     backgroundSize: "cover",
     backgroundPosition: "right bottom",
-    // height: "120vh",
-    // height: "100vh",
   },
   missionItem: { padding: theme.spacing(2) },
   whatWeDoItem: { padding: theme.spacing(2) },
@@ -82,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
   testColor: { color: "blue" },
   linkButton: { margin: theme.spacing(2), color: "#FFFFFF" },
-  logoMark: { height: "15px", margin: "auto" },
+  logoMark: { height: "14px", margin: "auto" },
   logoText: {
     fontWeight: "bold",
     fontSize: "20px",
@@ -91,18 +81,13 @@ const useStyles = makeStyles((theme) => ({
   },
   thickText: {
     fontWeight: "bold",
-    fontSize: "20px",
     color: "rgb(255,255,255)",
   },
   form: {
     display: "flex",
     justifyContent: "center",
   },
-  subTitleText: {
-    // fontSize: "40px",
-  },
   contactSubTitle: {
-    // fontSize: "40px",
     color: "white",
   },
   contactText: {
@@ -180,7 +165,7 @@ function Homepage({ addCustomer, setService }) {
               WHAT WE DO
             </Typography>
             {/* </Grid> */}
-            <Typography variant="h4" className={classes.subTitleText}>
+            <Typography variant="h4">
               How Culture Aligment Model Skyrockets Your Efficiency
             </Typography>
             <Typography variant="subtitle1">
@@ -238,7 +223,7 @@ function Homepage({ addCustomer, setService }) {
               OUR SERVICES
             </Typography>
 
-            <Typography variant="h4" className={classes.subTitleText}>
+            <Typography variant="h4">
               Move from Talking About Your Culture to Tranforming It
             </Typography>
             <Grid item className={classes.cardButton}>

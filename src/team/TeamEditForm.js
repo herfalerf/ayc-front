@@ -4,7 +4,6 @@ import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button, ButtonGroup } from "@material-ui/core";
 import { Save, DeleteForever } from "@material-ui/icons/";
-// import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import ConfirmDialog from "../common/ConfirmDialog";
 import * as yup from "yup";
 import AycApi from "../api/api";

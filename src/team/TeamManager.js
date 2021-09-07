@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import AycApi from "../api/api";
 import TeamCard from "./TeamCard";
+import TeamList from "./TeamList";
 import LoadingSpinner from "../common/LoadingSpinner";
 
 // Show page with list of team members with buttons to add/edit/delete team members
@@ -14,8 +16,22 @@ import LoadingSpinner from "../common/LoadingSpinner";
 // Routes -> { TeamManager }
 //
 
+const useStyles = makeStyles((theme) => ({
+  teamMember: {
+    padding: theme.spacing(2),
+  },
+  upper: {
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/admin-home/admin-home01.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center bottom",
+    minHeight: "25vh",
+  },
+}));
+
 const TeamManager = () => {
   console.debug("TeamManager");
+
+  const classes = useStyles();
 
   const [team, setTeam] = useState(null);
 
@@ -32,6 +48,7 @@ const TeamManager = () => {
 
   return (
     <div>
+      <div className={classes.upper}></div>
       <h1>Team Manager</h1>
       <p>Here you can add, edit, or delete team members</p>
       <Button
@@ -42,19 +59,7 @@ const TeamManager = () => {
       >
         Add A New Team Member
       </Button>
-      <div>
-        {team.map((m) => (
-          <TeamCard
-            id={m.id}
-            key={m.name}
-            name={m.name}
-            title={m.title}
-            bio={m.bio}
-            img={m.img}
-            admin="true"
-          />
-        ))}
-      </div>
+      <TeamList admin="true" />
     </div>
   );
 };

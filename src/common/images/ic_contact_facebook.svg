@@ -1,0 +1,20 @@
+<svg id="ic_contact_facebook" xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #699e2e;
+        fill-opacity: 0;
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-opacity: 0.1;
+        stroke-width: 1px;
+      }
+       .cls-2 {
+        fill: #2dc0d2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="50.5" cy="50.5" r="50"/>
+  <path id="ic_footer_social_facebook" class="cls-2" d="M1201.37,3936.04l0.5-3.26h-3.12v-2.12a1.624,1.624,0,0,1,1.83-1.76H1202v-2.77a17.333,17.333,0,0,0-2.52-.22c-2.57,0-4.26,1.56-4.26,4.39v2.48h-2.86v3.26h2.86v7.87h3.53v-7.87h2.62Z" transform="translate(-1192.38 -3925.91)"/>
+</svg>

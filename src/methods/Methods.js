@@ -114,11 +114,11 @@ const Methods = () => {
         <Grid
           container
           justifyContent="space-around"
-          alignItem="center"
+          alignItems="center"
           item
           xs={12}
         >
-          <Grid container items lg={3} sm={6} className={classes.whyItem}>
+          <Grid container item lg={3} sm={6} className={classes.whyItem}>
             <Grid item xs={12}>
               <Typography align="center">
                 <Icon>
@@ -142,7 +142,7 @@ const Methods = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container items lg={3} sm={6} className={classes.whyItem}>
+          <Grid container item lg={3} sm={6} className={classes.whyItem}>
             <Grid item xs={12}>
               <Typography align="center">
                 <Icon>
@@ -166,7 +166,7 @@ const Methods = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container items lg={3} sm={6} className={classes.whyItem}>
+          <Grid container item lg={3} sm={6} className={classes.whyItem}>
             <Grid item xs={12}>
               <Typography align="center">
                 <Icon>
@@ -190,7 +190,7 @@ const Methods = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container items lg={3} sm={6} className={classes.whyItem}>
+          <Grid container item lg={3} sm={6} className={classes.whyItem}>
             <Grid item xs={12}>
               <Typography align="center">
                 <Icon>

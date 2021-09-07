@@ -1,0 +1,20 @@
+<svg id="ic_contact_linkedin" xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #699e2e;
+        fill-opacity: 0;
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-opacity: 0.1;
+        stroke-width: 1px;
+      }
+       .cls-2 {
+        fill: #2dc0d2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="50.5" cy="50.5" r="50"/>
+  <path id="ic_footer_social_linkedin" class="cls-2" d="M1256.02,3927.04h-13.51a1.133,1.133,0,0,0-1.12,1.13v13.48a1.135,1.135,0,0,0,1.12,1.14h13.51a1.129,1.129,0,0,0,1.12-1.14v-13.48A1.127,1.127,0,0,0,1256.02,3927.04Zm-9.87,13.5h-2.33v-7.52h2.34v7.52h-0.01Zm-1.16-8.55a1.35,1.35,0,1,1,1.35-1.35A1.359,1.359,0,0,1,1244.99,3931.99Zm9.91,8.55h-2.33v-3.66c0-.87-0.02-1.99-1.21-1.99-1.22,0-1.41.95-1.41,1.93v3.72h-2.33v-7.52h2.24v1.03h0.03a2.465,2.465,0,0,1,2.21-1.22c2.36,0,2.8,1.56,2.8,3.59v4.12Z" transform="translate(-1241.41 -3927.03)"/>
+</svg>

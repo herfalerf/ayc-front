@@ -45,7 +45,7 @@ const CardButton = ({ icon, alt, headerText, bodyText, route, onClick }) => {
                 <img src={icon} alt={alt} className={classes.mainIcon} />
               </Icon>
             </Grid>
-            <Grid items xs={8}>
+            <Grid item xs={8}>
               <Typography variant="h5" component="h5" color="inherit">
                 {headerText}
               </Typography>
