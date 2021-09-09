@@ -2,6 +2,8 @@ import React from "react";
 import { SvgIcon } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
+// Custom icon for the logomark slash
+
 const useStyles = makeStyles((theme) => ({
   root: {
     fill: "#2ec1d2",

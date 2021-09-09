@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import AycApi from "../api/api";
 import VideoCard from "./VideoCard";
 import LoadingSpinner from "../common/LoadingSpinner";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 // Show page with list of videos
 //
@@ -11,16 +13,21 @@ import LoadingSpinner from "../common/LoadingSpinner";
 //
 // Routes -> { VideoCard }
 
-function VideoList({ tag, usename }) {
+const useStyles = makeStyles((theme) => ({
+  video: {
+    padding: theme.spacing(2),
+  },
+  library: {
+    padding: theme.spacing(6),
+  },
+}));
+
+function VideoList({ tag, usename, usedescription, library, admin, useid }) {
   console.debug(`VideoList, tag=${tag}, usename=${usename}`);
 
-  const [videos, setVideos] = useState(null);
+  const classes = useStyles();
 
-  //   useEffect(async function getVideosOnMount() {
-  //     console.debug("VideoList useEffect getVideosOnMount");
-  //     let videos = await AycApi.getVideos(tag);
-  //     setVideos(videos);
-  //   }, []);
+  const [videos, setVideos] = useState(null);
 
   useEffect(
     function getVideosOnMount() {
@@ -38,11 +45,43 @@ function VideoList({ tag, usename }) {
   if (!videos) return <LoadingSpinner />;
   console.debug(videos);
   return (
-    <div>
-      {videos.map((v) => (
-        <VideoCard key={v.name} link={v.link} name={v.name} usename={usename} />
-      ))}
-    </div>
+    <Grid
+      container
+      item
+      xs={12}
+      justifyContent="center"
+      alignItems="flex-start"
+    >
+      {videos.map((v) =>
+        library ? (
+          <Grid item xs={12} sm={6} className={classes.library} key={v.name}>
+            <VideoCard
+              id={v.id}
+              useid={useid}
+              link={v.link}
+              name={v.name}
+              usename={usename}
+              description={v.description}
+              usedescription={usedescription}
+              admin={admin}
+            />
+          </Grid>
+        ) : (
+          <Grid item xs={12} className={classes.video} key={v.name}>
+            <VideoCard
+              id={v.id}
+              useid={useid}
+              link={v.link}
+              name={v.name}
+              usename={usename}
+              description={v.description}
+              usedescription={usedescription}
+              admin={admin}
+            />
+          </Grid>
+        )
+      )}
+    </Grid>
   );
 }
 

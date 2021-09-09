@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
-import AycApi from "../api/api";
-import CustomerCard from "./CustomerCard";
-import LoadingSpinner from "../common/LoadingSpinner";
+import { Button, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import CustomerList from "./CustomerList";
 
 // Shows page with a list of customers with buttons to add/edit/delete custoemrs
 //
@@ -14,46 +13,59 @@ import LoadingSpinner from "../common/LoadingSpinner";
 // Routes -> CustomerManager
 //
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  upper: {
+    backgroundImage: `url('${process.env.PUBLIC_URL}/images/admin-home/admin-home01.png')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center bottom",
+    minHeight: "25vh",
+  },
+  customerHeader: {
+    padding: theme.spacing(2),
+  },
+}));
+
 const CustomerManager = () => {
   console.debug("CustomerManager");
 
-  const [customers, setCustomers] = useState(null);
-
-  useEffect(() => {
-    async function getCustomersOnMount() {
-      console.debug("CustomerManager useEffect getCustomersOnMount");
-      let customers = await AycApi.getCustomers();
-
-      setCustomers(customers);
-    }
-    getCustomersOnMount();
-  }, []);
-  if (!customers) return <LoadingSpinner />;
+  const classes = useStyles();
 
   return (
     <div>
-      <h1>Customer Manager</h1>
-      <p>Here you can add, edit, or delete customers from the database</p>
-      <Button
-        variant="contained"
-        component={Link}
-        color="primary"
-        to="/admin/customers/add"
+      <div className={classes.upper}></div>
+      <Grid
+        container
+        justifyContent="center"
+        className={classes.customerHeader}
       >
-        Add A New Customer
-      </Button>
-      <div>
-        {customers.map((c) => (
-          <CustomerCard
-            id={c.id}
-            key={c.id}
-            name={c.name}
-            email={c.email}
-            phone={c.phone}
-            company={c.company}
-          />
-        ))}
-      </div>
+        <Grid item xs={12}>
+          <Typography variant="h4" align="center">
+            Customer Manager
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="subtitle1" align="center">
+            Here you can add, edit, or delete customers from the database
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography align="center">
+            {" "}
+            <Button
+              variant="contained"
+              component={Link}
+              color="primary"
+              to="/admin/customers/add"
+            >
+              Add A New Customer
+            </Button>
+          </Typography>
+        </Grid>
+      </Grid>
+      <CustomerList />
     </div>
   );
 };

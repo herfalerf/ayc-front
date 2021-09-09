@@ -2,8 +2,6 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Icon, Link } from "@material-ui/core";
-import ic_contact_facebook from "../common/images/ic_contact_facebook.svg";
-import ic_contact_linkedin from "../common/images/ic_contact_linkedin.svg";
 import ic_contact_mail from "../common/images/ic_contact_mail.svg";
 import ic_contact_phone from "../common/images/ic_contact_phone.svg";
 
@@ -22,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/contact/contact01.png')`,
     backgroundSize: "cover",
     backgroundPosition: "center bottom",
-    paddingTop: "21%",
+    paddingTop: "27%",
     width: "100%",
     height: "100%",
   },
@@ -94,19 +92,10 @@ function Contactpage({ addCustomer }) {
         <Grid
           container
           justifyContent="center"
-          // alignItems="center"
           item
           className={classes.contactBox}
         >
-          <Grid
-            container
-            // justifyContent="center"
-            alignItems="center"
-            item
-            xs={12}
-            sm={4}
-            lg={3}
-          >
+          <Grid container alignItems="center" item xs={12} sm={4} lg={3}>
             <Grid item>
               <Typography align="center">
                 <Link component="a" href="tel:1231231234">
@@ -129,15 +118,7 @@ function Contactpage({ addCustomer }) {
               </Typography>
             </Grid>
           </Grid>
-          <Grid
-            container
-            // justifyContent="center"
-            alignItems="center"
-            item
-            xs={12}
-            sm={4}
-            lg={3}
-          >
+          <Grid container alignItems="center" item xs={12} sm={4} lg={3}>
             <Grid item>
               <Typography align="center">
                 <Link component="a" href="mailto:test@email.com">

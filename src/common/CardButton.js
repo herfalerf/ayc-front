@@ -9,17 +9,16 @@ import {
   Icon,
   Grid,
 } from "@material-ui/core";
-
 import ic_arrow_small_blue from "./images/ic_arrow_small_blue.svg";
+
+// Reusable card button component, will make a card button which accepts an icon, header text, bodytext a route and an onClick function
+//
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 850,
   },
-  cardAction: {
-    // width: 600,
-    // height: 113,
-  },
+  cardAction: {},
   mainIcon: {
     height: 60,
   },

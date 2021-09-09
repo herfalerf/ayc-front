@@ -2,10 +2,9 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
-import { Button } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import * as yup from "yup";
 import { makeStyles } from "@material-ui/core/styles";
-import { CallMissedSharp } from "@material-ui/icons";
 
 // Admin Login form.
 //
@@ -28,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center bottom",
     minHeight: "25vh",
   },
+  form: {
+    padding: theme.spacing(4),
+  },
 }));
 
 function AdminForm({ login }) {
@@ -46,56 +48,61 @@ function AdminForm({ login }) {
   return (
     <div>
       <div className={classes.upper}></div>
-      <Formik
-        validationSchema={schema}
-        initialValues={{ username: "", password: "" }}
-        onSubmit={async (values, { setStatus, setSubmitting }) => {
-          setStatus(undefined);
-          let result = await login(values);
-          console.log(result);
+      <Grid container justifyContent="center" className={classes.form}>
+        <Grid item>
+          <Typography vairant="h5">Please Sign In for Admin Access</Typography>
+          <Formik
+            validationSchema={schema}
+            initialValues={{ username: "", password: "" }}
+            onSubmit={async (values, { setStatus, setSubmitting }) => {
+              setStatus(undefined);
+              let result = await login(values);
+              console.log(result);
 
-          if (result.success) {
-            setSubmitting(false);
-            history.push("/admin/videos");
-          } else {
-            setStatus({ error: result.errors });
-          }
-        }}
-      >
-        {({ isSubmitting, status }) => (
-          <Form>
-            <Field
-              label="username*"
-              type="username"
-              name="username"
-              component={TextField}
-            />
+              if (result.success) {
+                setSubmitting(false);
+                history.push("/admin/home");
+              } else {
+                setStatus({ error: result.errors });
+              }
+            }}
+          >
+            {({ isSubmitting, status }) => (
+              <Form>
+                <Field
+                  label="username*"
+                  type="username"
+                  name="username"
+                  component={TextField}
+                />
 
-            <br />
-            <Field
-              label="password"
-              type="password"
-              name="password"
-              component={TextField}
-            />
+                <br />
+                <Field
+                  label="password"
+                  type="password"
+                  name="password"
+                  component={TextField}
+                />
 
-            <br />
+                <br />
 
-            {status && status.error ? (
-              <div>API Error: {status.error}</div>
-            ) : null}
-            <br />
-            <Button
-              variant="contained"
-              color="primary"
-              disabled={isSubmitting}
-              type="submit"
-            >
-              Submit
-            </Button>
-          </Form>
-        )}
-      </Formik>
+                {status && status.error ? (
+                  <div>API Error: {status.error}</div>
+                ) : null}
+                <br />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  disabled={isSubmitting}
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </Form>
+            )}
+          </Formik>
+        </Grid>
+      </Grid>
     </div>
   );
 }

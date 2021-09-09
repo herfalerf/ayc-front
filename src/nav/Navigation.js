@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
 import UserContext from "../auth/UserContext";
@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       background: "transparent",
-      // backgroundColor: "#212931",
       boxShadow: "none",
       flexGrow: 1,
       [theme.breakpoints.down("sm")]: {
@@ -38,10 +37,9 @@ const useStyles = makeStyles((theme) =>
     },
     navLogo: {
       maxHeight: 20,
-      // flexGrow: 1,
     },
     mobileLogo: {
-      maxHeight: 15,
+      maxHeight: 13,
     },
     navLinks: {
       display: "flex",
@@ -124,13 +122,6 @@ function Navigation({ logout }) {
                   className={classes.drawerContainer}
                 >
                   <div className={classes.drawer} onClick={handleDrawerClose}>
-                    <Link
-                      className={classes.drawerItem}
-                      component={RouterLink}
-                      to="/admin/home"
-                    >
-                      <MenuItem>Admin Home</MenuItem>
-                    </Link>
                     <Link
                       className={classes.drawerItem}
                       component={RouterLink}
@@ -231,7 +222,7 @@ function Navigation({ logout }) {
             aria-haspopup="true"
             onClick={handleDrawerOpen}
           >
-            <MenuIcon />
+            <MenuIcon style={{ color: "white" }} />
           </IconButton>
 
           <Drawer
@@ -309,13 +300,6 @@ function Navigation({ logout }) {
                 className={classes.drawerContainer}
               >
                 <div className={classes.drawer} onClick={handleAdminClose}>
-                  <Link
-                    className={classes.drawerItem}
-                    component={RouterLink}
-                    to="/admin/home"
-                  >
-                    <MenuItem>Admin Home</MenuItem>
-                  </Link>
                   <Link
                     className={classes.drawerItem}
                     component={RouterLink}

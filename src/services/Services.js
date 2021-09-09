@@ -5,15 +5,7 @@ import Assessments from "./Assessments";
 import Consulting from "./Consulting";
 import VideoList from "../videos/VideoList";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Typography,
-  Grid,
-  Button,
-  List,
-  ListItem,
-  ListItemText,
-  Icon,
-} from "@material-ui/core";
+import { Typography, Grid, Button } from "@material-ui/core";
 
 // Services
 //
@@ -28,16 +20,18 @@ const useStyles = makeStyles((theme) => ({
   upper: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/services/services01.png')`,
     backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
     backgroundPosition: "center bottom",
-    paddingTop: "6%",
+    paddingTop: "4%",
     width: "100%",
     height: "100%",
   },
   headerItem: {
-    // paddingLeft: theme.spacing(10),
+    padding: theme.spacing(3),
   },
-  subItem: { color: "white", padding: theme.spacing(4) },
+  headerVideo: {
+    padding: theme.spacing(3),
+  },
+  subItem: { color: "white", padding: theme.spacing(2) },
   textUnderline: { color: "white", borderBottom: "2px solid #00c7d7" },
   serviceBox: {
     padding: theme.spacing(2),
@@ -53,13 +47,13 @@ const Services = ({ service, setService }) => {
   const classes = useStyles();
 
   function viewWorkshops(evt) {
-    setService(Workshops);
+    setService("workshops");
   }
   function viewAssessments(evt) {
-    setService(Assessments);
+    setService("assessments");
   }
   function viewConsulting(evt) {
-    setService(Consulting);
+    setService("consulting");
   }
 
   return (
@@ -67,7 +61,7 @@ const Services = ({ service, setService }) => {
       <Grid
         container
         alignItems="flex-start"
-        justifyContent="space-around"
+        justifyContent="center"
         className={classes.upper}
       >
         <Grid item xs={12} sm={6} md={4} className={classes.headerItem}>
@@ -83,7 +77,7 @@ const Services = ({ service, setService }) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} className={classes.subItem}>
+        <Grid item xs={12} sm={6} md={4} className={classes.headerVideo}>
           <VideoList tag="services" />
         </Grid>
       </Grid>
@@ -93,16 +87,8 @@ const Services = ({ service, setService }) => {
         alignItems="center"
         className={classes.serviceBox}
       >
-        <Grid
-          container
-          justifyContent="space-around"
-          alignItems="center"
-          item
-          xs={12}
-          sm={8}
-          md={6}
-        >
-          <Grid item>
+        <Grid container item xs={12} sm={8} md={6}>
+          <Grid container justifyContent="center" item xs={12} sm={4}>
             <Button
               variant="outlined"
               color="secondary"
@@ -111,7 +97,7 @@ const Services = ({ service, setService }) => {
               Workshops
             </Button>
           </Grid>
-          <Grid item>
+          <Grid container justifyContent="center" item xs={12} sm={4}>
             <Button
               variant="outlined"
               color="secondary"
@@ -120,7 +106,7 @@ const Services = ({ service, setService }) => {
               Culture Assessments
             </Button>
           </Grid>
-          <Grid item>
+          <Grid container justifyContent="center" item xs={12} sm={4}>
             <Button
               variant="outlined"
               color="secondary"
@@ -131,9 +117,11 @@ const Services = ({ service, setService }) => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Typography align="center">
-            <div>{service}</div>
-          </Typography>
+          {/* <Typography align="center"> */}
+          {service === "workshops" && <Workshops />}
+          {service === "assessments" && <Assessments />}
+          {service === "consulting" && <Consulting />}
+          {/* </Typography> */}
         </Grid>
       </Grid>
 

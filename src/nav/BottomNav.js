@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/nav/nav.png')`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
-    // height: "120vh",
+
     minHeight: "25vh",
     [theme.breakpoints.down("xs")]: {
       display: "none",
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/nav/nav.png')`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
-    // height: "120vh",
+
     minHeight: "25vh",
     [theme.breakpoints.up("sm")]: {
       display: "none",
@@ -92,7 +92,6 @@ const BottomNav = () => {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </Typography>
               </Grid>
-              {/* <Grid item xs={6}></Grid> */}
             </Grid>
             <Grid item xs={2} className={classes.botItem}>
               <List>
@@ -223,8 +222,6 @@ const BottomNav = () => {
             </Grid>
           </Grid>
         </div>
-
-        {/* <NavLink to="/admin">Admin</NavLink> */}
       </div>
     );
   };

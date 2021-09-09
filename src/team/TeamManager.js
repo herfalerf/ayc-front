@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button, Grid } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AycApi from "../api/api";
-import TeamCard from "./TeamCard";
 import TeamList from "./TeamList";
 import LoadingSpinner from "../common/LoadingSpinner";
 

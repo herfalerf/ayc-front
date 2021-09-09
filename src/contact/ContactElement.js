@@ -18,12 +18,11 @@ const useStyles = makeStyles((theme) => ({
   button: { color: "#FFFFFF" },
   thickText: {
     fontWeight: "bold",
-    // fontSize: "20px",
+
     color: "rgb(255,255,255)",
     padding: theme.spacing(1),
   },
   contactSubTitle: {
-    // fontSize: "40px",
     color: "white",
     padding: theme.spacing(1),
   },

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ContactElement from "../contact/ContactElement";
-import AycApi from "../api/api";
-import TeamCard from "./TeamCard";
 import TeamList from "./TeamList";
-import LoadingSpinner from "../common/LoadingSpinner";
+
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Icon } from "@material-ui/core";
 import ic_logomark from "../common/images/ic_logomark.svg";
@@ -27,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/about/about01.png')`,
     backgroundSize: "cover",
     backgroundPosition: "center bottom",
-    paddingTop: "21%",
+    paddingTop: "27%",
     width: "100%",
     height: "100%",
   },
@@ -65,19 +63,6 @@ function About() {
   console.debug("TeamList");
 
   const classes = useStyles();
-
-  //   const [team, setTeam] = useState(null);
-
-  //   useEffect(() => {
-  //     async function getTeamOnMount() {
-  //       console.debug("TeamList useEffect getTeamOnMount");
-  //       let team = await AycApi.getTeam();
-  //       setTeam(team);
-  //     }
-  //     getTeamOnMount();
-  //   }, []);
-  //   if (!team) return <LoadingSpinner />;
-  //   console.debug(team);
 
   return (
     <div>

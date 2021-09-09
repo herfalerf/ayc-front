@@ -1,14 +1,7 @@
 import React from "react";
 import ContactElement from "../contact/ContactElement";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Typography,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Icon,
-} from "@material-ui/core";
+import { Typography, Grid, Icon } from "@material-ui/core";
 import ic_methodology_inspire from "../common/images/ic_methodology_inspire.svg";
 import ic_methodology_leadership from "../common/images/ic_methodology_leadership.svg";
 import ic_methodology_motivate from "../common/images/ic_methodology_motivate.svg";
@@ -28,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
   upper: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/images/methods/methods01.png')`,
     backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
+
     backgroundPosition: "center bottom",
-    paddingTop: "19%",
+    paddingTop: "27%",
     width: "100%",
-    height: "100%",
   },
   methodTitle: { backgroundColor: "#FFFFFF", padding: theme.spacing(3) },
   methodImg: {
@@ -41,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center bottom",
-    // marginTop: "-80px",
+
     paddingTop: "59%",
     height: "100%",
     width: "100%",
@@ -59,8 +51,6 @@ const useStyles = makeStyles((theme) => ({
   whyItem: { padding: theme.spacing(2) },
   thickText: {
     fontWeight: "bold",
-    // fontSize: "20px",
-    // color: "rgb(255,255,255)",
   },
 }));
 
@@ -216,38 +206,6 @@ const Methods = () => {
           </Grid>
         </Grid>
       </Grid>
-      {/* <div>
-        <h5>Why Use Our Methodology?</h5>
-        <h3>We Make it easy to Transform Your Company Culture</h3>
-        <div>
-          <h4>Motivate your team</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur sunt non fuga sapiente vero dicta?
-          </p>
-        </div>
-        <div>
-          <h4>Create a Thriving Environment</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur sunt non fuga sapiente vero dicta?
-          </p>
-        </div>
-        <div>
-          <h4>Establish Faith in Leadership</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur sunt non fuga sapiente vero dicta?
-          </p>
-        </div>
-        <div>
-          <h4>Inspire Your Team for Greatness</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur sunt non fuga sapiente vero dicta?
-          </p>
-        </div>
-      </div> */}
       <ContactElement />
     </div>
   );

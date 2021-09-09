@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ContactElement from "../contact/ContactElement";
+
 import AycApi from "../api/api";
 import TeamCard from "./TeamCard";
 import LoadingSpinner from "../common/LoadingSpinner";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Grid, Icon } from "@material-ui/core";
-import ic_logomark from "../common/images/ic_logomark.svg";
-import ic_about_curiosity from "../common/images/ic_about_curiosity.svg";
-import ic_about_positivity from "../common/images/ic_about_positivity.svg";
-import ic_about_sharing from "../common/images/ic_about_sharing.svg";
-import ic_about_simplicity from "../common/images/ic_about_simplicity.svg";
+import { Grid } from "@material-ui/core";
 
 // Show page with list of team members
 //
