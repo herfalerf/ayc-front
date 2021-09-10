@@ -15,4 +15,11 @@ const UserProvider = ({
   </UserContext.Provider>
 );
 
+const demoCustomer = {
+  id: "1",
+  name: "test",
+  email: "test@test.com",
+  company: "test",
+};
+
 export { UserProvider };

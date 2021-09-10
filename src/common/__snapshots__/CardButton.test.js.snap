@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-root-5 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiCardActionArea-root makeStyles-cardAction-6"
+      href="/"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiCardContent-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              aria-hidden="true"
+              class="material-icons MuiIcon-root"
+            >
+              <img
+                class="makeStyles-mainIcon-7"
+              />
+            </span>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit"
+            />
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
+              vartiant="subtitle2"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          >
+            <span
+              aria-hidden="true"
+              class="material-icons MuiIcon-root"
+            >
+              <img
+                alt=""
+                class="makeStyles-arrowIcon-8"
+                src="ic_arrow_small_blue.svg"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiCardActionArea-focusHighlight"
+      />
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+  </div>
+</DocumentFragment>
+`;

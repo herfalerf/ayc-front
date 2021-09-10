@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ContactForm from "./ContactForm";
+import CardButton from "./CardButton";
 import { MemoryRouter } from "react-router";
 
 it("renders without crashing", function () {
   render(
     <MemoryRouter>
-      <ContactForm />
+      <CardButton route="/" />
     </MemoryRouter>
   );
 });
@@ -14,7 +14,7 @@ it("renders without crashing", function () {
 it("matches snapshot", function () {
   const { asFragment } = render(
     <MemoryRouter>
-      <ContactForm />
+      <CardButton route="/" />
     </MemoryRouter>
   );
   expect(asFragment()).toMatchSnapshot();

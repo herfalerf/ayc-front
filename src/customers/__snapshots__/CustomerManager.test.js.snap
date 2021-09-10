@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-upper-7"
+    />
+    <div
+      class="MuiGrid-root makeStyles-customerHeader-8 MuiGrid-container MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+        >
+          Customer Manager
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          Here you can add, edit, or delete customers from the database
+        </h6>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+        >
+           
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            href="/admin/customers/add"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Add A New Customer
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      class="LoadingSpinner"
+    >
+      Loading ...
+    </div>
+  </div>
+</DocumentFragment>
+`;

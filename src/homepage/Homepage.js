@@ -190,7 +190,7 @@ function Homepage({ addCustomer, setService }) {
               Our Methodology
             </Button>
           </Grid>
-          <Grid item xs={12} sm={6} className>
+          <Grid item xs={12} sm={6}>
             <VideoList tag="main" />
           </Grid>
         </Grid>

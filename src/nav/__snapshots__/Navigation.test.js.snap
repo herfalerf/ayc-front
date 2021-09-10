@@ -3,48 +3,156 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <nav>
-    <a
-      href="/"
-    >
-      Align Your Culture
-    </a>
-    <ul>
-      <li>
-        <a
-          href="/methods"
+    <div>
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionAbsolute MuiAppBar-colorPrimary makeStyles-root-12 MuiPaper-elevation4"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
         >
-          Methodology
-        </a>
-      </li>
-      <li>
-        <a
-          href="/services"
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-navLogo-14"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+               
+              <img
+                alt="Align Your Culture"
+                class="makeStyles-navLogo-14"
+                src="navLogo.png"
+              />
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <div
+            class="makeStyles-navLinks-16"
+          >
+            <div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-19 MuiButton-containedSecondary"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Admin
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+               
+            </div>
+            <a
+              class="MuiTypography-root makeStyles-navLink-17 MuiTypography-body1"
+              href="/methods"
+            >
+              Our Methodology
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-17 MuiTypography-body1"
+              href="/services"
+            >
+              Services
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-17 MuiTypography-body1"
+              href="/resources"
+            >
+              Resources
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-17 MuiTypography-body1"
+              href="/about"
+            >
+              About Us
+            </a>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-19 MuiButton-containedSecondary"
+              href="/contact"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Contact
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionAbsolute MuiAppBar-colorPrimary makeStyles-rootMobile-13 MuiPaper-elevation4"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
         >
-          Services
-        </a>
-      </li>
-      <li>
-        <a
-          href="/resources"
-        >
-          Resources
-        </a>
-      </li>
-      <li>
-        <a
-          href="/about"
-        >
-          About Us
-        </a>
-      </li>
-      <li>
-        <a
-          href="/contact"
-        >
-          Contact Us
-        </a>
-      </li>
-    </ul>
+          <button
+            aria-haspopup="true"
+            aria-label="menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                style="color: white;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <div>
+            <img
+              alt="Align Your Culture"
+              class="makeStyles-mobileLogo-15"
+              src="navLogo.png"
+            />
+          </div>
+          <div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-19 MuiButton-containedSecondary"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Admin
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+             
+          </div>
+        </div>
+      </header>
+    </div>
   </nav>
 </DocumentFragment>
 `;
@@ -52,48 +160,122 @@ exports[`matches snapshot 1`] = `
 exports[`matches snapshot when logged out 1`] = `
 <DocumentFragment>
   <nav>
-    <a
-      href="/"
-    >
-      Align Your Culture
-    </a>
-    <ul>
-      <li>
-        <a
-          href="/methods"
+    <div>
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionAbsolute MuiAppBar-colorPrimary makeStyles-root-23 MuiPaper-elevation4"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
         >
-          Methodology
-        </a>
-      </li>
-      <li>
-        <a
-          href="/services"
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-navLogo-25"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+               
+              <img
+                alt="Align Your Culture"
+                class="makeStyles-navLogo-25"
+                src="navLogo.png"
+              />
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <div
+            class="makeStyles-navLinks-27"
+          >
+            <a
+              class="MuiTypography-root makeStyles-navLink-28 MuiTypography-body1"
+              href="/methods"
+            >
+              Our Methodology
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-28 MuiTypography-body1"
+              href="/services"
+            >
+              Services
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-28 MuiTypography-body1"
+              href="/resources"
+            >
+              Resources
+            </a>
+            <a
+              class="MuiTypography-root makeStyles-navLink-28 MuiTypography-body1"
+              href="/about"
+            >
+              About Us
+            </a>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-30 MuiButton-containedSecondary"
+              href="/contact"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Contact
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionAbsolute MuiAppBar-colorPrimary makeStyles-rootMobile-24 MuiPaper-elevation4"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
         >
-          Services
-        </a>
-      </li>
-      <li>
-        <a
-          href="/resources"
-        >
-          Resources
-        </a>
-      </li>
-      <li>
-        <a
-          href="/about"
-        >
-          About Us
-        </a>
-      </li>
-      <li>
-        <a
-          href="/contact"
-        >
-          Contact Us
-        </a>
-      </li>
-    </ul>
+          <button
+            aria-haspopup="true"
+            aria-label="menu"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                style="color: white;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <div>
+            <img
+              alt="Align Your Culture"
+              class="makeStyles-mobileLogo-26"
+              src="navLogo.png"
+            />
+          </div>
+        </div>
+      </header>
+    </div>
   </nav>
 </DocumentFragment>
 `;

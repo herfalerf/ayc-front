@@ -3,151 +3,571 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <div>
+    <div
+      class="makeStyles-root-32"
+    >
       <div>
-        <h1>
-          Our Mission is to Inspire Organizations to Create Extraordinary Working Cultures
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, harum? Fuga eos atque ea recusandae deserunt aperiam veniam sint doloremque.
-        </p>
-        <a
-          aria-disabled="false"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/resources"
-          role="button"
-          tabindex="0"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            Get Started Here
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </a>
-      </div>
-      <div>
-        <p>
-          WHAT WE DO
-        </p>
-        <h3>
-          How Culture Aligment Model Skyrockets Your Efficiency
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam adipisci harum blanditiis dolorum earum dicta incidunt maiores illum debitis eveniet consequatur itaque nostrum at aliquam deserunt placeat inventore, a rerum. Nostrum eum et iste sit.
-        </p>
-        <ul>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          </li>
-        </ul>
-        <a
-          aria-disabled="false"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/methods"
-          role="button"
-          tabindex="0"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            Our Methodology
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </a>
         <div
-          class="LoadingSpinner"
+          class="MuiGrid-root makeStyles-mission-33 MuiGrid-container MuiGrid-align-items-xs-center"
         >
-          Loading ...
+          <div
+            class="MuiGrid-root makeStyles-missionItem-37 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          >
+            <h2
+              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-h2"
+            >
+              <span
+                class="makeStyles-missionTextUnderline-45"
+              >
+                Our Mission
+              </span>
+               is to Inspire Organizations to 
+              <span
+                class="makeStyles-missionTextUnderline-45"
+              >
+                Create Extraordinary
+              </span>
+               Working Cultures
+            </h2>
+            <p
+              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-subtitle1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, harum? Fuga eos atque ea recusandae deserunt aperiam veniam sint doloremque.
+            </p>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-linkButton-47 MuiButton-containedPrimary"
+              href="/resources"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Get Started Here
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </div>
         </div>
       </div>
       <div>
-        <p>
-          OUR SERVICES
-        </p>
-        <h3>
-          Move from Talking About Your Culture to Tranforming It
-        </h3>
-        <li>
-          Workshops
-        </li>
-        <li>
-          Culture Assessments
-        </li>
-        <li>
-          Consulting
-        </li>
+        <div
+          class="MuiGrid-root makeStyles-whatWeDo-34 MuiGrid-container MuiGrid-align-items-xs-center"
+        >
+          <div
+            class="MuiGrid-root makeStyles-whatWeDoItem-38 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          >
+            <span
+              aria-hidden="true"
+              class="material-icons MuiIcon-root makeStyles-logoMark-48"
+            >
+              <img
+                alt="logo mark"
+                class="makeStyles-logoMark-48"
+                src="ic_logomark.svg"
+              />
+            </span>
+            <span
+              class="MuiTypography-root makeStyles-logoText-49 MuiTypography-subtitle1"
+            >
+              WHAT WE DO
+            </span>
+            <h4
+              class="MuiTypography-root MuiTypography-h4"
+            >
+              How Culture Aligment Model Skyrockets Your Efficiency
+            </h4>
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam adipisci harum blanditiis dolorum earum dicta incidunt maiores illum debitis eveniet consequatur itaque nostrum at aliquam deserunt placeat inventore, a rerum. Nostrum eum et iste sit.
+            </h6>
+            <ul
+              class="MuiList-root MuiList-padding"
+            >
+              <li
+                class="MuiListItem-root MuiListItem-gutters"
+              >
+                <div
+                  class="MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </span>
+                </div>
+              </li>
+              <li
+                class="MuiListItem-root MuiListItem-gutters"
+              >
+                <div
+                  class="MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </span>
+                </div>
+              </li>
+              <li
+                class="MuiListItem-root MuiListItem-gutters"
+              >
+                <div
+                  class="MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-linkButton-47 MuiButton-containedPrimary"
+              href="/methods"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Our Methodology
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          >
+            <div
+              class="LoadingSpinner"
+            >
+              Loading ...
+            </div>
+          </div>
+        </div>
       </div>
       <div>
-        <div>
-          <h2>
-             Send a Message
-          </h2>
-          <div>
-            <div>
-              <form>
-                <div>
-                  <label>
-                    Name
-                  </label>
-                  <input
-                    name="username"
-                    value=""
-                  />
-                </div>
-                <div>
-                  <label>
-                    Email
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    value=""
-                  />
-                </div>
-                <div>
-                  <label>
-                    Company
-                  </label>
-                  <input
-                    name="company"
-                    value=""
-                  />
-                </div>
-                <div>
-                  <label>
-                    Phone Number
-                  </label>
-                  <input
-                    name="phone"
-                    value=""
-                  />
-                </div>
-                <div>
-                  <label>
-                    Message
-                  </label>
-                  <input
-                    name="message"
-                    value=""
-                  />
-                </div>
-                <button
-                  type="submit"
+        <div
+          class="MuiGrid-root makeStyles-services-35 MuiGrid-container MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-flex-end"
+        >
+          <div
+            class="MuiGrid-root makeStyles-servicesItem-39 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          >
+            <span
+              aria-hidden="true"
+              class="material-icons MuiIcon-root makeStyles-logoMark-48"
+            >
+              <img
+                alt="logo mark"
+                class="makeStyles-logoMark-48"
+                src="ic_logomark.svg"
+              />
+            </span>
+            <span
+              class="MuiTypography-root makeStyles-logoText-49 MuiTypography-subtitle1"
+            >
+              OUR SERVICES
+            </span>
+            <h4
+              class="MuiTypography-root MuiTypography-h4"
+            >
+              Move from Talking About Your Culture to Tranforming It
+            </h4>
+            <div
+              class="MuiGrid-root makeStyles-cardButton-43 MuiGrid-item"
+            >
+              <div
+                class="MuiPaper-root MuiCard-root makeStyles-root-56 MuiPaper-elevation1 MuiPaper-rounded"
+              >
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiCardActionArea-root makeStyles-cardAction-57"
+                  href="/services"
+                  role="button"
+                  tabindex="0"
                 >
-                  Submit
-                </button>
-              </form>
+                  <div
+                    class="MuiCardContent-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt="workshops button"
+                            class="makeStyles-mainIcon-58"
+                            src="ic_services_workshops.svg"
+                          />
+                        </span>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+                      >
+                        <h5
+                          class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit"
+                        >
+                          Workshops
+                        </h5>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
+                          vartiant="subtitle2"
+                        >
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
+                        </p>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt=""
+                            class="makeStyles-arrowIcon-59"
+                            src="ic_arrow_small_blue.svg"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="MuiCardActionArea-focusHighlight"
+                  />
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root makeStyles-cardButton-43 MuiGrid-item"
+            >
+              <div
+                class="MuiPaper-root MuiCard-root makeStyles-root-56 MuiPaper-elevation1 MuiPaper-rounded"
+              >
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiCardActionArea-root makeStyles-cardAction-57"
+                  href="/services"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiCardContent-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt="assessments button"
+                            class="makeStyles-mainIcon-58"
+                            src="ic_services_assessment.svg"
+                          />
+                        </span>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+                      >
+                        <h5
+                          class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit"
+                        >
+                          Culture Assessments
+                        </h5>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
+                          vartiant="subtitle2"
+                        >
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
+                        </p>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt=""
+                            class="makeStyles-arrowIcon-59"
+                            src="ic_arrow_small_blue.svg"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="MuiCardActionArea-focusHighlight"
+                  />
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root makeStyles-cardButton-43 MuiGrid-item"
+            >
+              <div
+                class="MuiPaper-root MuiCard-root makeStyles-root-56 MuiPaper-elevation1 MuiPaper-rounded"
+              >
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiCardActionArea-root makeStyles-cardAction-57"
+                  href="/services"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiCardContent-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt="consulting button"
+                            class="makeStyles-mainIcon-58"
+                            src="ic_services_consulting.svg"
+                          />
+                        </span>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+                      >
+                        <h5
+                          class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit"
+                        >
+                          Consulting
+                        </h5>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
+                          vartiant="subtitle2"
+                        >
+                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
+                        </p>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root"
+                        >
+                          <img
+                            alt=""
+                            class="makeStyles-arrowIcon-59"
+                            src="ic_arrow_small_blue.svg"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="MuiCardActionArea-focusHighlight"
+                  />
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="MuiGrid-root makeStyles-contact-36 MuiGrid-container MuiGrid-justify-content-xs-center"
+        >
+          <div
+            class="MuiGrid-root makeStyles-contactItem-40 MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root makeStyles-thickText-50 MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              OUR RESULTS SPEAK FOR THEMSELVES
+            </h6>
+            <h4
+              class="MuiTypography-root makeStyles-contactSubTitle-52 MuiTypography-h4 MuiTypography-alignCenter"
+            >
+              Get In Touch to See How We Can Help
+            </h4>
+            <h6
+              class="MuiTypography-root makeStyles-contactText-53 MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor facilis id aspernatur sit non quod fugit eaque similique consequatur tempora!
+            </h6>
+            <div
+              class="makeStyles-form-51"
+            >
+              <div>
+                <form
+                  action="#"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      name*
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        name="name"
+                        type="name"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="MuiFormControl-root MuiTextField-root"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      email*
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        name="email"
+                        type="email"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="MuiFormControl-root MuiTextField-root"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      company
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        name="company"
+                        type="company"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="MuiFormControl-root MuiTextField-root"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      phone
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        name="phone"
+                        type="phone"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="MuiFormControl-root MuiTextField-root"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                      data-shrink="false"
+                    >
+                      message
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+                    >
+                      <textarea
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                        name="message"
+                        rows="1"
+                        style="height: 0px; overflow: hidden;"
+                      />
+                      <textarea
+                        aria-hidden="true"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                        readonly=""
+                        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); width: 100%;"
+                        tabindex="-1"
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-linkButton-61 MuiButton-containedPrimary"
+                    tabindex="0"
+                    type="submit"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Send A Message
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -4,20 +4,19 @@ exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="makeStyles-upper-2"
+      class="makeStyles-upper-4"
     />
     <div
-      class="MuiGrid-root makeStyles-form-3 MuiGrid-container MuiGrid-justify-content-xs-center"
+      class="MuiGrid-root makeStyles-form-5 MuiGrid-container MuiGrid-justify-content-xs-center"
     >
       <div
         class="MuiGrid-root MuiGrid-item"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
-          vairant="h5"
+        <h5
+          class="MuiTypography-root makeStyles-message-6 MuiTypography-h5"
         >
-          Please Sign In for Admin Access
-        </p>
+          Add a New Customer
+        </h5>
         <form
           action="#"
         >
@@ -28,7 +27,7 @@ exports[`matches snapshot 1`] = `
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink="false"
             >
-              username*
+              name*
             </label>
             <div
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -36,8 +35,8 @@ exports[`matches snapshot 1`] = `
               <input
                 aria-invalid="false"
                 class="MuiInputBase-input MuiInput-input"
-                name="username"
-                type="username"
+                name="name"
+                type="name"
                 value=""
               />
             </div>
@@ -50,7 +49,7 @@ exports[`matches snapshot 1`] = `
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink="false"
             >
-              password
+              email*
             </label>
             <div
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -58,8 +57,52 @@ exports[`matches snapshot 1`] = `
               <input
                 aria-invalid="false"
                 class="MuiInputBase-input MuiInput-input"
-                name="password"
-                type="password"
+                name="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <br />
+          <div
+            class="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+            >
+              company
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                name="company"
+                type="company"
+                value=""
+              />
+            </div>
+          </div>
+          <br />
+          <div
+            class="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+            >
+              phone
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                name="phone"
+                type="phone"
                 value=""
               />
             </div>

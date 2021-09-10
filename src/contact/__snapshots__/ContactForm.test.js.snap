@@ -3,68 +3,142 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <div>
-      <h2>
-         Send a Message
-      </h2>
-      <div>
-        <div>
-          <form>
-            <div>
-              <label>
-                Name
-              </label>
-              <input
-                name="username"
-                value=""
-              />
-            </div>
-            <div>
-              <label>
-                Email
-              </label>
-              <input
-                name="email"
-                type="email"
-                value=""
-              />
-            </div>
-            <div>
-              <label>
-                Company
-              </label>
-              <input
-                name="company"
-                value=""
-              />
-            </div>
-            <div>
-              <label>
-                Phone Number
-              </label>
-              <input
-                name="phone"
-                value=""
-              />
-            </div>
-            <div>
-              <label>
-                Message
-              </label>
-              <input
-                name="message"
-                value=""
-              />
-            </div>
-            <button
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
+    <form
+      action="#"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          name*
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            name="name"
+            type="name"
+            value=""
+          />
         </div>
       </div>
-    </div>
+      <br />
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          email*
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            name="email"
+            type="email"
+            value=""
+          />
+        </div>
+      </div>
+      <br />
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          company
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            name="company"
+            type="company"
+            value=""
+          />
+        </div>
+      </div>
+      <br />
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          phone
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            name="phone"
+            type="phone"
+            value=""
+          />
+        </div>
+      </div>
+      <br />
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+        >
+          message
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+        >
+          <textarea
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+            name="message"
+            rows="1"
+            style="height: 0px; overflow: hidden;"
+          />
+          <textarea
+            aria-hidden="true"
+            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+            readonly=""
+            style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); width: 100%;"
+            tabindex="-1"
+          />
+        </div>
+      </div>
+      <br />
+      <br />
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-linkButton-5 MuiButton-containedPrimary"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Send A Message
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
   </div>
 </DocumentFragment>
 `;
