@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { Button } from "@material-ui/core";
@@ -43,7 +42,7 @@ const ContactForm = ({ addCustomer, sendEmail }) => {
         "Please enter phone number in format ###-###-#### or ##########"
       ),
   });
-  const history = useHistory();
+
   console.debug(
     "ContactForm",
     "addCustomer=",
