@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import * as yup from "yup";
 
 // Contact Form.
-//
+//s
 // Shows contact form and manages state
 // On submission
 // Calls addCustomer function prop
@@ -63,7 +63,7 @@ const ContactForm = ({ addCustomer, sendEmail }) => {
           phone: "",
           message: "",
         }}
-        onSubmit={async (values, { setStatus, setSubmitting }) => {
+        onSubmit={async (values, { setStatus, setSubmitting, resetForm }) => {
           console.debug(values);
           let serverValues = values;
           delete serverValues.message;
@@ -73,11 +73,31 @@ const ContactForm = ({ addCustomer, sendEmail }) => {
 
           if (result.success) {
             setSubmitting(false);
-            history.push("/");
+            resetForm({
+              values: {
+                name: "",
+                email: "",
+                company: "",
+                phone: "",
+                message: "",
+              },
+            });
+            setStatus({ success: true });
+            // history.push("/");
           } else {
             if (result.errors[0] === `Email already exists: ${values.email}`) {
               setSubmitting(false);
-              history.push("/");
+              resetForm({
+                values: {
+                  name: "",
+                  email: "",
+                  company: "",
+                  phone: "",
+                  message: "",
+                },
+              });
+              setStatus({ success: true });
+              // history.push("/");
             } else {
               setStatus({ error: result.errors });
             }
@@ -124,6 +144,9 @@ const ContactForm = ({ addCustomer, sendEmail }) => {
             <br />
             {status && status.error ? (
               <div>API Error: {status.error}</div>
+            ) : null}
+            {status && status.success ? (
+              <div>Thank you for your message.</div>
             ) : null}
             <br />
             <Button
