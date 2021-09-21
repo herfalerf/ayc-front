@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-upper-5"
+    />
+    <div
+      class="MuiGrid-root makeStyles-adminHeader-6 MuiGrid-container MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+        >
+           Welcome to the Admin Portal
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          You may now use the admin drop down menu on the main navigation bar to access admin specific pages or to log out. Please be aware that changes you make on the admin portal will permanently affect the rest of the site.
+        </h6>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

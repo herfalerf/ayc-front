@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root makeStyles-root-7 MuiGrid-container"
+  >
+    <div
+      class="MuiGrid-root makeStyles-title-11 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        <span
+          aria-hidden="true"
+          class="material-icons MuiIcon-root makeStyles-logoMark-9"
+        >
+          <img
+            alt="logo mark"
+            class="makeStyles-logoMark-9"
+            src="ic_logomark.svg"
+          />
+        </span>
+        <span
+          class="MuiTypography-root makeStyles-logoText-10 MuiTypography-subtitle1"
+        >
+          WHY WORKSHOPS?
+        </span>
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root makeStyles-title-11 MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignJustify"
+        >
+          AYC Online Workshops Will Help Position Your Company for Success
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-subTitle-12 MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignJustify"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-list-8 MuiGrid-container MuiGrid-item"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+      >
+        <div>
+          <ul
+            class="MuiList-root MuiList-padding"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div>
+          <ul
+            class="MuiList-root MuiList-padding"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Single-line item
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

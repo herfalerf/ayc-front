@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiGrid-root makeStyles-upper-13 MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root makeStyles-headerItem-14 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <h2
+          class="MuiTypography-root makeStyles-subItem-16 MuiTypography-h2"
+        >
+          <span
+            class="makeStyles-textUnderline-17"
+          >
+            Get Started
+          </span>
+           with our Resource Library
+        </h2>
+        <p
+          class="MuiTypography-root makeStyles-subItem-16 MuiTypography-subtitle1"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-headerVideo-15 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <div
+          class="LoadingSpinner"
+        >
+          Loading ...
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-videoBox-20 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          <span
+            aria-hidden="true"
+            class="material-icons MuiIcon-root makeStyles-logoMark-18"
+          >
+            <img
+              alt="logo mark"
+              class="makeStyles-logoMark-18"
+              src="ic_logomark.svg"
+            />
+          </span>
+          <span
+            class="MuiTypography-root makeStyles-logoText-19 MuiTypography-subtitle1"
+          >
+            Videos
+          </span>
+        </p>
+      </div>
+      <div
+        class="LoadingSpinner"
+      >
+        Loading ...
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

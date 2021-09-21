@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import VideoEditForm from "./VideoEditForm";
 import { MemoryRouter } from "react-router";
-import Homepage from "./Homepage";
 
 it("renders without crashing", function () {
   render(
     <MemoryRouter>
-      <Homepage />
+      <VideoEditForm />
     </MemoryRouter>
   );
 });
@@ -14,7 +14,7 @@ it("renders without crashing", function () {
 it("matches snapshot", function () {
   const { asFragment } = render(
     <MemoryRouter>
-      <Homepage />
+      <VideoEditForm />
     </MemoryRouter>
   );
   expect(asFragment()).toMatchSnapshot();

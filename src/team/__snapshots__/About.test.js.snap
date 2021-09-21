@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-upper-20"
+    />
+    <div
+      class="MuiGrid-root makeStyles-aboutBox-23 MuiGrid-container MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+        >
+          <img
+            alt="AYC Logo"
+            class="makeStyles-logo-21"
+            src="/images/logos/Logo03a.png"
+          />
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+        >
+          Forging Our Own Path
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-6"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero at voluptate officiis sed atque, ipsam quod est dicta veritatis eaque aut, sequi sapiente veniam eveniet aliquid totam? Labore, hic! Laboriosam!
+        </h6>
+      </div>
+    </div>
+    <div
+      class="makeStyles-aboutBox-23"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-around"
+      >
+        <div
+          class="MuiGrid-root makeStyles-aboutItem-24 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="sharing icon"
+                  class="makeStyles-mainIcon-22"
+                  src="ic_about_sharing.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Sharing knowledge
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-aboutItem-24 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="curiosity icon"
+                  class="makeStyles-mainIcon-22"
+                  src="ic_about_curiosity.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Curiosity
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-aboutItem-24 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="simplicity icon"
+                  class="makeStyles-mainIcon-22"
+                  src="ic_about_simplicity.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Simplicity
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-aboutItem-24 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="positivity icon"
+                  class="makeStyles-mainIcon-22"
+                  src="ic_about_positivity.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Positivity
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root makeStyles-teamBox-25 MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <span
+              aria-hidden="true"
+              class="material-icons MuiIcon-root makeStyles-logoMark-27"
+            >
+              <img
+                alt="logo mark"
+                class="makeStyles-logoMark-27"
+                src="ic_logomark.svg"
+              />
+            </span>
+            <span
+              class="MuiTypography-root makeStyles-logoText-28 MuiTypography-subtitle1"
+            >
+              WHO WE ARE
+            </span>
+          </p>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            The Team Behind AlignYourCulture
+          </h6>
+        </div>
+        <div
+          class="LoadingSpinner"
+        >
+          Loading ...
+        </div>
+      </div>
+    </div>
+    <div
+      class="makeStyles-root-31"
+    >
+      <div
+        class="MuiGrid-root makeStyles-contactItem-32 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h6
+            class="MuiTypography-root makeStyles-thickText-34 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            OUR RESULTS SPEAK FOR THEMSELVES
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h4
+            class="MuiTypography-root makeStyles-contactSubTitle-35 MuiTypography-h4 MuiTypography-alignCenter"
+          >
+            Get In Touch to See How We Can Help
+          </h4>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-contactText-36 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor facilis id aspernatur sit non quod fugit eaque similique consequatur tempora!
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <p
+            class="MuiTypography-root makeStyles-contactText-36 MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-33 MuiButton-containedPrimary"
+              href="/contact"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Send a Message
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiGrid-root makeStyles-upper-17 MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root makeStyles-headerItem-18 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <h2
+          class="MuiTypography-root makeStyles-subItem-20 MuiTypography-h2"
+        >
+          <span
+            class="makeStyles-textUnderline-21"
+          >
+            Services
+          </span>
+           to Help You Transform Your Business
+        </h2>
+        <p
+          class="MuiTypography-root makeStyles-subItem-20 MuiTypography-subtitle1"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-headerVideo-19 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <div
+          class="LoadingSpinner"
+        >
+          Loading ...
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-serviceBox-22 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-6"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-sm-4"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Workshops
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-sm-4"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Culture Assessments
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-sm-4"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Consulting
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      />
+    </div>
+    <div
+      class="makeStyles-root-25"
+    >
+      <div
+        class="MuiGrid-root makeStyles-contactItem-26 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h6
+            class="MuiTypography-root makeStyles-thickText-28 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            OUR RESULTS SPEAK FOR THEMSELVES
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h4
+            class="MuiTypography-root makeStyles-contactSubTitle-29 MuiTypography-h4 MuiTypography-alignCenter"
+          >
+            Get In Touch to See How We Can Help
+          </h4>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-contactText-30 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor facilis id aspernatur sit non quod fugit eaque similique consequatur tempora!
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <p
+            class="MuiTypography-root makeStyles-contactText-30 MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-27 MuiButton-containedPrimary"
+              href="/contact"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Send a Message
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

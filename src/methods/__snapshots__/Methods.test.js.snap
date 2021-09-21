@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-upper-17"
+    />
+    <div
+      class="MuiGrid-root makeStyles-methodTitle-18 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+        >
+          <img
+            alt="AYC Logo"
+            class="makeStyles-logo-20"
+            src="/images/logos/Logo03a.png"
+          />
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+        >
+          Cultural Alignment Model
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio saepe alias explicabo dignissimos doloribus consequuntur et eum sit? Corrupti, excepturi!
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-methodImg-19 MuiGrid-container"
+    />
+    <div
+      class="MuiGrid-root makeStyles-whyBox-22 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h6
+          class="MuiTypography-root makeStyles-thickText-24 MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          WHY USE OUR METHODOLOGY?
+        </h6>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+        >
+          We Make It Easy to Tranform Your Company Culture
+        </h4>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-around MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiGrid-root makeStyles-whyItem-23 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="motivate icon"
+                  class="makeStyles-mainIcon-21"
+                  src="ic_methodology_motivate.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Motivate Your Team
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-whyItem-23 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="motivate icon"
+                  class="makeStyles-mainIcon-21"
+                  src="ic_methodology_thriving.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Create a Thriving Environment
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-whyItem-23 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="motivate icon"
+                  class="makeStyles-mainIcon-21"
+                  src="ic_methodology_leadership.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Establish Faith in Leadership
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-whyItem-23 MuiGrid-container MuiGrid-item MuiGrid-grid-sm-6 MuiGrid-grid-lg-3"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
+            >
+              <span
+                aria-hidden="true"
+                class="material-icons MuiIcon-root"
+              >
+                <img
+                  alt="motivate icon"
+                  class="makeStyles-mainIcon-21"
+                  src="ic_methodology_inspire.svg"
+                />
+              </span>
+            </p>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter"
+            >
+              Inspire Your Team for Greatness
+            </h5>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="makeStyles-root-25"
+    >
+      <div
+        class="MuiGrid-root makeStyles-contactItem-26 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h6
+            class="MuiTypography-root makeStyles-thickText-28 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            OUR RESULTS SPEAK FOR THEMSELVES
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <h4
+            class="MuiTypography-root makeStyles-contactSubTitle-29 MuiTypography-h4 MuiTypography-alignCenter"
+          >
+            Get In Touch to See How We Can Help
+          </h4>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-contactText-30 MuiTypography-subtitle1 MuiTypography-alignCenter"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor facilis id aspernatur sit non quod fugit eaque similique consequatur tempora!
+          </h6>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+           
+          <p
+            class="MuiTypography-root makeStyles-contactText-30 MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-27 MuiButton-containedPrimary"
+              href="/contact"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Send a Message
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

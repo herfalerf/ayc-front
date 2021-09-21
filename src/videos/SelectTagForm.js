@@ -13,7 +13,7 @@ const SelectTagForm = ({ setVideo, videoId, availableTags, tagVideo }) => {
       <h2>Add a Tag</h2>
       <Formik
         validationSchema={schema}
-        initialValues={{ tag: null }}
+        initialValues={{ tag: undefined }}
         onSubmit={async (values, { setStatus, setSubmitting }) => {
           setStatus(undefined);
           console.debug("videoId=", videoId, "values=", values);
@@ -32,7 +32,7 @@ const SelectTagForm = ({ setVideo, videoId, availableTags, tagVideo }) => {
         {({ status }) => (
           <Form>
             <Field as="select" name="tag">
-              <option value={null}>Select a tag</option>
+              <option value={undefined}>Select a tag</option>
 
               {availableTags &&
                 availableTags.map((t) => (
