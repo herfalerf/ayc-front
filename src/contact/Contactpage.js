@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
   },
   contactText: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
   },
 }));
 
@@ -122,7 +122,6 @@ function Contactpage({ addCustomer }) {
             <Grid item>
               <Typography align="center">
                 <Link component="a" href="mailto:test@email.com">
-                  {" "}
                   <Icon>
                     <img
                       src={ic_contact_mail}
