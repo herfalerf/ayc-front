@@ -53,6 +53,9 @@ The backend of Align Your Culture is created using Node.js.  The site features a
 Please read the instructions in the below Create React App section on how to test the front-end.  Instructions on testing the back end are provided in the backend repo
 [Backend repo](https://github.com/herfalerf/ayc-back)
 
+##### Web Design by [akorn.creative](https://99designs.com/profiles/akorncreative)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
