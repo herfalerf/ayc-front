@@ -4,7 +4,7 @@
 
 #### About
 
-This project was created for a startup company.  The project provides a customer facing website for the company which displays the company's video repository, information on services offered, information on the team at the company and a way to contact the company.  The site also provides an administrator portal so that the company can easily modify the videos displayed, the team members info and keep track of the customers who have contacted the company.  As of this time the website is has been submitted to the client and will be deployed on the client's domain once enough content has been created by the client.  Particular attention was paid to make the website as responsive and mobile friendly as possible.
+This project was created for a startup company.  The project provides a customer facing website for the company which displays the company's video repository, information on services offered, information on the team at the company and a way to contact the company.  The site also provides an administrator portal so that the company can easily modify the videos displayed, the team members info and keep track of the customers who have contacted the company.  As of this time the website is has been submitted to the client and will be deployed on the client's domain once enough content has been created by the client.  Particular attention was paid to make the website as responsive and mobile friendly as possible.  Web design and company assets were provided by the client for this project.
 
 #### Admin portal
 
