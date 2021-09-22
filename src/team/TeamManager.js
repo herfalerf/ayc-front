@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AycApi from "../api/api";
 import TeamList from "./TeamList";
@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center bottom",
     minHeight: "25vh",
   },
+  teamHeader: {
+    padding: theme.spacing(2),
+  },
 }));
 
 const TeamManager = () => {
@@ -48,16 +51,30 @@ const TeamManager = () => {
   return (
     <div>
       <div className={classes.upper}></div>
-      <h1>Team Manager</h1>
-      <p>Here you can add, edit, or delete team members</p>
-      <Button
-        variant="contained"
-        component={Link}
-        color="primary"
-        to="/admin/team/add"
-      >
-        Add A New Team Member
-      </Button>
+      <Grid container justifycontent="center" className={classes.teamHeader}>
+        <Grid item xs={12}>
+          <Typography variant="h4" align="center">
+            Video Manager
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="subtitle1" align="center">
+            Here you can add, edit, or delete team members
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography align="center">
+            <Button
+              variant="contained"
+              component={Link}
+              color="primary"
+              to="/admin/videos/add"
+            >
+              Add A New Team Member
+            </Button>
+          </Typography>
+        </Grid>
+      </Grid>
       <TeamList admin="true" />
     </div>
   );
