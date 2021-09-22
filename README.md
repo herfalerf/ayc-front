@@ -1,3 +1,58 @@
+# Align Your Culture
+
+##### [Click here to access the site](https://abaft-kick.surge.sh)
+
+#### About
+
+This project was created for a startup company.  The project provides a customer facing website for the company which displays the company's video repository, information on services offered, information on the team at the company and a way to contact the company.  The site also provides an administrator portal so that the company can easily modify the videos displayed, the team members info and keep track of the customers who have contacted the company.  As of this time the website is has been submitted to the client and will be deployed on the client's domain once enough content has been created by the client.  Particular attention was paid to make the website as responsive and mobile friendly as possible.
+
+#### Admin portal
+
+Please note the admin portal is not accessible through a link on the website and must be accessed by visiting https://abaft-kick.surge.sh/admin.  Account creation is not possible by design.  Below is a demo of the userflow for the admin portal.
+
+#### Admin portal demo
+
+##### Login
+![login](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/login.png)
+
+###### After Login, the Admin navigation button will appear 
+![home](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/home.png)
+
+###### Clicking the button makes the drop down accessible
+![adminnav](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/adminnav.png)
+
+##### The Video manager link allows for management of the video library
+![video](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/video.png)
+
+###### you can add a new video 
+![videoadd](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/videoadd.png)
+
+###### or edit/delete an existing video as well as add or remove tags for that video.
+![videoedit](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/videoedit.png)
+
+###### Team Manager and Customers links have similar functionality to the video manager.
+
+![team](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/team.png)
+![customer](https://github.com/herfalerf/ayc-front/blob/master/readmeimages/customer.png)
+
+
+
+#### Technology
+
+##### Front-end
+
+The front end of Align Your Culture was created using React.js and Material-ui.  Axios was utlized for requests, Formik was utilized for form styling with Yup for validation.  The front end is currently deployed on surge for demonstration purposes, but will be deployed on the company's domain once they have created enough content for the site to go live.
+
+##### Backend
+
+The backend of Align Your Culture is created using Node.js.  The site features a custom API written using the Express.js framework and deployed to Heroku.  Password encryption (for the admin login) is accomplished with bcrypt and authentication is done using JWT.  The backend utilizes PostgreSQL for its database.  Please see the backend repo for more details. 
+[Backend repo](https://github.com/herfalerf/ayc-back)
+
+##### Testing
+
+Please read the instructions in the below Create React App section on how to test the front-end.  Instructions on testing the back end are provided in the backend repo
+[Backend repo](https://github.com/herfalerf/ayc-back)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
