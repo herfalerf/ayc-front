@@ -97,7 +97,6 @@ exports[`matches snapshot 1`] = `
                 class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
                 href="mailto:test@email.com"
               >
-                 
                 <span
                   aria-hidden="true"
                   class="material-icons MuiIcon-root"

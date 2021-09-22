@@ -54,7 +54,7 @@ const TeamManager = () => {
       <Grid container justifycontent="center" className={classes.teamHeader}>
         <Grid item xs={12}>
           <Typography variant="h4" align="center">
-            Video Manager
+            Team Manager
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -68,7 +68,7 @@ const TeamManager = () => {
               variant="contained"
               component={Link}
               color="primary"
-              to="/admin/videos/add"
+              to="/admin/team/add"
             >
               Add A New Team Member
             </Button>
