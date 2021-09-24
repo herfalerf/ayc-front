@@ -14,12 +14,22 @@ import "./videocard.css";
 const useStyles = makeStyles((theme) => ({
   playerWrapper: {
     position: "relative",
-    paddingTop: "56.25%",
+    // paddingTop: "56.25%",
+    paddingBottom: "56.25%",
+    overflow: "hidden",
+    height: 0,
   },
   reactPlayer: {
     position: "absolute",
     top: "0",
     left: "0",
+  },
+  videoResponsive: {
+    left: "0",
+    top: "0",
+    height: "100%",
+    width: "100%",
+    position: "absolute",
   },
 }));
 
@@ -40,7 +50,7 @@ function VideoCard({
   return (
     <div>
       <Card className={classes.playerWrapper}>
-        <ReactPlayer
+        {/* <ReactPlayer
           config={{
             youtube: {
               playerVars: { controls: 1, rel: 0, modestbranding: 1 },
@@ -50,7 +60,19 @@ function VideoCard({
           className={classes.reactPlayer}
           width="100%"
           height="100%"
+        /> */}
+        {/* <div className="video-responsive"> */}
+        <iframe
+          className={classes.videoResponsive}
+          width="853"
+          height="480"
+          src={link}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
         />
+        {/* </div> */}
       </Card>
 
       {useid && <Typography variant="subtitle2">id: {id}</Typography>}
