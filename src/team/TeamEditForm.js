@@ -148,7 +148,7 @@ const TeamEditForm = ({ editMember, deleteMember }) => {
                       let result = await deleteMember(id);
 
                       if (result.success) {
-                        history.push("/admin/customers");
+                        history.push("/admin/team");
                       } else {
                         console.debug("API error", result.errors);
                       }

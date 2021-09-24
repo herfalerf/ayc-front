@@ -204,12 +204,20 @@ const BottomNav = () => {
                 </Link>
               </Grid>
               <Grid item xs={1} className={classes.botItem}>
-                <Link component="a" href="https://www.facebook.com">
+                <Link
+                  component="a"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                >
                   <FacebookIcon className={classes.textWhite} />
                 </Link>
               </Grid>
               <Grid item xs={1} className={classes.botItem}>
-                <Link componet="a" href="https://www.linkedin.com">
+                <Link
+                  componet="a"
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                >
                   <LinkedInIcon className={classes.textWhite} />
                 </Link>
               </Grid>
@@ -249,12 +257,20 @@ const BottomNav = () => {
               </Link>
             </Grid>
             <Grid item xs={6} className={classes.botItem}>
-              <Link component="a" href="https://www.facebook.com">
+              <Link
+                component="a"
+                href="https://www.facebook.com"
+                target="_blank"
+              >
                 <FacebookIcon className={classes.textWhite} />
               </Link>
             </Grid>
             <Grid item xs={6} className={classes.botItem}>
-              <Link componet="a" href="https://www.linkedin.com">
+              <Link
+                componet="a"
+                target="_blank"
+                href="https://www.linkedin.com"
+              >
                 <LinkedInIcon className={classes.textWhite} />
               </Link>
             </Grid>

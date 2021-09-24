@@ -74,14 +74,8 @@ const CustomerForm = ({ addCustomer }) => {
                 setSubmitting(false);
                 history.push("/admin/customers");
               } else {
-                if (
-                  result.errors[0] === `Email already exists: ${values.email}`
-                ) {
-                  setSubmitting(false);
-                  history.push("/");
-                } else {
-                  setStatus({ error: result.errors });
-                }
+                setSubmitting(false);
+                setStatus({ error: result.errors });
               }
             }}
           >
