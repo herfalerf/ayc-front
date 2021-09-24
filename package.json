@@ -12,7 +12,7 @@
     "axios": "^0.21.1",
     "axios-mock-adapter": "^1.19.0",
     "formik": "^2.2.9",
-    "formik-material-ui": "*",
+    "formik-material-ui": "^3.0.1",
     "gotham-pro-font": "^1.0.0",
     "jest": "^26.6.0",
     "jsonwebtoken": "^8.5.1",
