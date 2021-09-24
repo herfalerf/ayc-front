@@ -1,6 +1,6 @@
 # Align Your Culture
 
-##### [Click here to access the site](https://abaft-kick.surge.sh)
+##### [Click here to access the site](https://ayc-front.herokuapp.com/)
 
 #### About
 
@@ -8,7 +8,7 @@ This project was created for a startup company.  The project provides a customer
 
 #### Admin portal
 
-Please note the admin portal is not accessible through a link on the website and must be accessed by visiting https://abaft-kick.surge.sh/admin.  Account creation is not possible by design.  Below is a demo of the userflow for the admin portal.
+Please note the admin portal is not accessible through a link on the website and must be accessed by visiting https://ayc-front.herokuapp.com/admin.  Account creation is not possible by design.  Below is a demo of the userflow for the admin portal.
 
 #### Admin portal demo
 
@@ -41,7 +41,7 @@ Please note the admin portal is not accessible through a link on the website and
 
 ##### Front-end
 
-The front end of Align Your Culture was created using React.js and Material-ui.  Axios was utlized for requests, Formik was utilized for form styling with Yup for validation.  The front end is currently deployed on surge for demonstration purposes, but will be deployed on the company's domain once they have created enough content for the site to go live.
+The front end of Align Your Culture was created using React.js and Material-ui.  Axios was utlized for requests, Formik was utilized for form styling with Yup for validation.  The front end is currently deployed on heroku for demonstration purposes, but will be deployed on the company's domain once they have created enough content for the site to go live.
 
 ##### Backend
 
