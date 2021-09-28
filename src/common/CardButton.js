@@ -48,7 +48,7 @@ const CardButton = ({ icon, alt, headerText, bodyText, route, onClick }) => {
               <Typography variant="h5" component="h5" color="inherit">
                 {headerText}
               </Typography>
-              <Typography vartiant="subtitle2" color="inherit">
+              <Typography variant="body2" color="inherit">
                 {bodyText}
               </Typography>
             </Grid>

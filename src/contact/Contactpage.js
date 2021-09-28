@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Icon, Link } from "@material-ui/core";
 import ic_contact_mail from "../common/images/ic_contact_mail.svg";
 import ic_contact_phone from "../common/images/ic_contact_phone.svg";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Contact Page
 //
@@ -65,6 +66,7 @@ function Contactpage({ addCustomer }) {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <div className={classes.upper}></div>
       <Grid container justifyContent="center" className={classes.aboutBox}>
         <Grid item xs={12}>

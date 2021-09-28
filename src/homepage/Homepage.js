@@ -17,6 +17,7 @@ import ic_logomark from "../common/images/ic_logomark.svg";
 import ic_service_workshops from "../common/images/ic_services_workshops.svg";
 import ic_service_assessment from "../common/images/ic_services_assessment.svg";
 import ic_service_consulting from "../common/images/ic_services_consulting.svg";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Homepage of site.
 //
@@ -53,12 +54,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "right bottom",
   },
   missionItem: { padding: theme.spacing(2) },
-  whatWeDoItem: { padding: theme.spacing(2) },
-  servicesItem: { padding: theme.spacing(2) },
-  contactItem: { padding: theme.spacing(2) },
-  mainItem: { padding: theme.spacing(2) },
-  subItem: { color: "white", padding: theme.spacing(2) },
-  cardButton: { marginTop: theme.spacing(2), marginRight: theme.spacing(2) },
+  whatWeDoItem: { padding: theme.spacing(1) },
+  servicesItem: { padding: theme.spacing(1) },
+  contactItem: { padding: theme.spacing(1) },
+  mainItem: { padding: theme.spacing(1) },
+  subItem: { color: "white", padding: theme.spacing(1) },
+  cardButton: { marginTop: theme.spacing(1), marginRight: theme.spacing(1) },
   missionText: {
     color: "white",
     borderBottom: "2px solid rgba(0, 0, 0, 0.0)",
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "2px solid #00c7d7",
   },
   testColor: { color: "blue" },
-  linkButton: { margin: theme.spacing(2), color: "#FFFFFF" },
+  linkButton: { margin: theme.spacing(1), color: "#FFFFFF" },
   logoMark: { height: "14px", margin: "auto" },
   logoText: {
     fontWeight: "bold",
@@ -99,6 +100,7 @@ function Homepage({ addCustomer, setService }) {
 
   return (
     <div className={classes.root}>
+      <ScrollToTopOnMount />
       <div>
         <Grid
           container
@@ -107,7 +109,7 @@ function Homepage({ addCustomer, setService }) {
           alignItems="center"
         >
           <Grid item xs={12} sm={6} className={classes.missionItem}>
-            <Typography className={classes.subItem} variant="h2">
+            <Typography className={classes.subItem} variant="h3">
               <span className={classes.missionTextUnderline}>Our Mission</span>{" "}
               is to Inspire Organizations to{" "}
               <span className={classes.missionTextUnderline}>
@@ -117,7 +119,7 @@ function Homepage({ addCustomer, setService }) {
             </Typography>
             <Typography
               className={classes.subItem}
-              variant="subtitle1"
+              variant="body1"
               component="p"
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel,

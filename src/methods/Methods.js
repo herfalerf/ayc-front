@@ -6,6 +6,7 @@ import ic_methodology_inspire from "../common/images/ic_methodology_inspire.svg"
 import ic_methodology_leadership from "../common/images/ic_methodology_leadership.svg";
 import ic_methodology_motivate from "../common/images/ic_methodology_motivate.svg";
 import ic_methodology_thriving from "../common/images/ic_methodology_thriving.svg";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Methods page
 //
@@ -61,6 +62,7 @@ const Methods = () => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <div className={classes.upper}></div>
       <Grid container className={classes.methodTitle}>
         <Grid item xs={12}>

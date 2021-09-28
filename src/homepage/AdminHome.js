@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Test component for admin homepage
 //
@@ -28,6 +29,7 @@ const AdminHome = () => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <div className={classes.upper}></div>
       <Grid container justifyContent="center" className={classes.adminHeader}>
         <Grid item xs={12}>

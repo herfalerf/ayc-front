@@ -37,8 +37,7 @@ exports[`matches snapshot 1`] = `
               class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit"
             />
             <p
-              class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
-              vartiant="subtitle2"
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
             />
           </div>
           <div

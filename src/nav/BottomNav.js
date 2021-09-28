@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BottomNav = () => {
+const BottomNav = ({ setService }) => {
   const classes = useStyles();
 
   const displayDesktop = () => {
@@ -143,7 +143,13 @@ const BottomNav = () => {
                   <ListItemText primary="OUR SERVICES" />
                 </ListItem>
                 <ListItem>
-                  <Link>
+                  <Link
+                    component={RouterLink}
+                    to="/services"
+                    onClick={() => {
+                      setService("workshops");
+                    }}
+                  >
                     {" "}
                     <ListItemText
                       className={classes.textWhite}
@@ -152,7 +158,13 @@ const BottomNav = () => {
                   </Link>
                 </ListItem>
                 <ListItem>
-                  <Link>
+                  <Link
+                    component={RouterLink}
+                    to="/services"
+                    onClick={() => {
+                      setService("assessments");
+                    }}
+                  >
                     {" "}
                     <ListItemText
                       className={classes.textWhite}
@@ -161,7 +173,13 @@ const BottomNav = () => {
                   </Link>
                 </ListItem>
                 <ListItem>
-                  <Link>
+                  <Link
+                    component={RouterLink}
+                    to="/services"
+                    onClick={() => {
+                      setService("consulting");
+                    }}
+                  >
                     <ListItemText
                       className={classes.textWhite}
                       primary="Consulting"
@@ -176,7 +194,7 @@ const BottomNav = () => {
                   <ListItemText primary="RESOURCES" />
                 </ListItem>
                 <ListItem>
-                  <Link>
+                  <Link component={RouterLink} to="/resources">
                     {" "}
                     <ListItemText
                       className={classes.textWhite}

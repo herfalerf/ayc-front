@@ -1,7 +1,6 @@
 import React from "react";
 import ContactElement from "../contact/ContactElement";
 import TeamList from "./TeamList";
-
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Icon } from "@material-ui/core";
 import ic_logomark from "../common/images/ic_logomark.svg";
@@ -9,6 +8,7 @@ import ic_about_curiosity from "../common/images/ic_about_curiosity.svg";
 import ic_about_positivity from "../common/images/ic_about_positivity.svg";
 import ic_about_sharing from "../common/images/ic_about_sharing.svg";
 import ic_about_simplicity from "../common/images/ic_about_simplicity.svg";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Show page with list of team members
 //
@@ -66,6 +66,7 @@ function About() {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <div className={classes.upper}></div>
       <Grid container justifyContent="center" className={classes.aboutBox}>
         <Grid item xs={12}>

@@ -236,7 +236,7 @@ function App() {
               service={service}
               setService={setService}
             />
-            <BottomNav />
+            <BottomNav setService={setService} />
           </div>
         </UserContext.Provider>
       </BrowserRouter>

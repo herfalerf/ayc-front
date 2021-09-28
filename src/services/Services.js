@@ -6,6 +6,7 @@ import Consulting from "./Consulting";
 import VideoList from "../videos/VideoList";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Button } from "@material-ui/core";
+import ScrollToTopOnMount from "../common/ScrollToTopOnMount";
 
 // Services
 //
@@ -58,6 +59,7 @@ const Services = ({ service, setService }) => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <Grid
         container
         alignItems="flex-start"

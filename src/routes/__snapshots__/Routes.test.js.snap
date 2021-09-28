@@ -13,8 +13,8 @@ exports[`matches snapshot 1`] = `
           <div
             class="MuiGrid-root makeStyles-missionItem-37 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
           >
-            <h2
-              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-h2"
+            <h3
+              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-h3"
             >
               <span
                 class="makeStyles-missionTextUnderline-45"
@@ -28,9 +28,9 @@ exports[`matches snapshot 1`] = `
                 Create Extraordinary
               </span>
                Working Cultures
-            </h2>
+            </h3>
             <p
-              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-subtitle1"
+              class="MuiTypography-root makeStyles-subItem-42 MuiTypography-body1"
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, harum? Fuga eos atque ea recusandae deserunt aperiam veniam sint doloremque.
             </p>
@@ -225,8 +225,7 @@ exports[`matches snapshot 1`] = `
                           Workshops
                         </h5>
                         <p
-                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
-                          vartiant="subtitle2"
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
                         >
                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
                         </p>
@@ -298,8 +297,7 @@ exports[`matches snapshot 1`] = `
                           Culture Assessments
                         </h5>
                         <p
-                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
-                          vartiant="subtitle2"
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
                         >
                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
                         </p>
@@ -371,8 +369,7 @@ exports[`matches snapshot 1`] = `
                           Consulting
                         </h5>
                         <p
-                          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit"
-                          vartiant="subtitle2"
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
                         >
                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, perspiciatis. 
                         </p>
